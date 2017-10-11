@@ -17,8 +17,8 @@ avx512f rdseed adx avx512pf avx512er avx512cd
 Another mechanism to identify the AVX-512 support is using the function: _may_i_use_cpu_feature
 
 ```
-icc CPU_feature.c -o CPU_feature./^C
-[silvio@phi05 KNL-Short-Course]$ ./CPU_feature
+icc CPU_feature.c -o CPU_feature
+./CPU_feature
 ```
 
 Verify the processor and cache topology
