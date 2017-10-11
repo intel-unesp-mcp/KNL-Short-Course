@@ -27,9 +27,22 @@ Verify the processor and cache topology
 lstopo
 ```
 
-Verify the numa organization
+Show numa organization
 ```
 numactl -H
+```
+
+## map an application to MCDRAM or DRAM
+
+Map to DRAM:
+
+```
+numactl -m 0,1,2,3
+```
+
+Map to MCDRAM:
+```
+numactl -m 4,5,6,7
 ```
 
 ## Compile Code Using AVX-512:
