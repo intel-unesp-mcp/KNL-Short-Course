@@ -81,9 +81,9 @@ The following loop was compiled using AVX-512F using FMA Square root and mask op
 	      dvz += mOverDist3 * dz;	
 	  }
 ```
-Execution Time:
+
+Nbody Execution Time Evaluation comparing XEON against KNL (Average of five executions):
 
 Xeon AVX-2 | KNL AVX-512 
 --- | --- 
-1 | 2 
-
+13 | 9.5 
