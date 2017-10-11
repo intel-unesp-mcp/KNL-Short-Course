@@ -44,5 +44,16 @@ non-KNL Machine:
 icc knl-ex1.c -o knl-ex1 -qopt-report=5 -xMIC-AVX512 -g
 ```
 
+assembly code (AVX-512):
+```
+vmovupsz  (%rsi,%r14,4), %zmm2	
+vmovupsz  0x40(%rsi,%r14,4), %zmm3	
+vaddpsz  (%rdi,%r14,4), %zmm2, %zmm4	
+vaddpsz  0x40(%rdi,%r14,4), %zmm3, %zmm5	
+vmovupsz  %zmm4, (%r9,%r14,4)	
+vmovupsz  %zmm5, 0x40(%r9,%r14,4)
+```
+
+
 knl-ex2.c => shows an example of matrix multiplication using scalar instructions, avx512 instructions and avx2 instructions.
 
