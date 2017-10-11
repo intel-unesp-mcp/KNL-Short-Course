@@ -147,3 +147,9 @@ Option-price Execution Time Evaluation comparing XEON against KNL (Average of fi
 Xeon AVX-2 | KNL AVX-512 
 --- | --- 
 23 | 7.5 
+
+## pre-fetch
+
+put this option to enable the compiler to introduce intrinsics code for pre-fetch:
+
+-qopt-prefetch=5
