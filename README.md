@@ -69,6 +69,17 @@ vmovups   %zmm5, 64(%r9,%r14,4)
 ## Nbody Example
 
 icpc -O3 -fopenmp -fp-model fast=2 -qopt-report=5 -g -xhost -o nbody-v0s nbody-v0.cc
-The following loop was compiled using AVX-512F
+
+The following loop was compiled using AVX-512F using FMA Square root and mask operations
 ```
+    for ( size_t j = i+1; j < n; ++j ) {	
+	      real dx = x[j] - x[i], dy = y[j] - y[i], dz = z[j] - z[i];
+	      real dist2 = dx*dx + dy*dy + dz*dz;	
+	      real mOverDist3 = m[j] / (dist2 * Sqrt( dist2 ));	
+	      dvx += mOverDist3 * dx;	
+	      dvy += mOverDist3 * dy;	
+	      dvz += mOverDist3 * dz;	
+	  }
+```
+
 
