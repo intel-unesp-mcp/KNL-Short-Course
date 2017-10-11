@@ -44,15 +44,27 @@ non-KNL Machine:
 icc knl-ex1.c -o knl-ex1 -qopt-report=5 -xMIC-AVX512 -g
 ```
 
-assembly code (AVX-512):
+Compilation using -S (compile to assembly only (.s) ):
+
+AVX-2 - assembly
 ```
-vmovupsz  (%rsi,%r14,4), %zmm2	
-vmovupsz  0x40(%rsi,%r14,4), %zmm3	
-vaddpsz  (%rdi,%r14,4), %zmm2, %zmm4	
-vaddpsz  0x40(%rdi,%r14,4), %zmm3, %zmm5	
-vmovupsz  %zmm4, (%r9,%r14,4)	
-vmovupsz  %zmm5, 0x40(%r9,%r14,4)
+vmovups   (%rdi,%rcx,4), %ymm0                          
+vaddps    (%r10,%rcx,4), %ymm0, %ymm1                   
+vmovups   %ymm1, (%r9,%rcx,4)                           
+vmovups   32(%rdi,%rcx,4), %ymm2                        
+vaddps    32(%r10,%rcx,4), %ymm2, %ymm3                 
+vmovups   %ymm3, 32(%r9,%rcx,4)                         
+
+AVX-512 - assembly
 ```
+vmovups   (%rsi,%r14,4), %zmm2                          
+vmovups   64(%rsi,%r14,4), %zmm3                        
+vaddps    (%rdi,%r14,4), %zmm2, %zmm4                   
+vaddps    64(%rdi,%r14,4), %zmm3, %zmm5                 
+vmovups   %zmm4, (%r9,%r14,4)                           
+vmovups   %zmm5, 64(%r9,%r14,4)  
+```
+
 
 
 knl-ex2.c => shows an example of matrix multiplication using scalar instructions, avx512 instructions and avx2 instructions.
