@@ -87,3 +87,6 @@ Nbody Execution Time Evaluation comparing XEON against KNL (Average of five exec
 Xeon AVX-2 | KNL AVX-512 
 --- | --- 
 13 | 9.5 
+
+unpack and mask operations.
+
