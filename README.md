@@ -66,4 +66,9 @@ vmovups   %zmm4, (%r9,%r14,4)
 vmovups   %zmm5, 64(%r9,%r14,4)  
 ```
 
-knl-ex2.c => shows an example of matrix multiplication using scalar instructions, avx512 instructions and avx2 instructions.
+## Nbody Example
+
+icpc -O3 -fopenmp -fp-model fast=2 -qopt-report=5 -g -xhost -o nbody-v0s nbody-v0.cc
+The following loop was compiled using AVX-512F
+```
+
