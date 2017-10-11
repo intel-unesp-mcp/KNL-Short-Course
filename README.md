@@ -1,6 +1,6 @@
 # KNL Short Course
 
-## 1 Verify the new AVX512 resources implemented:
+## Verify the new AVX512 resources implemented:
 
 cat /proc/cpuinfo | grep flags | head -n 1
 
