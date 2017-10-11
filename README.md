@@ -32,5 +32,17 @@ Verify the numa organization
 numactl -H
 ```
 
+compile code using AVX-512:
+
+KNL machine:
+```
+icc knl-ex1.c -o knl-ex1 -qopt-report=5 -xhost -g
+```
+
+non-KNL Machine
+```
+icc knl-ex1.c -o knl-ex1 -qopt-report=5 -xMIC-AVX512 -g
+```
+
 knl-ex2.c => shows an example of matrix multiplication using scalar instructions, avx512 instructions and avx2 instructions.
 
