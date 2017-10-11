@@ -1,6 +1,6 @@
 # KNL Short Course
 
-Verify the new AVX512 resources implemented:
+## 1 Verify the new AVX512 resources implemented:
 
 cat /proc/cpuinfo | grep flags | head -n 1
 
@@ -32,14 +32,14 @@ Verify the numa organization
 numactl -H
 ```
 
-compile code using AVX-512:
+## Compile Code Using AVX-512:
 
 KNL machine:
 ```
 icc knl-ex1.c -o knl-ex1 -qopt-report=5 -xhost -g
 ```
 
-non-KNL Machine
+non-KNL Machine:
 ```
 icc knl-ex1.c -o knl-ex1 -qopt-report=5 -xMIC-AVX512 -g
 ```
