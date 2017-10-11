@@ -1,4 +1,4 @@
-# intrinsics-KNL
+# KNL Short Course
 
 Verify the new AVX512 resources implemented:
 
