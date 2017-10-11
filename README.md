@@ -15,8 +15,14 @@ avx512f rdseed adx avx512pf avx512er avx512cd
 ```
 
 Verify the processor and cache topology
+
 ```
-avx512f rdseed adx avx512pf avx512er avx512cd
+lstopo
+```
+
+Verify the numa organization
+```
+numactl -H
 ```
 
 knl-ex2.c => shows an example of matrix multiplication using scalar instructions, avx512 instructions and avx2 instructions.
