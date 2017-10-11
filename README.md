@@ -54,6 +54,7 @@ vmovups   %ymm1, (%r9,%rcx,4)
 vmovups   32(%rdi,%rcx,4), %ymm2                        
 vaddps    32(%r10,%rcx,4), %ymm2, %ymm3                 
 vmovups   %ymm3, 32(%r9,%rcx,4)                         
+```
 
 AVX-512 - assembly
 ```
@@ -65,7 +66,4 @@ vmovups   %zmm4, (%r9,%r14,4)
 vmovups   %zmm5, 64(%r9,%r14,4)  
 ```
 
-
-
 knl-ex2.c => shows an example of matrix multiplication using scalar instructions, avx512 instructions and avx2 instructions.
-
