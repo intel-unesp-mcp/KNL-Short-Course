@@ -110,3 +110,27 @@ Xeon AVX-2 | KNL AVX-512
 
 unpack and mask operations.
 
+## Option-price Example
+
+S. Li, “Chapter 8 - Parallel Numerical Methods in Finance,” in High Performance
+Parallelism Pearls Volume Two: Multicore and Many-core Programming
+Approaches, vol. 2, J. Reinders and J. Jeffers, Eds. Boston, MA, USA: Morgan
+Kaufmann, 2015, pp. 113–137.
+
+Compiling Option price:
+
+```
+icpc -ltbbmalloc -xHOST -openmp -g -O3 -ipo -restrict -fimf-precision=low -fimf-domain-exclusion=31 -fno-alias -qopt-report=5  -DCOMPILER_VERSION=\""icpc-17.0.1"\" -o am_call_vp am_call.cpp
+```
+
+Execute Option price:
+
+```
+./am_call_vp
+```
+
+Option-price Execution Time Evaluation comparing XEON against KNL (Average of five executions):
+
+Xeon AVX-2 | KNL AVX-512 
+--- | --- 
+23 | 7.5 
