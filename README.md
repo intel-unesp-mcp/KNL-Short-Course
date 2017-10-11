@@ -66,11 +66,31 @@ vmovups   %zmm4, (%r9,%r14,4)
 vmovups   %zmm5, 64(%r9,%r14,4)  
 ```
 
+Compiling with AVX-512 and execute on Haswell:
+
+```
+icc knl-ex1.c -o knl-ex1 -xMIC-AVX512 -qopenmp
+./knl-ex1 
+
+Please verify that both the operating system and the processor support Intel(R) AVX512F, ADX, RDSEED, AVX512ER, AVX512PF and AVX512CD instructions.
+```
+
+
 ## Nbody Example
 
-icpc -O3 -fopenmp -fp-model fast=2 -qopt-report=5 -g -xhost -o nbody-v0s nbody-v0.cc
+"A. Duran and L. Meadows, “Chapter 9 - A Many-Core Implementation of the Direct
+N-Body Problem,” in High Performance Parallelism Pearls: Multicore and Manycore
+Programming Approaches, vol. 1, J. Reinders and J. Jeffers, Eds. Boston, MA,
+USA: Morgan Kaufmann, 2015, pp. 159–174."
 
-The following loop was compiled using AVX-512F using FMA Square root and mask operations
+compiling nbody example:
+
+```
+icpc -O3 -fopenmp -fp-model fast=2 -qopt-report=5 -g -xhost -o nbody-v0s nbody-v0.cc
+```
+
+The following loop was compiled using AVX-512F using FMA Square, root and mask operations:
+
 ```
     for ( size_t j = i+1; j < n; ++j ) {	
 	      real dx = x[j] - x[i], dy = y[j] - y[i], dz = z[j] - z[i];
