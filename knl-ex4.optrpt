@@ -1,0 +1,242 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 17.0.1.132 Build 20161005
+
+Compiler options: -o knl-ex4 -O3 -qopenmp -g -qopt-report=5 -xhost
+
+    Report from: Interprocedural optimizations [ipo]
+
+  WHOLE PROGRAM (SAFE) [EITHER METHOD]: false
+  WHOLE PROGRAM (SEEN) [TABLE METHOD]: false
+  WHOLE PROGRAM (READ) [OBJECT READER METHOD]: false
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+In the inlining report below:
+   "sz" refers to the "size" of the routine. The smaller a routine's size,
+      the more likely it is to be inlined.
+   "isz" refers to the "inlined size" of the routine. This is the amount
+      the calling routine will grow if the called routine is inlined into it.
+      The compiler generally limits the amount a routine can grow by having
+      routines inlined into it.
+
+Begin optimization report for: main(int, char **)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (main(int, char **)) [1/3=33.3%] knl-ex4.c(56,34)
+  -> EXTERN: (62,3) time(time_t *)
+  -> EXTERN: (63,19) localtime(const time_t *)
+  -> EXTERN: (64,3) printf(const char *__restrict__, ...)
+  -> EXTERN: (64,43) asctime(const struct tm *)
+  -> INLINE: (66,3) fillarray() (isz = 96) (sz = 99)
+    -> EXTERN: (24,3) srand(unsigned int)
+    -> EXTERN: (24,9) time(time_t *)
+    -> EXTERN: (26,16) malloc(unsigned long long)
+    -> EXTERN: (27,14) malloc(unsigned long long)
+    -> EXTERN: (28,16) malloc(unsigned long long)
+    -> EXTERN: (29,16) malloc(unsigned long long)
+    -> EXTERN: (31,10) rand(void)
+    -> EXTERN: (35,12) rand(void)
+    -> EXTERN: (40,18) rand(void)
+  -> EXTERN: (68,3) time(time_t *)
+  -> EXTERN: (69,17) localtime(const time_t *)
+  -> EXTERN: (70,3) printf(const char *__restrict__, ...)
+  -> EXTERN: (70,44) asctime(const struct tm *)
+  -> EXTERN: (72,3) time(time_t *)
+  -> EXTERN: (73,19) localtime(const time_t *)
+  -> EXTERN: (74,3) printf(const char *__restrict__, ...)
+  -> EXTERN: (74,40) asctime(const struct tm *)
+  -> INLINE: (77,5) sum3() (isz = 27) (sz = 30)
+  -> EXTERN: (80,3) time(time_t *)
+  -> EXTERN: (81,17) localtime(const time_t *)
+  -> EXTERN: (83,3) printf(const char *__restrict__, ...)
+  -> EXTERN: (83,40) asctime(const struct tm *)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at knl-ex4.c(34,3) inlined into knl-ex4.c(66,3)
+   remark #15523: loop was not vectorized: loop control variable auxcont2 was found, but loop iteration count cannot be computed before executing the loop
+
+   LOOP BEGIN at knl-ex4.c(38,5) inlined into knl-ex4.c(66,3)
+      remark #15523: loop was not vectorized: loop control variable auxcont was found, but loop iteration count cannot be computed before executing the loop
+      remark #25456: Number of Array Refs Scalar Replaced In Loop: 1
+   LOOP END
+LOOP END
+
+LOOP BEGIN at knl-ex4.c(76,3)
+   remark #25096: Loop Interchange not done due to: Imperfect Loop Nest (Either at Source or due to other Compiler Transformations)
+   remark #25451: Advice: Loop Interchange, if possible, might help loopnest. Suggested Permutation : ( 1 2 ) --> ( 2 1 ) 
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between o[auxcont] (51:5) and o[auxcont] (51:5)
+   remark #15346: vector dependence: assumed OUTPUT dependence between o[auxcont] (51:5) and o[auxcont] (51:5)
+
+   LOOP BEGIN at knl-ex4.c(50,3) inlined into knl-ex4.c(77,5)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed FLOW dependence between o[auxcont] (51:5) and a[*(b+auxcont*4)] (51:5)
+      remark #15346: vector dependence: assumed ANTI dependence between a[*(b+auxcont*4)] (51:5) and o[auxcont] (51:5)
+      remark #25439: unrolled with remainder by 2  
+   LOOP END
+
+   LOOP BEGIN at knl-ex4.c(50,3) inlined into knl-ex4.c(77,5)
+   <Remainder>
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+knl-ex4.c(56,34):remark #34051: REGISTER ALLOCATION : [main] knl-ex4.c:56
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   63[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm31 k0-k7]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   18[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm3]
+        
+    Routine temporaries
+        Total         :     137
+            Global    :      58
+            Local     :      79
+        Regenerable   :      33
+        Spilled       :      11
+        
+    Routine stack
+        Variables     :      12 bytes*
+            Reads     :       2 [0.00e+00 ~ 0.0%]
+            Writes    :       2 [0.00e+00 ~ 0.0%]
+        Spills        :      88 bytes*
+            Reads     :      11 [1.34e+02 ~ 10.4%]
+            Writes    :      11 [1.26e+01 ~ 1.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: fillarray()
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (fillarray()) [2/3=66.7%] knl-ex4.c(17,18)
+  -> EXTERN: (24,3) srand(unsigned int)
+  -> EXTERN: (24,9) time(time_t *)
+  -> EXTERN: (26,16) malloc(unsigned long long)
+  -> EXTERN: (27,14) malloc(unsigned long long)
+  -> EXTERN: (28,16) malloc(unsigned long long)
+  -> EXTERN: (29,16) malloc(unsigned long long)
+  -> EXTERN: (31,10) rand(void)
+  -> EXTERN: (35,12) rand(void)
+  -> EXTERN: (40,18) rand(void)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at knl-ex4.c(34,3)
+   remark #15523: loop was not vectorized: loop control variable auxcont2 was found, but loop iteration count cannot be computed before executing the loop
+
+   LOOP BEGIN at knl-ex4.c(38,5)
+      remark #15523: loop was not vectorized: loop control variable auxcont was found, but loop iteration count cannot be computed before executing the loop
+      remark #25456: Number of Array Refs Scalar Replaced In Loop: 1
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+knl-ex4.c(17,18):remark #34051: REGISTER ALLOCATION : [fillarray] knl-ex4.c:17
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   63[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm31 k0-k7]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   15[ rax rdx rcx rbx rbp rsi rdi r8-r9 r12-r15 zmm0-zmm1]
+        
+    Routine temporaries
+        Total         :      53
+            Global    :      34
+            Local     :      19
+        Regenerable   :       1
+        Spilled       :      16
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :     128 bytes*
+            Reads     :      16 [1.53e+02 ~ 17.0%]
+            Writes    :      16 [3.65e+01 ~ 4.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: sum3()
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (sum3()) [3/3=100.0%] knl-ex4.c(47,13)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at knl-ex4.c(50,3)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed FLOW dependence between o[auxcont] (51:5) and a[*(b+auxcont*4)] (51:5)
+   remark #15346: vector dependence: assumed ANTI dependence between a[*(b+auxcont*4)] (51:5) and o[auxcont] (51:5)
+   remark #25439: unrolled with remainder by 2  
+LOOP END
+
+LOOP BEGIN at knl-ex4.c(50,3)
+<Remainder>
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+knl-ex4.c(47,13):remark #34051: REGISTER ALLOCATION : [sum3] knl-ex4.c:47
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   63[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm31 k0-k7]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   13[ rax rdx rcx rsi rdi r8-r11 zmm0-zmm3]
+        
+    Routine temporaries
+        Total         :      29
+            Global    :      14
+            Local     :      15
+        Regenerable   :       0
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================

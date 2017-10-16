@@ -1,0 +1,162 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C++ Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 17.0.1.132 Build 20161005
+
+Compiler options: -g -O3 -fopenmp -DMETHOD=2 -opt-report5 -lmemkind -xhost -qopt-prefetch=5 -DDOUBLE -c -o Transpose-MIC.o
+
+    Report from: Interprocedural optimizations [ipo]
+
+  WHOLE PROGRAM (SAFE) [EITHER METHOD]: false
+  WHOLE PROGRAM (SEEN) [TABLE METHOD]: false
+  WHOLE PROGRAM (READ) [OBJECT READER METHOD]: false
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+In the inlining report below:
+   "sz" refers to the "size" of the routine. The smaller a routine's size,
+      the more likely it is to be inlined.
+   "isz" refers to the "inlined size" of the routine. This is the amount
+      the calling routine will grow if the called routine is inlined into it.
+      The compiler generally limits the amount a routine can grow by having
+      routines inlined into it.
+
+Begin optimization report for: Transpose(double *, double *, int)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (Transpose(double *, double *, int)) [1/1=100.0%] Transpose.cc(14,61)
+
+
+    Report from: OpenMP optimizations [openmp]
+
+Transpose.cc(16:1-16:1):OMP:_Z9TransposePdS_i:  OpenMP DEFINED LOOP WAS PARALLELIZED
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at Transpose.cc(17,3)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at Transpose.cc(19,5)
+   <Peeled loop for vectorization>
+      remark #15389: vectorization support: reference B[j*n+i] has unaligned access   [ Transpose.cc(20,20) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: peel loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.404
+      remark #25015: Estimate of max trip count of loop=15
+   LOOP END
+
+   LOOP BEGIN at Transpose.cc(19,5)
+      remark #15389: vectorization support: reference B[j*n+i] has unaligned access   [ Transpose.cc(20,20) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15416: vectorization support: non-unit strided store was generated for the variable <A[i*n+j]>, stride is unknown to compiler   [ Transpose.cc(20,7) ]
+      remark #15305: vectorization support: vector length 16
+      remark #15309: vectorization support: normalized vectorization overhead 0.378
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15453: unmasked strided stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 5 
+      remark #15477: vector cost: 2.310 
+      remark #15478: estimated potential speedup: 1.810 
+      remark #15488: --- end vector cost summary ---
+      remark #25018: Total number of lines prefetched=10
+      remark #25035: Number of pointer data prefetches=3, dist=8
+      remark #25467: Number of extra pointer data prefetches for strided references=7
+   LOOP END
+
+   LOOP BEGIN at Transpose.cc(19,5)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference B[j*n+i] has unaligned access   [ Transpose.cc(20,20) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.613
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+   LOOP END
+
+   LOOP BEGIN at Transpose.cc(19,5)
+   <Remainder loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at Transpose.cc(23,5)
+   <Peeled loop for vectorization>
+      remark #15389: vectorization support: reference A[j*n+i] has unaligned access   [ Transpose.cc(24,7) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: peel loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 0.319
+      remark #25015: Estimate of max trip count of loop=7
+   LOOP END
+
+   LOOP BEGIN at Transpose.cc(23,5)
+      remark #15389: vectorization support: reference A[j*n+i] has unaligned access   [ Transpose.cc(24,7) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15415: vectorization support: non-unit strided load was generated for the variable <B[i*n+j]>, stride is unknown to compiler   [ Transpose.cc(24,20) ]
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.625
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15452: unmasked strided loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 5 
+      remark #15477: vector cost: 2.000 
+      remark #15478: estimated potential speedup: 2.300 
+      remark #15488: --- end vector cost summary ---
+      remark #25018: Total number of lines prefetched=9
+      remark #25035: Number of pointer data prefetches=2, dist=8
+      remark #25467: Number of extra pointer data prefetches for strided references=7
+   LOOP END
+
+   LOOP BEGIN at Transpose.cc(23,5)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference A[j*n+i] has unaligned access   [ Transpose.cc(24,7) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.556
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+Transpose.cc(14,61):remark #34051: REGISTER ALLOCATION : [_Z9TransposePdS_i] Transpose.cc:14
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   63[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm31 k0-k7]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   31[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm6 zmm16-zmm22 k1-k3]
+        
+    Routine temporaries
+        Total         :     293
+            Global    :     108
+            Local     :     185
+        Regenerable   :      52
+        Spilled       :      47
+        
+    Routine stack
+        Variables     :      40 bytes*
+            Reads     :       4 [0.00e+00 ~ 0.0%]
+            Writes    :       8 [2.40e+01 ~ 0.5%]
+        Spills        :     408 bytes*
+            Reads     :      85 [5.38e+02 ~ 11.2%]
+            Writes    :      60 [1.31e+02 ~ 2.7%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================

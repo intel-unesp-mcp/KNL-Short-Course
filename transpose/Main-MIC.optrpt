@@ -1,0 +1,534 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C++ Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 17.0.1.132 Build 20161005
+
+Compiler options: -g -O3 -fopenmp -DMETHOD=2 -opt-report5 -lmemkind -xhost -qopt-prefetch=5 -DDOUBLE -c -o Main-MIC.o
+
+    Report from: Interprocedural optimizations [ipo]
+
+  WHOLE PROGRAM (SAFE) [EITHER METHOD]: false
+  WHOLE PROGRAM (SEEN) [TABLE METHOD]: false
+  WHOLE PROGRAM (READ) [OBJECT READER METHOD]: false
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+In the inlining report below:
+   "sz" refers to the "size" of the routine. The smaller a routine's size,
+      the more likely it is to be inlined.
+   "isz" refers to the "inlined size" of the routine. This is the amount
+      the calling routine will grow if the called routine is inlined into it.
+      The compiler generally limits the amount a routine can grow by having
+      routines inlined into it.
+
+Begin optimization report for: main(int, char **)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (main(int, char **)) [1/5=20.0%] Main.cc(41,32)
+  -> EXTERN: (44,5) printf(const char *, ...)
+  -> EXTERN: (45,5) printf(const char *, ...)
+  -> EXTERN: (46,5) printf(const char *, ...)
+  -> EXTERN: (47,5) exit(int)
+  -> INLINE (MANUAL): (50,17) atoi(const char *) (isz = 7) (sz = 14)
+    -> EXTERN: /usr/include/stdlib.h:(280,16) strtol(const char *, char **, int)
+  -> INLINE (MANUAL): (54,29) atoi(const char *) (isz = 7) (sz = 14)
+    -> EXTERN: /usr/include/stdlib.h:(280,16) strtol(const char *, char **, int)
+  -> EXTERN: (56,3) printf(const char *, ...)
+  -> EXTERN: (57,3) printf(const char *, ...)
+  -> EXTERN: (63,3) omp_get_max_threads()
+  -> EXTERN: (70,22) _mm_malloc(unsigned long long, unsigned long long)
+  -> EXTERN: (71,22) hbw_malloc(size_t)
+  -> EXTERN: (75,29) malloc(size_t)
+  -> EXTERN: (78,10) _vla_free(void *, long)
+  -> EXTERN: (78,10) _vla_alloc(long)
+  -> INLINE: (83,22) InitMatrix(double *, double *, int) (isz = 45) (sz = 54)
+  -> EXTERN: (86,23) omp_get_wtime()
+  -> EXTERN: (87,5) Transpose(double *, double *, int)
+  -> EXTERN: (88,23) omp_get_wtime()
+  -> INLINE: (92,11) VerifyTransposed(double *, int) (isz = 45) (sz = 54)
+  -> EXTERN: (93,2) fprintf(FILE *, const char *, ...)
+  -> EXTERN: (94,2) exit(int)
+  -> EXTERN: (126,3) printf(const char *, ...)
+  -> EXTERN: (128,3) fflush(FILE *)
+  -> EXTERN: (130,3) free(void *)
+  -> EXTERN: (133,3) _mm_free(void *)
+  -> EXTERN: (134,3) _vla_free(void *, long)
+  -> EXTERN: (134,3) hbw_free(void *)
+
+
+    Report from: OpenMP optimizations [openmp]
+
+Main.cc(12:1-12:1):OMP:main:  OpenMP DEFINED LOOP WAS PARALLELIZED
+Main.cc(25:1-25:1):OMP:main:  OpenMP DEFINED LOOP WAS PARALLELIZED
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at Main.cc(80,3)
+   remark #15333: loop was not vectorized: exception handling for a call prevents vectorization   [ Main.cc(86,23) ]
+   remark #25018: Total number of lines prefetched=1
+   remark #25019: Number of spatial prefetches=1, dist=13
+LOOP END
+
+LOOP BEGIN at Main.cc(115,3)
+<Peeled loop for vectorization>
+   remark #15389: vectorization support: reference t[i] has unaligned access   [ Main.cc(117,63) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 8
+   remark #15427: loop was completely unrolled
+   remark #15309: vectorization support: normalized vectorization overhead 1.457
+   remark #15301: PEEL LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at Main.cc(115,3)
+   remark #15388: vectorization support: reference t[i] has aligned access   [ Main.cc(117,63) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 1.797
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 61 
+   remark #15477: vector cost: 7.370 
+   remark #15478: estimated potential speedup: 7.420 
+   remark #15486: divides: 1 
+   remark #15488: --- end vector cost summary ---
+   remark #25018: Total number of lines prefetched=1
+   remark #25019: Number of spatial prefetches=1, dist=8
+LOOP END
+
+LOOP BEGIN at Main.cc(115,3)
+<Remainder loop for vectorization>
+   remark #15388: vectorization support: reference t[i] has aligned access   [ Main.cc(117,63) ]
+   remark #15305: vectorization support: vector length 8
+   remark #15309: vectorization support: normalized vectorization overhead 1.475
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at Main.cc(13,3) inlined into Main.cc(83,22)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at Main.cc(14,5) inlined into Main.cc(83,22)
+   <Peeled loop for vectorization, Multiversioned v1>
+      remark #15389: vectorization support: reference A has unaligned access   [ Main.cc(15,7) ]
+      remark #15389: vectorization support: reference B has unaligned access   [ Main.cc(16,7) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.800
+      remark #15301: PEEL LOOP WAS VECTORIZED
+      remark #25015: Estimate of max trip count of loop=1000
+   LOOP END
+
+   LOOP BEGIN at Main.cc(14,5) inlined into Main.cc(83,22)
+   <Multiversioned v1>
+      remark #25228: Loop multiversioned for Data Dependence
+      remark #15389: vectorization support: reference A has unaligned access   [ Main.cc(15,7) ]
+      remark #15389: vectorization support: reference B has unaligned access   [ Main.cc(16,7) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 32
+      remark #15309: vectorization support: normalized vectorization overhead 0.500
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15451: unmasked unaligned unit stride stores: 2 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 14 
+      remark #15477: vector cost: 1.060 
+      remark #15478: estimated potential speedup: 9.150 
+      remark #15487: type converts: 2 
+      remark #15488: --- end vector cost summary ---
+      remark #25018: Total number of lines prefetched=8
+      remark #25035: Number of pointer data prefetches=8, dist=8
+      remark #25015: Estimate of max trip count of loop=1000
+   LOOP END
+
+   LOOP BEGIN at Main.cc(14,5) inlined into Main.cc(83,22)
+   <Remainder loop for vectorization, Multiversioned v1>
+      remark #15389: vectorization support: reference A has unaligned access   [ Main.cc(15,7) ]
+      remark #15389: vectorization support: reference B has unaligned access   [ Main.cc(16,7) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.800
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #25015: Estimate of max trip count of loop=1000
+   LOOP END
+
+   LOOP BEGIN at Main.cc(14,5) inlined into Main.cc(83,22)
+   <Multiversioned v2>
+      remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+      remark #25439: unrolled with remainder by 2  
+      remark #25018: Total number of lines prefetched=2
+      remark #25035: Number of pointer data prefetches=2, dist=64
+      remark #25015: Estimate of max trip count of loop=1000
+   LOOP END
+
+   LOOP BEGIN at Main.cc(14,5) inlined into Main.cc(83,22)
+   <Remainder, Multiversioned v2>
+      remark #25015: Estimate of max trip count of loop=1000
+   LOOP END
+LOOP END
+
+LOOP BEGIN at Main.cc(26,3) inlined into Main.cc(92,11)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at Main.cc(27,5) inlined into Main.cc(92,11)
+   <Peeled loop for vectorization>
+      remark #15389: vectorization support: reference A has unaligned access   [ Main.cc(28,27) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 1.517
+      remark #15301: PEEL LOOP WAS VECTORIZED
+      remark #25015: Estimate of max trip count of loop=1000
+   LOOP END
+
+   LOOP BEGIN at Main.cc(27,5) inlined into Main.cc(92,11)
+      remark #25084: Preprocess Loopnests: Moving Out Store    [ Main.cc(29,7) ]
+      remark #15389: vectorization support: reference A has unaligned access   [ Main.cc(28,27) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 1.500
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 15 
+      remark #15477: vector cost: 1.620 
+      remark #15478: estimated potential speedup: 8.050 
+      remark #15487: type converts: 1 
+      remark #15488: --- end vector cost summary ---
+      remark #25018: Total number of lines prefetched=2
+      remark #25035: Number of pointer data prefetches=2, dist=8
+      remark #25015: Estimate of max trip count of loop=1000
+   LOOP END
+
+   LOOP BEGIN at Main.cc(27,5) inlined into Main.cc(92,11)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference A has unaligned access   [ Main.cc(28,27) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 1.517
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #25015: Estimate of max trip count of loop=1000
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+Main.cc(41,32):remark #34051: REGISTER ALLOCATION : [main] Main.cc:41
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   63[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm31 k0-k7]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   49[ rax rdx rcx rsi rdi r8-r15 zmm0-zmm31 k0-k3]
+        
+    Routine temporaries
+        Total         :     800
+            Global    :     177
+            Local     :     623
+        Regenerable   :     163
+        Spilled       :      23
+        
+    Routine stack
+        Variables     :      96 bytes*
+            Reads     :      15 [1.43e+00 ~ 0.1%]
+            Writes    :      21 [2.11e+01 ~ 1.2%]
+        Spills        :     216 bytes*
+            Reads     :      96 [4.09e+01 ~ 2.3%]
+            Writes    :      45 [2.12e+01 ~ 1.2%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: VerifyTransposed(double *, int)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (VerifyTransposed(double *, int)) [3/5=60.0%] Main.cc(21,47)
+
+
+    Report from: OpenMP optimizations [openmp]
+
+Main.cc(25:1-25:1):OMP:_Z16VerifyTransposedPdi:  OpenMP DEFINED LOOP WAS PARALLELIZED
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at Main.cc(26,3)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at Main.cc(27,5)
+   <Peeled loop for vectorization>
+      remark #15389: vectorization support: reference A[i*n+j] has unaligned access   [ Main.cc(28,27) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 1.517
+      remark #15301: PEEL LOOP WAS VECTORIZED
+      remark #25015: Estimate of max trip count of loop=1000
+   LOOP END
+
+   LOOP BEGIN at Main.cc(27,5)
+      remark #25084: Preprocess Loopnests: Moving Out Store    [ Main.cc(29,7) ]
+      remark #15389: vectorization support: reference A[i*n+j] has unaligned access   [ Main.cc(28,27) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15399: vectorization support: unroll factor set to 2
+      remark #15309: vectorization support: normalized vectorization overhead 1.500
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 15 
+      remark #15477: vector cost: 1.620 
+      remark #15478: estimated potential speedup: 8.050 
+      remark #15487: type converts: 1 
+      remark #15488: --- end vector cost summary ---
+      remark #25018: Total number of lines prefetched=2
+      remark #25035: Number of pointer data prefetches=2, dist=8
+      remark #25015: Estimate of max trip count of loop=1000
+   LOOP END
+
+   LOOP BEGIN at Main.cc(27,5)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference A[i*n+j] has unaligned access   [ Main.cc(28,27) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 1.517
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #25015: Estimate of max trip count of loop=1000
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+Main.cc(21,47):remark #34051: REGISTER ALLOCATION : [_Z16VerifyTransposedPdi] Main.cc:21
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   63[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm31 k0-k7]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   35[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm12 zmm16-zmm21 k1-k2]
+        
+    Routine temporaries
+        Total         :     268
+            Global    :      52
+            Local     :     216
+        Regenerable   :      66
+        Spilled       :       2
+        
+    Routine stack
+        Variables     :      48 bytes*
+            Reads     :       8 [2.31e+00 ~ 0.1%]
+            Writes    :      10 [2.58e+01 ~ 1.5%]
+        Spills        :      56 bytes*
+            Reads     :      18 [5.81e+00 ~ 0.3%]
+            Writes    :      17 [1.23e+01 ~ 0.7%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: FlushCaches(char *, int)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (FlushCaches(char *, int)) [4/5=80.0%] Main.cc(34,65)
+
+
+    Report from: OpenMP optimizations [openmp]
+
+Main.cc(36:1-36:1):OMP:_Z11FlushCachesPci:  OpenMP DEFINED LOOP WAS PARALLELIZED
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at Main.cc(36,1)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at Main.cc(36,1)
+      remark #15329: vectorization support: non-unit strided store was emulated for the variable <cacheFlush[i]>, stride is 64   [ Main.cc(38,5) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <cacheFlush[i]>, stride is 64   [ Main.cc(38,22) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <cacheFlush[i+1]>, stride is 64   [ Main.cc(38,38) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <cacheFlush[i]>, stride is 64   [ Main.cc(38,22) ]
+      remark #15328: vectorization support: non-unit strided load was emulated for the variable <cacheFlush[i+1]>, stride is 64   [ Main.cc(38,38) ]
+      remark #15305: vectorization support: vector length 16
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15452: unmasked strided loads: 4 
+      remark #15453: unmasked strided stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 20 
+      remark #15477: vector cost: 11.060 
+      remark #15478: estimated potential speedup: 1.690 
+      remark #15488: --- end vector cost summary ---
+      remark #25018: Total number of lines prefetched=16
+      remark #25035: Number of pointer data prefetches=1, dist=8
+      remark #25467: Number of extra pointer data prefetches for strided references=15
+   LOOP END
+
+   LOOP BEGIN at Main.cc(36,1)
+   <Remainder loop for vectorization>
+      remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.031
+      remark #25456: Number of Array Refs Scalar Replaced In Loop: 1
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+Main.cc(38,55):remark #34030: adjacent sparse (strided) loads optimized for speed. Details: stride { 64 }, types { SI8-V128, SI8-V128 }, number of elements { 16 }, select mask { 0x000000003 }.
+Main.cc(34,65):remark #34051: REGISTER ALLOCATION : [_Z11FlushCachesPci] Main.cc:34
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   63[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm31 k0-k7]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   39[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm23 k1]
+        
+    Routine temporaries
+        Total         :     162
+            Global    :      31
+            Local     :     131
+        Regenerable   :      49
+        Spilled       :       1
+        
+    Routine stack
+        Variables     :      32 bytes*
+            Reads     :       4 [0.00e+00 ~ 0.0%]
+            Writes    :       7 [2.30e+01 ~ 3.8%]
+        Spills        :      48 bytes*
+            Reads     :      11 [5.00e+00 ~ 0.8%]
+            Writes    :      11 [1.00e+01 ~ 1.7%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: InitMatrix(double *, double *, int)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (InitMatrix(double *, double *, int)) [5/5=100.0%] Main.cc(10,49)
+
+
+    Report from: OpenMP optimizations [openmp]
+
+Main.cc(12:1-12:1):OMP:_Z10InitMatrixPdS_i:  OpenMP DEFINED LOOP WAS PARALLELIZED
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at Main.cc(13,3)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at Main.cc(14,5)
+   <Peeled loop for vectorization, Multiversioned v1>
+      remark #15389: vectorization support: reference A[i*n+j] has unaligned access   [ Main.cc(15,7) ]
+      remark #15389: vectorization support: reference B[i*n+j] has unaligned access   [ Main.cc(16,7) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.800
+      remark #15301: PEEL LOOP WAS VECTORIZED
+      remark #25015: Estimate of max trip count of loop=1000
+   LOOP END
+
+   LOOP BEGIN at Main.cc(14,5)
+   <Multiversioned v1>
+      remark #25228: Loop multiversioned for Data Dependence
+      remark #15389: vectorization support: reference A[i*n+j] has unaligned access   [ Main.cc(15,7) ]
+      remark #15389: vectorization support: reference B[i*n+j] has unaligned access   [ Main.cc(16,7) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 32
+      remark #15309: vectorization support: normalized vectorization overhead 0.500
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15451: unmasked unaligned unit stride stores: 2 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 14 
+      remark #15477: vector cost: 1.060 
+      remark #15478: estimated potential speedup: 9.150 
+      remark #15487: type converts: 2 
+      remark #15488: --- end vector cost summary ---
+      remark #25018: Total number of lines prefetched=8
+      remark #25035: Number of pointer data prefetches=8, dist=8
+      remark #25015: Estimate of max trip count of loop=1000
+   LOOP END
+
+   LOOP BEGIN at Main.cc(14,5)
+   <Remainder loop for vectorization, Multiversioned v1>
+      remark #15389: vectorization support: reference A[i*n+j] has unaligned access   [ Main.cc(15,7) ]
+      remark #15389: vectorization support: reference B[i*n+j] has unaligned access   [ Main.cc(16,7) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 8
+      remark #15309: vectorization support: normalized vectorization overhead 0.800
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #25015: Estimate of max trip count of loop=1000
+   LOOP END
+
+   LOOP BEGIN at Main.cc(14,5)
+   <Multiversioned v2>
+      remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+      remark #25439: unrolled with remainder by 2  
+      remark #25018: Total number of lines prefetched=2
+      remark #25035: Number of pointer data prefetches=2, dist=64
+      remark #25015: Estimate of max trip count of loop=1000
+   LOOP END
+
+   LOOP BEGIN at Main.cc(14,5)
+   <Remainder, Multiversioned v2>
+      remark #25015: Estimate of max trip count of loop=1000
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+Main.cc(10,49):remark #34051: REGISTER ALLOCATION : [_Z10InitMatrixPdS_i] Main.cc:10
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   63[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm31 k0-k7]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   27[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm10 k1-k2]
+        
+    Routine temporaries
+        Total         :     206
+            Global    :      58
+            Local     :     148
+        Regenerable   :      48
+        Spilled       :       9
+        
+    Routine stack
+        Variables     :      40 bytes*
+            Reads     :       4 [0.00e+00 ~ 0.0%]
+            Writes    :       8 [2.40e+01 ~ 1.9%]
+        Spills        :     112 bytes*
+            Reads     :      49 [3.23e+01 ~ 2.5%]
+            Writes    :      23 [2.09e+01 ~ 1.7%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
