@@ -32,7 +32,7 @@ Show numa organization
 numactl -H
 ```
 
-## map an application to MCDRAM or DRAM
+## Map an Application to MCDRAM or DRAM
 
 Map to DRAM:
 
