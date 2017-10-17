@@ -1,6 +1,6 @@
 # KNL Short Course
 
-## Verify the new AVX512 resources implemented:
+## Verify the new AVX-512 resources implemented:
 
 cat /proc/cpuinfo | grep flags | head -n 1
 
@@ -148,7 +148,11 @@ Xeon AVX-2 | KNL AVX-512
 --- | --- 
 23 | 7.5 
 
-## pre-fetch
+## Conflict Detection
+
+## ERI
+
+## Pre-Fetch
 
 put this option to enable the compiler to introduce intrinsics code for pre-fetch:
 
