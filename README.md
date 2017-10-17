@@ -1,6 +1,6 @@
 # KNL Short Course
 
-## Verify the new AVX512 resources implemented:
+## Verify the new AVX-512 resources implemented:
 
 cat /proc/cpuinfo | grep flags | head -n 1
 
@@ -123,7 +123,9 @@ Xeon AVX-2 | KNL AVX-512
 
 unpack and mask operations.
 
-## Option-price Example
+## ERI
+
+### Option-price Example
 
 S. Li, “Chapter 8 - Parallel Numerical Methods in Finance,” in High Performance
 Parallelism Pearls Volume Two: Multicore and Many-core Programming
@@ -148,7 +150,22 @@ Xeon AVX-2 | KNL AVX-512
 --- | --- 
 23 | 7.5 
 
-## pre-fetch
+## Conflict Detection
+
+Example based on Colfax WP "Capabilities of Intel® AVX-512 in Intel® Xeon® Scalable Processors (Skylake)" (https://colfaxresearch.com/skl-avx512)
+
+```
+for(i = 0; i < SIZE; i++) {
+  A[BB[i]] += 1.0f/C[i] + auxval;
+}
+
+```
+
+Xeon AVX-2 | KNL AVX-512 
+--- | --- 
+38 | 34 
+
+## Pre-Fetch
 
 put this option to enable the compiler to introduce intrinsics code for pre-fetch:
 
