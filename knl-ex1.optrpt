@@ -4,7 +4,7 @@ See "https://software.intel.com/en-us/intel-advisor-xe" for details.
 
 Intel(R) C Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 17.0.1.132 Build 20161005
 
-Compiler options: -o knl-ex1 -qopt-report=5 -xMIC-AVX512 -g
+Compiler options: -S -qopt-report=5 -xMIC-AVX512 -g
 
     Report from: Interprocedural optimizations [ipo]
 

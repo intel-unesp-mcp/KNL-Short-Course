@@ -21,36 +21,36 @@ main:
 	.cfi_startproc
 ..___tag_value_main.2:
 ..L3:
-                                                          #72.34
+                                                          #74.34
 ..LN0:
 	.file   1 "knl-ex1.c"
-	.loc    1  72  is_stmt 1
-        pushq     %rbp                                          #72.34
+	.loc    1  74  is_stmt 1
+        pushq     %rbp                                          #74.34
 	.cfi_def_cfa_offset 16
 ..LN1:
-        movq      %rsp, %rbp                                    #72.34
+        movq      %rsp, %rbp                                    #74.34
 	.cfi_def_cfa 6, 16
 	.cfi_offset 6, -16
 ..LN2:
-        andq      $-128, %rsp                                   #72.34
+        andq      $-128, %rsp                                   #74.34
 ..LN3:
-        subq      $256, %rsp                                    #72.34 c1
+        subq      $256, %rsp                                    #74.34 c1
 ..LN4:
-        movq      %rbx, 24(%rsp)                                #72.34[spill] c3
+        movq      %rbx, 24(%rsp)                                #74.34[spill] c3
 ..LN5:
-        movq      $0x7389d9ffe, %rsi                            #72.34 c3
+        movq      $0x7389d9ffe, %rsi                            #74.34 c3
 ..LN6:
-        movq      %r15, 32(%rsp)                                #72.34[spill] c3
+        movq      %r15, 32(%rsp)                                #74.34[spill] c3
 ..LN7:
-        movl      $3, %edi                                      #72.34 c3
+        movl      $3, %edi                                      #74.34 c3
 ..LN8:
-        movq      %r14, 40(%rsp)                                #72.34[spill] c5
+        movq      %r14, 40(%rsp)                                #74.34[spill] c5
 ..LN9:
-        movq      %r13, 48(%rsp)                                #72.34[spill] c5
+        movq      %r13, 48(%rsp)                                #74.34[spill] c5
 ..LN10:
-        movq      %r12, 56(%rsp)                                #72.34[spill] c7
+        movq      %r12, 56(%rsp)                                #74.34[spill] c7
 ..LN11:
-        call      __intel_new_feature_proc_init                 #72.34 c7
+        call      __intel_new_feature_proc_init                 #74.34 c7
 	.cfi_escape 0x10, 0x03, 0x0e, 0x38, 0x1c, 0x0d, 0x80, 0xff, 0xff, 0xff, 0x1a, 0x0d, 0x18, 0xff, 0xff, 0xff, 0x22
 	.cfi_escape 0x10, 0x0c, 0x0e, 0x38, 0x1c, 0x0d, 0x80, 0xff, 0xff, 0xff, 0x1a, 0x0d, 0x38, 0xff, 0xff, 0xff, 0x22
 	.cfi_escape 0x10, 0x0d, 0x0e, 0x38, 0x1c, 0x0d, 0x80, 0xff, 0xff, 0xff, 0x1a, 0x0d, 0x30, 0xff, 0xff, 0xff, 0x22
@@ -61,55 +61,55 @@ main:
 ..B1.157:                       # Preds ..B1.1
                                 # Execution count [1.00e+00]
 ..LN13:
-        vstmxcsr  (%rsp)                                        #72.34 c1
+        vstmxcsr  (%rsp)                                        #74.34 c1
 ..LN14:
-	.loc    1  78  prologue_end  is_stmt 1
-        lea       16(%rsp), %rdi                                #78.3 c1
+	.loc    1  80  prologue_end  is_stmt 1
+        lea       16(%rsp), %rdi                                #80.3 c1
 ..LN15:
-	.loc    1  72  is_stmt 1
-        orl       $32832, (%rsp)                                #72.34 c3
+	.loc    1  74  is_stmt 1
+        orl       $32832, (%rsp)                                #74.34 c3
 ..LN16:
-        vldmxcsr  (%rsp)                                        #72.34 c5
+        vldmxcsr  (%rsp)                                        #74.34 c5
 ..LN17:
-	.loc    1  78  is_stmt 1
+	.loc    1  80  is_stmt 1
 #       time(time_t *)
-        call      time                                          #78.3 c5
+        call      time                                          #80.3 c5
 ..LN18:
                                 # LOE
 ..B1.2:                         # Preds ..B1.157
                                 # Execution count [1.00e+00]
 ..LN19:
-	.loc    1  79  is_stmt 1
-        lea       16(%rsp), %rdi                                #79.19 c1
+	.loc    1  81  is_stmt 1
+        lea       16(%rsp), %rdi                                #81.19 c1
 ..LN20:
 #       localtime(const time_t *)
-        call      localtime                                     #79.19 c3
+        call      localtime                                     #81.19 c3
 ..LN21:
                                 # LOE rax
 ..B1.159:                       # Preds ..B1.2
                                 # Execution count [1.00e+00]
 ..LN22:
-	.loc    1  80  is_stmt 1
-        movq      %rax, %rdi                                    #80.43 c1
+	.loc    1  82  is_stmt 1
+        movq      %rax, %rdi                                    #82.43 c1
 ..___tag_value_main.13:
 ..LN23:
 #       asctime(const struct tm *)
-        call      asctime                                       #80.43
+        call      asctime                                       #82.43
 ..___tag_value_main.14:
 ..LN24:
                                 # LOE rax
 ..B1.3:                         # Preds ..B1.159
                                 # Execution count [1.00e+00]
 ..LN25:
-        movl      $.L_2__STRING.0, %edi                         #80.3 c1
+        movl      $.L_2__STRING.0, %edi                         #82.3 c1
 ..LN26:
-        movq      %rax, %rsi                                    #80.3 c1
+        movq      %rax, %rsi                                    #82.3 c1
 ..LN27:
-        xorl      %eax, %eax                                    #80.3 c3
+        xorl      %eax, %eax                                    #82.3 c3
 ..___tag_value_main.15:
 ..LN28:
 #       printf(const char *__restrict__, ...)
-        call      printf                                        #80.3
+        call      printf                                        #82.3
 ..___tag_value_main.16:
 ..LN29:
                                 # LOE
@@ -1272,190 +1272,190 @@ main:
 ..B1.51:                        # Preds ..B1.49 ..B1.10
                                 # Execution count [1.00e+00]
 ..LN443:
-	.loc    1  84  is_stmt 1
-        lea       16(%rsp), %rdi                                #84.3 c1
+	.loc    1  86  is_stmt 1
+        lea       16(%rsp), %rdi                                #86.3 c1
 ..LN444:
 #       time(time_t *)
-        call      time                                          #84.3 c3
+        call      time                                          #86.3 c3
 ..LN445:
                                 # LOE
 ..B1.52:                        # Preds ..B1.51
                                 # Execution count [1.00e+00]
 ..LN446:
-	.loc    1  85  is_stmt 1
-        lea       16(%rsp), %rdi                                #85.17 c1
+	.loc    1  87  is_stmt 1
+        lea       16(%rsp), %rdi                                #87.17 c1
 ..LN447:
 #       localtime(const time_t *)
-        call      localtime                                     #85.17 c3
+        call      localtime                                     #87.17 c3
 ..LN448:
                                 # LOE rax
 ..B1.166:                       # Preds ..B1.52
                                 # Execution count [1.00e+00]
 ..LN449:
-	.loc    1  86  is_stmt 1
-        movq      %rax, %rdi                                    #86.44 c1
+	.loc    1  88  is_stmt 1
+        movq      %rax, %rdi                                    #88.44 c1
 ..___tag_value_main.23:
 ..LN450:
 #       asctime(const struct tm *)
-        call      asctime                                       #86.44
+        call      asctime                                       #88.44
 ..___tag_value_main.24:
 ..LN451:
                                 # LOE rax
 ..B1.53:                        # Preds ..B1.166
                                 # Execution count [1.00e+00]
 ..LN452:
-        movl      $.L_2__STRING.1, %edi                         #86.3 c1
+        movl      $.L_2__STRING.1, %edi                         #88.3 c1
 ..LN453:
-        movq      %rax, %rsi                                    #86.3 c1
+        movq      %rax, %rsi                                    #88.3 c1
 ..LN454:
-        xorl      %eax, %eax                                    #86.3 c3
+        xorl      %eax, %eax                                    #88.3 c3
 ..___tag_value_main.25:
 ..LN455:
 #       printf(const char *__restrict__, ...)
-        call      printf                                        #86.3
+        call      printf                                        #88.3
 ..___tag_value_main.26:
 ..LN456:
                                 # LOE
 ..B1.54:                        # Preds ..B1.53
                                 # Execution count [1.00e+00]
 ..LN457:
-	.loc    1  88  is_stmt 1
-        lea       16(%rsp), %rdi                                #88.3 c1
+	.loc    1  90  is_stmt 1
+        lea       16(%rsp), %rdi                                #90.3 c1
 ..LN458:
 #       time(time_t *)
-        call      time                                          #88.3 c3
+        call      time                                          #90.3 c3
 ..LN459:
                                 # LOE
 ..B1.55:                        # Preds ..B1.54
                                 # Execution count [1.00e+00]
 ..LN460:
-	.loc    1  89  is_stmt 1
-        lea       16(%rsp), %rdi                                #89.19 c1
+	.loc    1  91  is_stmt 1
+        lea       16(%rsp), %rdi                                #91.19 c1
 ..LN461:
 #       localtime(const time_t *)
-        call      localtime                                     #89.19 c3
+        call      localtime                                     #91.19 c3
 ..LN462:
                                 # LOE rax
 ..B1.168:                       # Preds ..B1.55
                                 # Execution count [1.00e+00]
 ..LN463:
-	.loc    1  90  is_stmt 1
-        movq      %rax, %rdi                                    #90.44 c1
+	.loc    1  92  is_stmt 1
+        movq      %rax, %rdi                                    #92.44 c1
 ..___tag_value_main.27:
 ..LN464:
 #       asctime(const struct tm *)
-        call      asctime                                       #90.44
+        call      asctime                                       #92.44
 ..___tag_value_main.28:
 ..LN465:
                                 # LOE rax
 ..B1.56:                        # Preds ..B1.168
                                 # Execution count [1.00e+00]
 ..LN466:
-        movl      $.L_2__STRING.2, %edi                         #90.3 c1
+        movl      $.L_2__STRING.2, %edi                         #92.3 c1
 ..LN467:
-        movq      %rax, %rsi                                    #90.3 c1
+        movq      %rax, %rsi                                    #92.3 c1
 ..LN468:
-        xorl      %eax, %eax                                    #90.3 c3
+        xorl      %eax, %eax                                    #92.3 c3
 ..___tag_value_main.29:
 ..LN469:
 #       printf(const char *__restrict__, ...)
-        call      printf                                        #90.3
+        call      printf                                        #92.3
 ..___tag_value_main.30:
 ..LN470:
                                 # LOE
 ..B1.57:                        # Preds ..B1.56
                                 # Execution count [1.00e+00]
 ..LN471:
-	.loc    1  92  is_stmt 1
-        movl      steps(%rip), %r13d                            #92.12 c1
+	.loc    1  94  is_stmt 1
+        movl      steps(%rip), %r13d                            #94.12 c1
 ..LN472:
-        movl      %r13d, k(%rip)                                #92.8 c5 stall 1
+        movl      %r13d, k(%rip)                                #94.8 c5 stall 1
 ..LN473:
-        movl      stepstotal(%rip), %ecx                        #92.27 c5
+        movl      stepstotal(%rip), %ecx                        #94.27 c5
 ..LN474:
-        xorl      %edx, %edx                                    #92.3 c5
+        xorl      %edx, %edx                                    #94.3 c5
 ..LN475:
-        lea       1(%r13), %eax                                 #92.19 c7
+        lea       1(%r13), %eax                                 #94.19 c7
 ..LN476:
-        cmpl      %ecx, %r13d                                   #92.27 c9
+        cmpl      %ecx, %r13d                                   #94.27 c9
 ..LN477:
-        jge       ..B1.138      # Prob 9%                       #92.27 c11
+        jge       ..B1.138      # Prob 9%                       #94.27 c11
 ..LN478:
                                 # LOE eax edx ecx r13d
 ..B1.58:                        # Preds ..B1.57
                                 # Execution count [9.00e-01]
 ..LN479:
-	.loc    1  45  is_stmt 1
-        movl      SIZE(%rip), %r8d                              #45.27 c1
-..LN480:
-	.loc    1  55  is_stmt 1
-        movl      %r13d, 8(%rsp)                                #55.3[spill] c1
-..LN481:
-	.loc    1  92  is_stmt 1
-        subl      %r13d, %ecx                                   #92.27 c1
-..LN482:
 	.loc    1  46  is_stmt 1
-        movq      a(%rip), %rsi                                 #46.18 c3
+        movl      SIZE(%rip), %r8d                              #46.27 c1
+..LN480:
+	.loc    1  57  is_stmt 1
+        movl      %r13d, 8(%rsp)                                #57.3[spill] c1
+..LN481:
+	.loc    1  94  is_stmt 1
+        subl      %r13d, %ecx                                   #94.27 c1
+..LN482:
+	.loc    1  47  is_stmt 1
+        movq      a(%rip), %rsi                                 #47.18 c3
 ..LN483:
-        movq      o(%rip), %r9                                  #46.7 c5
+        movq      o(%rip), %r9                                  #47.7 c5
 ..LN484:
 	.loc    1  29  is_stmt 1
         movl      %r8d, %ebx                                    #29.29 c5
 ..LN485:
         shrl      $31, %ebx                                     #29.29 c7
 ..LN486:
-	.loc    1  55  is_stmt 1
-        movq      %rsi, %r14                                    #55.3 c7
+	.loc    1  57  is_stmt 1
+        movq      %rsi, %r14                                    #57.3 c7
 ..LN487:
-	.loc    1  46  is_stmt 1
-        movq      b(%rip), %rdi                                 #46.31 c7
+	.loc    1  47  is_stmt 1
+        movq      b(%rip), %rdi                                 #47.31 c7
 ..LN488:
 	.loc    1  29  is_stmt 1
         addl      %r8d, %ebx                                    #29.29 c9
 ..LN489:
-	.loc    1  45  is_stmt 1
-        movslq    %r8d, %r8                                     #45.3 c9
+	.loc    1  46  is_stmt 1
+        movslq    %r8d, %r8                                     #46.3 c9
 ..LN490:
-        movq      %r8, 112(%rsp)                                #45.3[spill] c11
+        movq      %r8, 112(%rsp)                                #46.3[spill] c11
 ..LN491:
-        movq      %r9, %r11                                     #45.3 c11
+        movq      %r9, %r11                                     #46.3 c11
 ..LN492:
-	.loc    1  55  is_stmt 1
-        andq      $63, %r14                                     #55.3 c11
+	.loc    1  57  is_stmt 1
+        andq      $63, %r14                                     #57.3 c11
 ..LN493:
-        movl      %r14d, 72(%rsp)                               #55.3[spill] c11
+        movl      %r14d, 72(%rsp)                               #57.3[spill] c11
 ..LN494:
-	.loc    1  45  is_stmt 1
-        andq      $63, %r11                                     #45.3 c13
+	.loc    1  46  is_stmt 1
+        andq      $63, %r11                                     #46.3 c13
 ..LN495:
-	.loc    1  55  is_stmt 1
-        movl      %r11d, 80(%rsp)                               #55.3[spill] c13
+	.loc    1  57  is_stmt 1
+        movl      %r11d, 80(%rsp)                               #57.3[spill] c13
 ..LN496:
-	.loc    1  45  is_stmt 1
-        movl      %r11d, %r10d                                  #45.3 c13
+	.loc    1  46  is_stmt 1
+        movl      %r11d, %r10d                                  #46.3 c13
 ..LN497:
-	.loc    1  55  is_stmt 1
-        vmovups   .L_2il0floatpacket.0(%rip), %zmm1             #55.3 c13
+	.loc    1  57  is_stmt 1
+        vmovups   .L_2il0floatpacket.0(%rip), %zmm1             #57.3 c13
 ..LN498:
-        movl      %r8d, %r12d                                   #55.3 c15
+        movl      %r8d, %r12d                                   #57.3 c15
 ..LN499:
-        movl      %r14d, %r15d                                  #55.3 c15
+        movl      %r14d, %r15d                                  #57.3 c15
 ..LN500:
-        vmovdqu32 .L_2il0floatpacket.2(%rip), %zmm0             #55.3 c15
+        vmovdqu32 .L_2il0floatpacket.2(%rip), %zmm0             #57.3 c15
 ..LN501:
-	.loc    1  45  is_stmt 1
-        andl      $3, %r10d                                     #45.3 c17
+	.loc    1  46  is_stmt 1
+        andl      $3, %r10d                                     #46.3 c17
 ..LN502:
-	.loc    1  55  is_stmt 1
-        movl      %r10d, 120(%rsp)                              #55.3[spill] c19
+	.loc    1  57  is_stmt 1
+        movl      %r10d, 120(%rsp)                              #57.3[spill] c19
 ..LN503:
-        andl      $-32, %r12d                                   #55.3 c19
+        andl      $-32, %r12d                                   #57.3 c19
 ..LN504:
-        movl      %r12d, (%rsp)                                 #55.3[spill] c21
+        movl      %r12d, (%rsp)                                 #57.3[spill] c21
 ..LN505:
-        andl      $3, %r15d                                     #55.3 c21
+        andl      $3, %r15d                                     #57.3 c21
 ..LN506:
-        movl      %r15d, 64(%rsp)                               #55.3[spill] c23
+        movl      %r15d, 64(%rsp)                               #57.3[spill] c23
 ..LN507:
 	.loc    1  29  is_stmt 1
         sarl      $1, %ebx                                      #29.29 c23
@@ -1467,29 +1467,29 @@ main:
                 # optimization report
                 # %s was not vectorized: inner loop was already vectorized
 ..LN509:
-	.loc    1  92  is_stmt 1
+	.loc    1  94  is_stmt 1
 ..LN510:
-	.loc    1  55  is_stmt 1
-        testl     %r8d, %r8d                                    #55.27 c1
+	.loc    1  57  is_stmt 1
+        testl     %r8d, %r8d                                    #57.27 c1
 ..LN511:
-        jle       ..B1.136      # Prob 50%                      #55.27 c3
+        jle       ..B1.136      # Prob 50%                      #57.27 c3
 ..LN512:
                                 # LOE rsi rdi r9 eax edx ecx ebx r8d zmm0 zmm1
 ..B1.60:                        # Preds ..B1.59
                                 # Execution count [0.00e+00]
 ..LN513:
-	.loc    1  45  is_stmt 1
-        cmpl      $6, %r8d                                      #45.3 c1
+	.loc    1  46  is_stmt 1
+        cmpl      $6, %r8d                                      #46.3 c1
 ..LN514:
-        jg        ..B1.63       # Prob 50%                      #45.3 c3
+        jg        ..B1.63       # Prob 50%                      #46.3 c3
 ..LN515:
                                 # LOE rsi rdi r9 eax edx ecx ebx r8d zmm0 zmm1
 ..B1.61:                        # Preds ..B1.60
                                 # Execution count [0.00e+00]
 ..LN516:
-        testl     %ebx, %ebx                                    #45.3 c1
+        testl     %ebx, %ebx                                    #46.3 c1
 ..LN517:
-        jbe       ..B1.144      # Prob 10%                      #45.3 c3
+        jbe       ..B1.144      # Prob 10%                      #46.3 c3
 ..LN518:
                                 # LOE rsi rdi r9 eax edx ecx ebx r8d zmm0 zmm1
 ..B1.62:                        # Preds ..B1.61
@@ -1531,169 +1531,169 @@ main:
 ..B1.64:                        # Preds ..B1.148 ..B1.63
                                 # Execution count [0.00e+00]
 ..LN535:
-	.loc    1  46  is_stmt 1
-        cmpq      %rdi, %r9                                     #46.31 c1
+	.loc    1  47  is_stmt 1
+        cmpq      %rdi, %r9                                     #47.31 c1
 ..LN536:
-        jbe       ..B1.66       # Prob 50%                      #46.31 c3
+        jbe       ..B1.66       # Prob 50%                      #47.31 c3
 ..LN537:
                                 # LOE rsi rdi r9 ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.65:                        # Preds ..B1.64
                                 # Execution count [0.00e+00]
 ..LN538:
-        movq      112(%rsp), %rax                               #46.31[spill] c1
+        movq      112(%rsp), %rax                               #47.31[spill] c1
 ..LN539:
-        movq      %r9, %rdx                                     #46.31 c1
+        movq      %r9, %rdx                                     #47.31 c1
 ..LN540:
-        subq      %rdi, %rdx                                    #46.31 c3
+        subq      %rdi, %rdx                                    #47.31 c3
 ..LN541:
-        lea       (,%rax,4), %r10                               #46.31 c5
+        lea       (,%rax,4), %r10                               #47.31 c5
 ..LN542:
-        cmpq      %r10, %rdx                                    #46.31 c7
+        cmpq      %r10, %rdx                                    #47.31 c7
 ..LN543:
-        jge       ..B1.68       # Prob 50%                      #46.31 c9
+        jge       ..B1.68       # Prob 50%                      #47.31 c9
 ..LN544:
-        jmp       ..B1.88       # Prob 100%                     #46.31 c9
+        jmp       ..B1.88       # Prob 100%                     #47.31 c9
 ..LN545:
                                 # LOE rsi rdi r9 r10 ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.66:                        # Preds ..B1.64
                                 # Execution count [0.00e+00]
 ..LN546:
-        cmpq      %r9, %rdi                                     #46.31 c1
+        cmpq      %r9, %rdi                                     #47.31 c1
 ..LN547:
-        jbe       ..B1.88       # Prob 50%                      #46.31 c3
+        jbe       ..B1.88       # Prob 50%                      #47.31 c3
 ..LN548:
                                 # LOE rsi rdi r9 ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.67:                        # Preds ..B1.66
                                 # Execution count [0.00e+00]
 ..LN549:
-        movq      112(%rsp), %rax                               #46.31[spill] c1
+        movq      112(%rsp), %rax                               #47.31[spill] c1
 ..LN550:
-        movq      %rdi, %rdx                                    #46.31 c1
+        movq      %rdi, %rdx                                    #47.31 c1
 ..LN551:
-        subq      %r9, %rdx                                     #46.31 c3
+        subq      %r9, %rdx                                     #47.31 c3
 ..LN552:
-        lea       (,%rax,4), %r10                               #46.31 c5
+        lea       (,%rax,4), %r10                               #47.31 c5
 ..LN553:
-        cmpq      %r10, %rdx                                    #46.31 c7
+        cmpq      %r10, %rdx                                    #47.31 c7
 ..LN554:
-        jl        ..B1.88       # Prob 50%                      #46.31 c9
+        jl        ..B1.88       # Prob 50%                      #47.31 c9
 ..LN555:
                                 # LOE rsi rdi r9 r10 ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.68:                        # Preds ..B1.67 ..B1.65
                                 # Execution count [0.00e+00]
 ..LN556:
-        cmpq      %rsi, %r9                                     #46.18 c1
+        cmpq      %rsi, %r9                                     #47.18 c1
 ..LN557:
-        jbe       ..B1.70       # Prob 50%                      #46.18 c3
+        jbe       ..B1.70       # Prob 50%                      #47.18 c3
 ..LN558:
                                 # LOE rsi rdi r9 r10 ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.69:                        # Preds ..B1.68
                                 # Execution count [0.00e+00]
 ..LN559:
-        movq      %r9, %rax                                     #46.18 c1
+        movq      %r9, %rax                                     #47.18 c1
 ..LN560:
-        subq      %rsi, %rax                                    #46.18 c3
+        subq      %rsi, %rax                                    #47.18 c3
 ..LN561:
-        cmpq      %r10, %rax                                    #46.18 c5
+        cmpq      %r10, %rax                                    #47.18 c5
 ..LN562:
-        jge       ..B1.72       # Prob 50%                      #46.18 c7
+        jge       ..B1.72       # Prob 50%                      #47.18 c7
 ..LN563:
-        jmp       ..B1.88       # Prob 100%                     #46.18 c7
+        jmp       ..B1.88       # Prob 100%                     #47.18 c7
 ..LN564:
                                 # LOE rsi rdi r9 ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.70:                        # Preds ..B1.68
                                 # Execution count [0.00e+00]
 ..LN565:
-        cmpq      %r9, %rsi                                     #46.18 c1
+        cmpq      %r9, %rsi                                     #47.18 c1
 ..LN566:
-        jbe       ..B1.88       # Prob 50%                      #46.18 c3
+        jbe       ..B1.88       # Prob 50%                      #47.18 c3
 ..LN567:
                                 # LOE rsi rdi r9 r10 ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.71:                        # Preds ..B1.70
                                 # Execution count [0.00e+00]
 ..LN568:
-        movq      %rsi, %rax                                    #46.18 c1
+        movq      %rsi, %rax                                    #47.18 c1
 ..LN569:
-        subq      %r9, %rax                                     #46.18 c3
+        subq      %r9, %rax                                     #47.18 c3
 ..LN570:
-        cmpq      %r10, %rax                                    #46.18 c5
+        cmpq      %r10, %rax                                    #47.18 c5
 ..LN571:
-        jl        ..B1.88       # Prob 50%                      #46.18 c7
+        jl        ..B1.88       # Prob 50%                      #47.18 c7
 ..LN572:
                                 # LOE rsi rdi r9 ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.72:                        # Preds ..B1.69 ..B1.71
                                 # Execution count [2.25e+00]
 ..LN573:
-	.loc    1  45  is_stmt 1
-        cmpl      $433, %r8d                                    #45.3 c1
+	.loc    1  46  is_stmt 1
+        cmpl      $433, %r8d                                    #46.3 c1
 ..LN574:
-        jl        ..B1.147      # Prob 10%                      #45.3 c3
+        jl        ..B1.147      # Prob 10%                      #46.3 c3
 ..LN575:
                                 # LOE rsi rdi r9 ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.73:                        # Preds ..B1.72
                                 # Execution count [2.25e+00]
 ..LN576:
-        movl      %r12d, %r14d                                  #45.3 c1
+        movl      %r12d, %r14d                                  #46.3 c1
 ..LN577:
-        testl     %r12d, %r12d                                  #45.3 c1
+        testl     %r12d, %r12d                                  #46.3 c1
 ..LN578:
-        je        ..B1.76       # Prob 50%                      #45.3 c3
+        je        ..B1.76       # Prob 50%                      #46.3 c3
 ..LN579:
                                 # LOE rsi rdi r9 ecx ebx r8d r11d r12d r14d zmm0 zmm1
 ..B1.74:                        # Preds ..B1.73
                                 # Execution count [2.25e+00]
 ..LN580:
-        cmpl      $0, 120(%rsp)                                 #45.3[spill] c1
+        cmpl      $0, 120(%rsp)                                 #46.3[spill] c1
 ..LN581:
-        jne       ..B1.146      # Prob 10%                      #45.3 c3
+        jne       ..B1.146      # Prob 10%                      #46.3 c3
 ..LN582:
                                 # LOE rsi rdi r9 ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.75:                        # Preds ..B1.74
                                 # Execution count [0.00e+00]
 ..LN583:
-        movl      %r12d, %r14d                                  #45.3 c1
+        movl      %r12d, %r14d                                  #46.3 c1
 ..LN584:
-        negl      %r14d                                         #45.3 c3
+        negl      %r14d                                         #46.3 c3
 ..LN585:
-        addl      $64, %r14d                                    #45.3 c5
+        addl      $64, %r14d                                    #46.3 c5
 ..LN586:
-        shrl      $2, %r14d                                     #45.3 c7
+        shrl      $2, %r14d                                     #46.3 c7
 ..LN587:
-        cmpl      %r14d, %r8d                                   #45.3 c9
+        cmpl      %r14d, %r8d                                   #46.3 c9
 ..LN588:
-        cmovl     %r8d, %r14d                                   #45.3 c11
+        cmovl     %r8d, %r14d                                   #46.3 c11
 ..LN589:
                                 # LOE rsi rdi r9 ecx ebx r8d r11d r12d r14d zmm0 zmm1
 ..B1.76:                        # Preds ..B1.75 ..B1.73
                                 # Execution count [2.50e+00]
 ..LN590:
-        movl      %r8d, %edx                                    #45.3 c1
+        movl      %r8d, %edx                                    #46.3 c1
 ..LN591:
-        subl      %r14d, %edx                                   #45.3 c3
+        subl      %r14d, %edx                                   #46.3 c3
 ..LN592:
-        andl      $31, %edx                                     #45.3 c5
+        andl      $31, %edx                                     #46.3 c5
 ..LN593:
-        negl      %edx                                          #45.3 c7
+        negl      %edx                                          #46.3 c7
 ..LN594:
-        addl      %r8d, %edx                                    #45.3 c9
+        addl      %r8d, %edx                                    #46.3 c9
 ..LN595:
-        cmpl      $1, %r14d                                     #45.3 c9
+        cmpl      $1, %r14d                                     #46.3 c9
 ..LN596:
-        jb        ..B1.80       # Prob 50%                      #45.3 c11
+        jb        ..B1.80       # Prob 50%                      #46.3 c11
 ..LN597:
                                 # LOE rsi rdi r9 edx ecx ebx r8d r11d r12d r14d zmm0 zmm1
 ..B1.77:                        # Preds ..B1.76
                                 # Execution count [2.25e+00]
 ..LN598:
-        vmovaps   %zmm0, %zmm3                                  #45.3 c1
+        vmovaps   %zmm0, %zmm3                                  #46.3 c1
 ..LN599:
-        xorl      %r13d, %r13d                                  #45.3 c1
+        xorl      %r13d, %r13d                                  #46.3 c1
 ..LN600:
-        vpbroadcastd %r14d, %zmm2                               #45.3 c1
+        vpbroadcastd %r14d, %zmm2                               #46.3 c1
 ..LN601:
-        movslq    %r14d, %r10                                   #45.3 c1
+        movslq    %r14d, %r10                                   #46.3 c1
 ..LN602:
-        xorl      %eax, %eax                                    #45.3 c3
+        xorl      %eax, %eax                                    #46.3 c3
 ..LN603:
                                 # LOE rax rsi rdi r9 r10 r13 edx ecx ebx r8d r11d r12d r14d zmm0 zmm1 zmm2 zmm3
 ..B1.78:                        # Preds ..B1.78 ..B1.77
@@ -1712,53 +1712,53 @@ main:
                 # MAIN VECTOR TYPE: 32-bits floating point
                 # DEPENDENCY ANALYSIS WAS IGNORED
 ..LN604:
-        vpcmpgtd  %zmm3, %zmm2, %k1                             #45.3 c1
+        vpcmpgtd  %zmm3, %zmm2, %k1                             #46.3 c1
 ..LN605:
-        addq      $16, %r13                                     #45.3 c1
+        addq      $16, %r13                                     #46.3 c1
 ..LN606:
-        vpaddd    %zmm1, %zmm3, %zmm3                           #45.3 c1
+        vpaddd    %zmm1, %zmm3, %zmm3                           #46.3 c1
 ..LN607:
-	.loc    1  46  is_stmt 1
-        vmovups   (%rax,%rsi), %zmm4{%k1}{z}                    #46.18 c3
+	.loc    1  47  is_stmt 1
+        vmovups   (%rax,%rsi), %zmm4{%k1}{z}                    #47.18 c3
 ..LN608:
-        vmovups   (%rax,%rdi), %zmm5{%k1}{z}                    #46.31 c3
+        vmovups   (%rax,%rdi), %zmm5{%k1}{z}                    #47.31 c3
 ..LN609:
-        vaddps    %zmm5, %zmm4, %zmm6                           #46.31 c9 stall 2
+        vaddps    %zmm5, %zmm4, %zmm6                           #47.31 c9 stall 2
 ..LN610:
-        vmovups   %zmm6, (%rax,%r9){%k1}                        #46.7 c15 stall 2
+        vmovups   %zmm6, (%rax,%r9){%k1}                        #47.7 c15 stall 2
 ..LN611:
-	.loc    1  45  is_stmt 1
-        addq      $64, %rax                                     #45.3 c15
+	.loc    1  46  is_stmt 1
+        addq      $64, %rax                                     #46.3 c15
 ..LN612:
-        cmpq      %r10, %r13                                    #45.3 c15
+        cmpq      %r10, %r13                                    #46.3 c15
 ..LN613:
-        jb        ..B1.78       # Prob 82%                      #45.3 c17
+        jb        ..B1.78       # Prob 82%                      #46.3 c17
 ..LN614:
                                 # LOE rax rsi rdi r9 r10 r13 edx ecx ebx r8d r11d r12d r14d zmm0 zmm1 zmm2 zmm3
 ..B1.79:                        # Preds ..B1.78
                                 # Execution count [2.25e+00]
 ..LN615:
-        cmpl      %r14d, %r8d                                   #45.3 c1
+        cmpl      %r14d, %r8d                                   #46.3 c1
 ..LN616:
-        je        ..B1.98       # Prob 10%                      #45.3 c3
+        je        ..B1.98       # Prob 10%                      #46.3 c3
 ..LN617:
                                 # LOE rsi rdi r9 edx ecx ebx r8d r11d r12d r14d zmm0 zmm1
 ..B1.80:                        # Preds ..B1.79 ..B1.76 ..B1.147
                                 # Execution count [0.00e+00]
 ..LN618:
-        lea       32(%r14), %eax                                #45.3 c1
+        lea       32(%r14), %eax                                #46.3 c1
 ..LN619:
-        cmpl      %eax, %edx                                    #45.3 c3
+        cmpl      %eax, %edx                                    #46.3 c3
 ..LN620:
-        jl        ..B1.84       # Prob 50%                      #45.3 c5
+        jl        ..B1.84       # Prob 50%                      #46.3 c5
 ..LN621:
                                 # LOE rsi rdi r9 edx ecx ebx r8d r11d r12d r14d zmm0 zmm1
 ..B1.81:                        # Preds ..B1.80
                                 # Execution count [2.25e+00]
 ..LN622:
-        movslq    %r14d, %r14                                   #45.3 c1
+        movslq    %r14d, %r14                                   #46.3 c1
 ..LN623:
-        movslq    %edx, %rax                                    #45.3 c1
+        movslq    %edx, %rax                                    #46.3 c1
 ..LN624:
                                 # LOE rax rsi rdi r9 r14 edx ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.82:                        # Preds ..B1.82 ..B1.81
@@ -1775,65 +1775,65 @@ main:
                 # MAIN VECTOR TYPE: 32-bits floating point
                 # DEPENDENCY ANALYSIS WAS IGNORED
 ..LN625:
-	.loc    1  46  is_stmt 1
-        vmovups   (%rsi,%r14,4), %zmm2                          #46.18 c1
+	.loc    1  47  is_stmt 1
+        vmovups   (%rsi,%r14,4), %zmm2                          #47.18 c1
 ..LN626:
-        vmovups   64(%rsi,%r14,4), %zmm3                        #46.18 c1
+        vmovups   64(%rsi,%r14,4), %zmm3                        #47.18 c1
 ..LN627:
-        vaddps    (%rdi,%r14,4), %zmm2, %zmm4                   #46.31 c7 stall 2
+        vaddps    (%rdi,%r14,4), %zmm2, %zmm4                   #47.31 c7 stall 2
 ..LN628:
-        vaddps    64(%rdi,%r14,4), %zmm3, %zmm5                 #46.31 c7
+        vaddps    64(%rdi,%r14,4), %zmm3, %zmm5                 #47.31 c7
 ..LN629:
-        vmovups   %zmm4, (%r9,%r14,4)                           #46.7 c13 stall 2
+        vmovups   %zmm4, (%r9,%r14,4)                           #47.7 c13 stall 2
 ..LN630:
-        vmovups   %zmm5, 64(%r9,%r14,4)                         #46.7 c13
+        vmovups   %zmm5, 64(%r9,%r14,4)                         #47.7 c13
 ..LN631:
-	.loc    1  45  is_stmt 1
-        addq      $32, %r14                                     #45.3 c13
+	.loc    1  46  is_stmt 1
+        addq      $32, %r14                                     #46.3 c13
 ..LN632:
-        cmpq      %rax, %r14                                    #45.3 c15
+        cmpq      %rax, %r14                                    #46.3 c15
 ..LN633:
-        jb        ..B1.82       # Prob 82%                      #45.3 c17
+        jb        ..B1.82       # Prob 82%                      #46.3 c17
 ..LN634:
                                 # LOE rax rsi rdi r9 r14 edx ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.84:                        # Preds ..B1.82 ..B1.80 ..B1.146
                                 # Execution count [2.50e+00]
 ..LN635:
-        lea       1(%rdx), %eax                                 #45.3 c1
+        lea       1(%rdx), %eax                                 #46.3 c1
 ..LN636:
-        cmpl      %r8d, %eax                                    #45.3 c3
+        cmpl      %r8d, %eax                                    #46.3 c3
 ..LN637:
-        ja        ..B1.98       # Prob 50%                      #45.3 c5
+        ja        ..B1.98       # Prob 50%                      #46.3 c5
 ..LN638:
                                 # LOE rsi rdi r9 edx ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.85:                        # Preds ..B1.84
                                 # Execution count [2.25e+00]
 ..LN639:
-        movl      %r8d, %r10d                                   #45.3 c1
+        movl      %r8d, %r10d                                   #46.3 c1
 ..LN640:
-        vmovaps   %zmm0, %zmm3                                  #45.3 c1
+        vmovaps   %zmm0, %zmm3                                  #46.3 c1
 ..LN641:
-        xorl      %eax, %eax                                    #45.3 c1
+        xorl      %eax, %eax                                    #46.3 c1
 ..LN642:
-        subl      %edx, %r10d                                   #45.3 c3
+        subl      %edx, %r10d                                   #46.3 c3
 ..LN643:
-	.loc    1  46  is_stmt 1
-        movslq    %edx, %rdx                                    #46.18 c3
+	.loc    1  47  is_stmt 1
+        movslq    %edx, %rdx                                    #47.18 c3
 ..LN644:
-        lea       (%r9,%rdx,4), %r15                            #46.7 c5
+        lea       (%r9,%rdx,4), %r15                            #47.7 c5
 ..LN645:
-        lea       (%rdi,%rdx,4), %r14                           #46.31 c5
+        lea       (%rdi,%rdx,4), %r14                           #47.31 c5
 ..LN646:
-        lea       (%rsi,%rdx,4), %r13                           #46.18 c7
+        lea       (%rsi,%rdx,4), %r13                           #47.18 c7
 ..LN647:
-	.loc    1  45  is_stmt 1
-        negq      %rdx                                          #45.3 c7
+	.loc    1  46  is_stmt 1
+        negq      %rdx                                          #46.3 c7
 ..LN648:
-        vpbroadcastd %r10d, %zmm2                               #45.3 c7
+        vpbroadcastd %r10d, %zmm2                               #46.3 c7
 ..LN649:
-        xorl      %r10d, %r10d                                  #45.3 c7
+        xorl      %r10d, %r10d                                  #46.3 c7
 ..LN650:
-        addq      112(%rsp), %rdx                               #45.3[spill] c9
+        addq      112(%rsp), %rdx                               #46.3[spill] c9
 ..LN651:
                                 # LOE rax rdx rsi rdi r9 r10 r13 r14 r15 ecx ebx r8d r11d r12d zmm0 zmm1 zmm2 zmm3
 ..B1.86:                        # Preds ..B1.86 ..B1.85
@@ -1852,38 +1852,38 @@ main:
                 # MAIN VECTOR TYPE: 32-bits floating point
                 # DEPENDENCY ANALYSIS WAS IGNORED
 ..LN652:
-        vpcmpgtd  %zmm3, %zmm2, %k1                             #45.3 c1
+        vpcmpgtd  %zmm3, %zmm2, %k1                             #46.3 c1
 ..LN653:
-        addq      $16, %rax                                     #45.3 c1
+        addq      $16, %rax                                     #46.3 c1
 ..LN654:
-        vpaddd    %zmm1, %zmm3, %zmm3                           #45.3 c1
+        vpaddd    %zmm1, %zmm3, %zmm3                           #46.3 c1
 ..LN655:
-	.loc    1  46  is_stmt 1
-        vmovups   (%r10,%r13), %zmm4{%k1}{z}                    #46.18 c3
+	.loc    1  47  is_stmt 1
+        vmovups   (%r10,%r13), %zmm4{%k1}{z}                    #47.18 c3
 ..LN656:
-        vmovups   (%r10,%r14), %zmm5{%k1}{z}                    #46.31 c3
+        vmovups   (%r10,%r14), %zmm5{%k1}{z}                    #47.31 c3
 ..LN657:
-        vaddps    %zmm5, %zmm4, %zmm6                           #46.31 c9 stall 2
+        vaddps    %zmm5, %zmm4, %zmm6                           #47.31 c9 stall 2
 ..LN658:
-        vmovups   %zmm6, (%r10,%r15){%k1}                       #46.7 c15 stall 2
+        vmovups   %zmm6, (%r10,%r15){%k1}                       #47.7 c15 stall 2
 ..LN659:
-	.loc    1  45  is_stmt 1
-        addq      $64, %r10                                     #45.3 c15
+	.loc    1  46  is_stmt 1
+        addq      $64, %r10                                     #46.3 c15
 ..LN660:
-        cmpq      %rdx, %rax                                    #45.3 c15
+        cmpq      %rdx, %rax                                    #46.3 c15
 ..LN661:
-        jb        ..B1.86       # Prob 82%                      #45.3 c17
+        jb        ..B1.86       # Prob 82%                      #46.3 c17
 ..LN662:
-        jmp       ..B1.98       # Prob 100%                     #45.3 c17
+        jmp       ..B1.98       # Prob 100%                     #46.3 c17
 ..LN663:
                                 # LOE rax rdx rsi rdi r9 r10 r13 r14 r15 ecx ebx r8d r11d r12d zmm0 zmm1 zmm2 zmm3
 ..B1.88:                        # Preds ..B1.65 ..B1.66 ..B1.67 ..B1.69 ..B1.70
                                 #       ..B1.71
                                 # Execution count [2.50e+00]
 ..LN664:
-        testl     %ebx, %ebx                                    #45.3 c1
+        testl     %ebx, %ebx                                    #46.3 c1
 ..LN665:
-        jbe       ..B1.152      # Prob 10%                      #45.3 c3
+        jbe       ..B1.152      # Prob 10%                      #46.3 c3
 ..LN666:
                                 # LOE rsi rdi r9 ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.89:                        # Preds ..B1.88
@@ -1895,7 +1895,7 @@ main:
 ..B1.90:                        # Preds ..B1.89 ..B1.62
                                 # Execution count [2.25e+00]
 ..LN669:
-        xorl      %edx, %edx                                    #45.3 c1
+        xorl      %edx, %edx                                    #46.3 c1
 ..LN670:
                                 # LOE rax rsi rdi r9 edx ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.91:                        # Preds ..B1.91 ..B1.90
@@ -1907,49 +1907,49 @@ main:
                 # %s was not vectorized: non-vectorizable loop instance from multiversioning
                 # VECTOR TRIP COUNT IS ESTIMATED CONSTANT
 ..LN671:
-	.loc    1  46  is_stmt 1
-        lea       (%rdx,%rdx), %r10d                            #46.18 c1
+	.loc    1  47  is_stmt 1
+        lea       (%rdx,%rdx), %r10d                            #47.18 c1
 ..LN672:
-	.loc    1  45  is_stmt 1
-        addl      $1, %edx                                      #45.3 c1
-..LN673:
 	.loc    1  46  is_stmt 1
-        movslq    %r10d, %r10                                   #46.31 c3
+        addl      $1, %edx                                      #46.3 c1
+..LN673:
+	.loc    1  47  is_stmt 1
+        movslq    %r10d, %r10                                   #47.31 c3
 ..LN674:
-        vmovss    (%rsi,%r10,4), %xmm2                          #46.18 c5
+        vmovss    (%rsi,%r10,4), %xmm2                          #47.18 c5
 ..LN675:
-        vaddss    (%rdi,%r10,4), %xmm2, %xmm3                   #46.31 c11 stall 2
+        vaddss    (%rdi,%r10,4), %xmm2, %xmm3                   #47.31 c11 stall 2
 ..LN676:
-        vmovss    %xmm3, (%r9,%r10,4)                           #46.7 c17 stall 2
+        vmovss    %xmm3, (%r9,%r10,4)                           #47.7 c17 stall 2
 ..LN677:
-        vmovss    4(%rsi,%r10,4), %xmm4                         #46.18 c17
+        vmovss    4(%rsi,%r10,4), %xmm4                         #47.18 c17
 ..LN678:
-        vaddss    4(%rdi,%r10,4), %xmm4, %xmm5                  #46.31 c23 stall 2
+        vaddss    4(%rdi,%r10,4), %xmm4, %xmm5                  #47.31 c23 stall 2
 ..LN679:
-        vmovss    %xmm5, 4(%r9,%r10,4)                          #46.7 c29 stall 2
+        vmovss    %xmm5, 4(%r9,%r10,4)                          #47.7 c29 stall 2
 ..LN680:
-	.loc    1  45  is_stmt 1
-        cmpl      %ebx, %edx                                    #45.3 c29
+	.loc    1  46  is_stmt 1
+        cmpl      %ebx, %edx                                    #46.3 c29
 ..LN681:
-        jb        ..B1.91       # Prob 64%                      #45.3 c31
+        jb        ..B1.91       # Prob 64%                      #46.3 c31
 ..LN682:
                                 # LOE rax rsi rdi r9 edx ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.92:                        # Preds ..B1.91
                                 # Execution count [2.25e+00]
 ..LN683:
-	.loc    1  46  is_stmt 1
-        lea       1(%rdx,%rdx), %r10d                           #46.7 c1
+	.loc    1  47  is_stmt 1
+        lea       1(%rdx,%rdx), %r10d                           #47.7 c1
 ..LN684:
-	.loc    1  45  is_stmt 1
-        movslq    %r10d, %r10                                   #45.3 c3
-..LN685:
 	.loc    1  46  is_stmt 1
-        addq      $-1, %r10                                     #46.7 c5
+        movslq    %r10d, %r10                                   #46.3 c3
+..LN685:
+	.loc    1  47  is_stmt 1
+        addq      $-1, %r10                                     #47.7 c5
 ..LN686:
-	.loc    1  45  is_stmt 1
-        cmpq      %rax, %r10                                    #45.3 c7
+	.loc    1  46  is_stmt 1
+        cmpq      %rax, %r10                                    #46.3 c7
 ..LN687:
-        jae       ..B1.95       # Prob 10%                      #45.3 c9
+        jae       ..B1.95       # Prob 10%                      #46.3 c9
 ..LN688:
                                 # LOE rax rsi rdi r9 r10 ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.94:                        # Preds ..B1.145 ..B1.92 ..B1.153
@@ -1961,190 +1961,190 @@ main:
                 # %s was not vectorized: non-vectorizable loop instance from multiversioning
                 # VECTOR TRIP COUNT IS ESTIMATED CONSTANT
 ..LN689:
-	.loc    1  46  is_stmt 1
-        vmovss    (%rsi,%r10,4), %xmm2                          #46.18 c1
+	.loc    1  47  is_stmt 1
+        vmovss    (%rsi,%r10,4), %xmm2                          #47.18 c1
 ..LN690:
-        vaddss    (%rdi,%r10,4), %xmm2, %xmm3                   #46.31 c7 stall 2
+        vaddss    (%rdi,%r10,4), %xmm2, %xmm3                   #47.31 c7 stall 2
 ..LN691:
-        vmovss    %xmm3, (%r9,%r10,4)                           #46.7 c13 stall 2
+        vmovss    %xmm3, (%r9,%r10,4)                           #47.7 c13 stall 2
 ..LN692:
                                 # LOE rax rsi rdi r9 ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.95:                        # Preds ..B1.92 ..B1.94
                                 # Execution count [0.00e+00]
 ..LN693:
-	.loc    1  55  is_stmt 1
-        cmpl      $6, %r8d                                      #55.3 c1
+	.loc    1  57  is_stmt 1
+        cmpl      $6, %r8d                                      #57.3 c1
 ..LN694:
-        jle       ..B1.175      # Prob 50%                      #55.3 c3
+        jle       ..B1.175      # Prob 50%                      #57.3 c3
 ..LN695:
                                 # LOE rax rsi rdi r9 ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.98:                        # Preds ..B1.95 ..B1.86 ..B1.152 ..B1.84 ..B1.79
                                 #      
                                 # Execution count [0.00e+00]
 ..LN696:
-	.loc    1  56  is_stmt 1
-        cmpq      %rdi, %rsi                                    #56.31 c1
+	.loc    1  58  is_stmt 1
+        cmpq      %rdi, %rsi                                    #58.31 c1
 ..LN697:
-        jbe       ..B1.101      # Prob 50%                      #56.31 c3
+        jbe       ..B1.101      # Prob 50%                      #58.31 c3
 ..LN698:
                                 # LOE rsi rdi r9 ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.99:                        # Preds ..B1.98
                                 # Execution count [0.00e+00]
 ..LN699:
-        movq      112(%rsp), %rax                               #56.31[spill] c1
+        movq      112(%rsp), %rax                               #58.31[spill] c1
 ..LN700:
-        movq      %rsi, %rdx                                    #56.31 c1
+        movq      %rsi, %rdx                                    #58.31 c1
 ..LN701:
-        subq      %rdi, %rdx                                    #56.31 c3
+        subq      %rdi, %rdx                                    #58.31 c3
 ..LN702:
-        lea       (,%rax,4), %r10                               #56.31 c5
+        lea       (,%rax,4), %r10                               #58.31 c5
 ..LN703:
-        cmpq      %r10, %rdx                                    #56.31 c7
+        cmpq      %r10, %rdx                                    #58.31 c7
 ..LN704:
-        jge       ..B1.103      # Prob 50%                      #56.31 c9
+        jge       ..B1.103      # Prob 50%                      #58.31 c9
 ..LN705:
-        jmp       ..B1.175      # Prob 100%                     #56.31 c9
+        jmp       ..B1.175      # Prob 100%                     #58.31 c9
 ..LN706:
                                 # LOE rsi rdi r9 r10 ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.101:                       # Preds ..B1.98
                                 # Execution count [0.00e+00]
 ..LN707:
-        cmpq      %rsi, %rdi                                    #56.31 c1
+        cmpq      %rsi, %rdi                                    #58.31 c1
 ..LN708:
-        jbe       ..B1.175      # Prob 50%                      #56.31 c3
+        jbe       ..B1.175      # Prob 50%                      #58.31 c3
 ..LN709:
                                 # LOE rsi rdi r9 ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.102:                       # Preds ..B1.101
                                 # Execution count [0.00e+00]
 ..LN710:
-        movq      112(%rsp), %rax                               #56.31[spill] c1
+        movq      112(%rsp), %rax                               #58.31[spill] c1
 ..LN711:
-        movq      %rdi, %rdx                                    #56.31 c1
+        movq      %rdi, %rdx                                    #58.31 c1
 ..LN712:
-        subq      %rsi, %rdx                                    #56.31 c3
+        subq      %rsi, %rdx                                    #58.31 c3
 ..LN713:
-        lea       (,%rax,4), %r10                               #56.31 c5
+        lea       (,%rax,4), %r10                               #58.31 c5
 ..LN714:
-        cmpq      %r10, %rdx                                    #56.31 c7
+        cmpq      %r10, %rdx                                    #58.31 c7
 ..LN715:
-        jl        ..B1.175      # Prob 50%                      #56.31 c9
+        jl        ..B1.175      # Prob 50%                      #58.31 c9
 ..LN716:
                                 # LOE rsi rdi r9 r10 ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.103:                       # Preds ..B1.102 ..B1.99
                                 # Execution count [0.00e+00]
 ..LN717:
-        cmpq      %r9, %rsi                                     #56.18 c1
+        cmpq      %r9, %rsi                                     #58.18 c1
 ..LN718:
-        jbe       ..B1.106      # Prob 50%                      #56.18 c3
+        jbe       ..B1.106      # Prob 50%                      #58.18 c3
 ..LN719:
                                 # LOE rsi rdi r9 r10 ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.104:                       # Preds ..B1.103
                                 # Execution count [0.00e+00]
 ..LN720:
-        movq      %rsi, %rax                                    #56.18 c1
+        movq      %rsi, %rax                                    #58.18 c1
 ..LN721:
-        subq      %r9, %rax                                     #56.18 c3
+        subq      %r9, %rax                                     #58.18 c3
 ..LN722:
-        cmpq      %r10, %rax                                    #56.18 c5
+        cmpq      %r10, %rax                                    #58.18 c5
 ..LN723:
-        jge       ..B1.108      # Prob 50%                      #56.18 c7
+        jge       ..B1.108      # Prob 50%                      #58.18 c7
 ..LN724:
-        jmp       ..B1.175      # Prob 100%                     #56.18 c7
+        jmp       ..B1.175      # Prob 100%                     #58.18 c7
 ..LN725:
                                 # LOE rsi rdi r9 ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.106:                       # Preds ..B1.103
                                 # Execution count [0.00e+00]
 ..LN726:
-        cmpq      %rsi, %r9                                     #56.18 c1
+        cmpq      %rsi, %r9                                     #58.18 c1
 ..LN727:
-        jbe       ..B1.175      # Prob 50%                      #56.18 c3
+        jbe       ..B1.175      # Prob 50%                      #58.18 c3
 ..LN728:
                                 # LOE rsi rdi r9 r10 ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.107:                       # Preds ..B1.106
                                 # Execution count [0.00e+00]
 ..LN729:
-        movq      %r9, %rax                                     #56.18 c1
+        movq      %r9, %rax                                     #58.18 c1
 ..LN730:
-        subq      %rsi, %rax                                    #56.18 c3
+        subq      %rsi, %rax                                    #58.18 c3
 ..LN731:
-        cmpq      %r10, %rax                                    #56.18 c5
+        cmpq      %r10, %rax                                    #58.18 c5
 ..LN732:
-        jl        ..B1.175      # Prob 50%                      #56.18 c7
+        jl        ..B1.175      # Prob 50%                      #58.18 c7
 ..LN733:
                                 # LOE rsi rdi r9 ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.108:                       # Preds ..B1.104 ..B1.107
                                 # Execution count [2.25e+00]
 ..LN734:
-	.loc    1  55  is_stmt 1
-        cmpl      $433, %r8d                                    #55.3 c1
+	.loc    1  57  is_stmt 1
+        cmpl      $433, %r8d                                    #57.3 c1
 ..LN735:
-        jl        ..B1.150      # Prob 10%                      #55.3 c3
+        jl        ..B1.150      # Prob 10%                      #57.3 c3
 ..LN736:
                                 # LOE rsi rdi r9 ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.109:                       # Preds ..B1.108
                                 # Execution count [2.25e+00]
 ..LN737:
-        movl      %r11d, %r10d                                  #55.3 c1
+        movl      %r11d, %r10d                                  #57.3 c1
 ..LN738:
-        testl     %r11d, %r11d                                  #55.3 c1
+        testl     %r11d, %r11d                                  #57.3 c1
 ..LN739:
-        je        ..B1.112      # Prob 50%                      #55.3 c3
+        je        ..B1.112      # Prob 50%                      #57.3 c3
 ..LN740:
                                 # LOE rsi rdi r9 ecx ebx r8d r10d r11d r12d zmm0 zmm1
 ..B1.110:                       # Preds ..B1.109
                                 # Execution count [2.25e+00]
 ..LN741:
-        testl     %ecx, %ecx                                    #55.3 c1
+        testl     %ecx, %ecx                                    #57.3 c1
 ..LN742:
-        jne       ..B1.154      # Prob 10%                      #55.3 c3
+        jne       ..B1.154      # Prob 10%                      #57.3 c3
 ..LN743:
                                 # LOE rsi rdi r9 ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.111:                       # Preds ..B1.110
                                 # Execution count [0.00e+00]
 ..LN744:
-        movl      %r11d, %r10d                                  #55.3 c1
+        movl      %r11d, %r10d                                  #57.3 c1
 ..LN745:
-        negl      %r10d                                         #55.3 c3
+        negl      %r10d                                         #57.3 c3
 ..LN746:
-        addl      $64, %r10d                                    #55.3 c5
+        addl      $64, %r10d                                    #57.3 c5
 ..LN747:
-        shrl      $2, %r10d                                     #55.3 c7
+        shrl      $2, %r10d                                     #57.3 c7
 ..LN748:
-        cmpl      %r10d, %r8d                                   #55.3 c9
+        cmpl      %r10d, %r8d                                   #57.3 c9
 ..LN749:
-        cmovl     %r8d, %r10d                                   #55.3 c11
+        cmovl     %r8d, %r10d                                   #57.3 c11
 ..LN750:
                                 # LOE rsi rdi r9 ecx ebx r8d r10d r11d r12d zmm0 zmm1
 ..B1.112:                       # Preds ..B1.111 ..B1.109
                                 # Execution count [2.50e+00]
 ..LN751:
-        movl      %r8d, %r13d                                   #55.3 c1
+        movl      %r8d, %r13d                                   #57.3 c1
 ..LN752:
-        subl      %r10d, %r13d                                  #55.3 c3
+        subl      %r10d, %r13d                                  #57.3 c3
 ..LN753:
-        andl      $31, %r13d                                    #55.3 c5
+        andl      $31, %r13d                                    #57.3 c5
 ..LN754:
-        negl      %r13d                                         #55.3 c7
+        negl      %r13d                                         #57.3 c7
 ..LN755:
-        addl      %r8d, %r13d                                   #55.3 c9
+        addl      %r8d, %r13d                                   #57.3 c9
 ..LN756:
-        cmpl      $1, %r10d                                     #55.3 c9
+        cmpl      $1, %r10d                                     #57.3 c9
 ..LN757:
-        jb        ..B1.117      # Prob 50%                      #55.3 c11
+        jb        ..B1.117      # Prob 50%                      #57.3 c11
 ..LN758:
                                 # LOE rsi rdi r9 ecx ebx r8d r10d r11d r12d r13d zmm0 zmm1
 ..B1.114:                       # Preds ..B1.112
                                 # Execution count [2.25e+00]
 ..LN759:
-        vmovaps   %zmm0, %zmm3                                  #55.3 c1
+        vmovaps   %zmm0, %zmm3                                  #57.3 c1
 ..LN760:
-        xorl      %r14d, %r14d                                  #55.3 c1
+        xorl      %r14d, %r14d                                  #57.3 c1
 ..LN761:
-        vpbroadcastd %r10d, %zmm2                               #55.3 c1
+        vpbroadcastd %r10d, %zmm2                               #57.3 c1
 ..LN762:
-        movslq    %r10d, %rdx                                   #55.3 c1
+        movslq    %r10d, %rdx                                   #57.3 c1
 ..LN763:
-        xorl      %eax, %eax                                    #55.3 c3
+        xorl      %eax, %eax                                    #57.3 c3
 ..LN764:
                                 # LOE rax rdx rsi rdi r9 r14 ecx ebx r8d r10d r11d r12d r13d zmm0 zmm1 zmm2 zmm3
 ..B1.115:                       # Preds ..B1.115 ..B1.114
@@ -2163,35 +2163,35 @@ main:
                 # MAIN VECTOR TYPE: 32-bits floating point
                 # DEPENDENCY ANALYSIS WAS IGNORED
 ..LN765:
-        vpcmpgtd  %zmm3, %zmm2, %k1                             #55.3 c1
+        vpcmpgtd  %zmm3, %zmm2, %k1                             #57.3 c1
 ..LN766:
-        addq      $16, %r14                                     #55.3 c1
+        addq      $16, %r14                                     #57.3 c1
 ..LN767:
-        vpaddd    %zmm1, %zmm3, %zmm3                           #55.3 c1
+        vpaddd    %zmm1, %zmm3, %zmm3                           #57.3 c1
 ..LN768:
-	.loc    1  56  is_stmt 1
-        vmovups   (%rax,%r9), %zmm4{%k1}{z}                     #56.18 c3
+	.loc    1  58  is_stmt 1
+        vmovups   (%rax,%r9), %zmm4{%k1}{z}                     #58.18 c3
 ..LN769:
-        vmovups   (%rax,%rdi), %zmm5{%k1}{z}                    #56.31 c3
+        vmovups   (%rax,%rdi), %zmm5{%k1}{z}                    #58.31 c3
 ..LN770:
-        vaddps    %zmm5, %zmm4, %zmm6                           #56.31 c9 stall 2
+        vaddps    %zmm5, %zmm4, %zmm6                           #58.31 c9 stall 2
 ..LN771:
-        vmovups   %zmm6, (%rax,%rsi){%k1}                       #56.7 c15 stall 2
+        vmovups   %zmm6, (%rax,%rsi){%k1}                       #58.7 c15 stall 2
 ..LN772:
-	.loc    1  55  is_stmt 1
-        addq      $64, %rax                                     #55.3 c15
+	.loc    1  57  is_stmt 1
+        addq      $64, %rax                                     #57.3 c15
 ..LN773:
-        cmpq      %rdx, %r14                                    #55.3 c15
+        cmpq      %rdx, %r14                                    #57.3 c15
 ..LN774:
-        jb        ..B1.115      # Prob 82%                      #55.3 c17
+        jb        ..B1.115      # Prob 82%                      #57.3 c17
 ..LN775:
                                 # LOE rax rdx rsi rdi r9 r14 ecx ebx r8d r10d r11d r12d r13d zmm0 zmm1 zmm2 zmm3
 ..B1.116:                       # Preds ..B1.115
                                 # Execution count [2.25e+00]
 ..LN776:
-        cmpl      %r10d, %r8d                                   #55.3 c1
+        cmpl      %r10d, %r8d                                   #57.3 c1
 ..LN777:
-        je        ..B1.148      # Prob 10%                      #55.3 c3
+        je        ..B1.148      # Prob 10%                      #57.3 c3
 ..LN778:
                                 # LOE rsi rdi r9 ecx ebx r8d r10d r11d r12d r13d zmm0 zmm1
 ..B1.117:                       # Preds ..B1.112 ..B1.116
@@ -2213,19 +2213,19 @@ main:
 ..B1.118:                       # Preds ..B1.117 ..B1.150
                                 # Execution count [0.00e+00]
 ..LN786:
-        lea       32(%r10), %r11d                               #55.3 c1
+        lea       32(%r10), %r11d                               #57.3 c1
 ..LN787:
-        cmpl      %r11d, %r13d                                  #55.3 c3
+        cmpl      %r11d, %r13d                                  #57.3 c3
 ..LN788:
-        jl        ..B1.122      # Prob 50%                      #55.3 c5
+        jl        ..B1.122      # Prob 50%                      #57.3 c5
 ..LN789:
                                 # LOE rsi rdi r9 eax edx ecx ebx r8d r10d r13d zmm0 zmm1
 ..B1.119:                       # Preds ..B1.118
                                 # Execution count [2.25e+00]
 ..LN790:
-        movslq    %r10d, %r10                                   #55.3 c1
+        movslq    %r10d, %r10                                   #57.3 c1
 ..LN791:
-        movslq    %r13d, %r11                                   #55.3 c1
+        movslq    %r13d, %r11                                   #57.3 c1
 ..LN792:
                                 # LOE rsi rdi r9 r10 r11 eax edx ecx ebx r8d r13d zmm0 zmm1
 ..B1.120:                       # Preds ..B1.120 ..B1.119
@@ -2242,65 +2242,65 @@ main:
                 # MAIN VECTOR TYPE: 32-bits floating point
                 # DEPENDENCY ANALYSIS WAS IGNORED
 ..LN793:
-	.loc    1  56  is_stmt 1
-        vmovups   (%r9,%r10,4), %zmm2                           #56.18 c1
+	.loc    1  58  is_stmt 1
+        vmovups   (%r9,%r10,4), %zmm2                           #58.18 c1
 ..LN794:
-        vmovups   64(%r9,%r10,4), %zmm3                         #56.18 c1
+        vmovups   64(%r9,%r10,4), %zmm3                         #58.18 c1
 ..LN795:
-        vaddps    (%rdi,%r10,4), %zmm2, %zmm4                   #56.31 c7 stall 2
+        vaddps    (%rdi,%r10,4), %zmm2, %zmm4                   #58.31 c7 stall 2
 ..LN796:
-        vaddps    64(%rdi,%r10,4), %zmm3, %zmm5                 #56.31 c7
+        vaddps    64(%rdi,%r10,4), %zmm3, %zmm5                 #58.31 c7
 ..LN797:
-        vmovups   %zmm4, (%rsi,%r10,4)                          #56.7 c13 stall 2
+        vmovups   %zmm4, (%rsi,%r10,4)                          #58.7 c13 stall 2
 ..LN798:
-        vmovups   %zmm5, 64(%rsi,%r10,4)                        #56.7 c13
+        vmovups   %zmm5, 64(%rsi,%r10,4)                        #58.7 c13
 ..LN799:
-	.loc    1  55  is_stmt 1
-        addq      $32, %r10                                     #55.3 c13
+	.loc    1  57  is_stmt 1
+        addq      $32, %r10                                     #57.3 c13
 ..LN800:
-        cmpq      %r11, %r10                                    #55.3 c15
+        cmpq      %r11, %r10                                    #57.3 c15
 ..LN801:
-        jb        ..B1.120      # Prob 82%                      #55.3 c17
+        jb        ..B1.120      # Prob 82%                      #57.3 c17
 ..LN802:
                                 # LOE rsi rdi r9 r10 r11 eax edx ecx ebx r8d r13d zmm0 zmm1
 ..B1.122:                       # Preds ..B1.120 ..B1.118 ..B1.154
                                 # Execution count [2.50e+00]
 ..LN803:
-        lea       1(%r13), %r10d                                #55.3 c1
+        lea       1(%r13), %r10d                                #57.3 c1
 ..LN804:
-        cmpl      %r8d, %r10d                                   #55.3 c3
+        cmpl      %r8d, %r10d                                   #57.3 c3
 ..LN805:
-        ja        ..B1.136      # Prob 50%                      #55.3 c5
+        ja        ..B1.136      # Prob 50%                      #57.3 c5
 ..LN806:
                                 # LOE rsi rdi r9 eax edx ecx ebx r8d r13d zmm0 zmm1
 ..B1.123:                       # Preds ..B1.122
                                 # Execution count [2.25e+00]
 ..LN807:
-        movl      %r8d, %r11d                                   #55.3 c1
+        movl      %r8d, %r11d                                   #57.3 c1
 ..LN808:
-        vmovaps   %zmm0, %zmm3                                  #55.3 c1
+        vmovaps   %zmm0, %zmm3                                  #57.3 c1
 ..LN809:
-        xorl      %r10d, %r10d                                  #55.3 c1
+        xorl      %r10d, %r10d                                  #57.3 c1
 ..LN810:
-        subl      %r13d, %r11d                                  #55.3 c3
+        subl      %r13d, %r11d                                  #57.3 c3
 ..LN811:
-	.loc    1  56  is_stmt 1
-        movslq    %r13d, %r13                                   #56.18 c3
+	.loc    1  58  is_stmt 1
+        movslq    %r13d, %r13                                   #58.18 c3
 ..LN812:
-        lea       (%rsi,%r13,4), %r15                           #56.7 c5
+        lea       (%rsi,%r13,4), %r15                           #58.7 c5
 ..LN813:
-        lea       (%rdi,%r13,4), %r14                           #56.31 c5
+        lea       (%rdi,%r13,4), %r14                           #58.31 c5
 ..LN814:
-        lea       (%r9,%r13,4), %r12                            #56.18 c7
+        lea       (%r9,%r13,4), %r12                            #58.18 c7
 ..LN815:
-	.loc    1  55  is_stmt 1
-        negq      %r13                                          #55.3 c7
+	.loc    1  57  is_stmt 1
+        negq      %r13                                          #57.3 c7
 ..LN816:
-        vpbroadcastd %r11d, %zmm2                               #55.3 c7
+        vpbroadcastd %r11d, %zmm2                               #57.3 c7
 ..LN817:
-        xorl      %r11d, %r11d                                  #55.3 c7
+        xorl      %r11d, %r11d                                  #57.3 c7
 ..LN818:
-        addq      112(%rsp), %r13                               #55.3[spill] c9
+        addq      112(%rsp), %r13                               #57.3[spill] c9
 ..LN819:
                                 # LOE rsi rdi r9 r10 r11 r12 r13 r14 r15 eax edx ecx ebx r8d zmm0 zmm1 zmm2 zmm3
 ..B1.124:                       # Preds ..B1.124 ..B1.123
@@ -2319,29 +2319,29 @@ main:
                 # MAIN VECTOR TYPE: 32-bits floating point
                 # DEPENDENCY ANALYSIS WAS IGNORED
 ..LN820:
-        vpcmpgtd  %zmm3, %zmm2, %k1                             #55.3 c1
+        vpcmpgtd  %zmm3, %zmm2, %k1                             #57.3 c1
 ..LN821:
-        addq      $16, %r10                                     #55.3 c1
+        addq      $16, %r10                                     #57.3 c1
 ..LN822:
-        vpaddd    %zmm1, %zmm3, %zmm3                           #55.3 c1
+        vpaddd    %zmm1, %zmm3, %zmm3                           #57.3 c1
 ..LN823:
-	.loc    1  56  is_stmt 1
-        vmovups   (%r11,%r12), %zmm4{%k1}{z}                    #56.18 c3
+	.loc    1  58  is_stmt 1
+        vmovups   (%r11,%r12), %zmm4{%k1}{z}                    #58.18 c3
 ..LN824:
-        vmovups   (%r11,%r14), %zmm5{%k1}{z}                    #56.31 c3
+        vmovups   (%r11,%r14), %zmm5{%k1}{z}                    #58.31 c3
 ..LN825:
-        vaddps    %zmm5, %zmm4, %zmm6                           #56.31 c9 stall 2
+        vaddps    %zmm5, %zmm4, %zmm6                           #58.31 c9 stall 2
 ..LN826:
-        vmovups   %zmm6, (%r11,%r15){%k1}                       #56.7 c15 stall 2
+        vmovups   %zmm6, (%r11,%r15){%k1}                       #58.7 c15 stall 2
 ..LN827:
-	.loc    1  55  is_stmt 1
-        addq      $64, %r11                                     #55.3 c15
+	.loc    1  57  is_stmt 1
+        addq      $64, %r11                                     #57.3 c15
 ..LN828:
-        cmpq      %r13, %r10                                    #55.3 c15
+        cmpq      %r13, %r10                                    #57.3 c15
 ..LN829:
-        jb        ..B1.124      # Prob 82%                      #55.3 c17
+        jb        ..B1.124      # Prob 82%                      #57.3 c17
 ..LN830:
-        jmp       ..B1.136      # Prob 100%                     #55.3 c17
+        jmp       ..B1.136      # Prob 100%                     #57.3 c17
 ..LN831:
                                 # LOE rsi rdi r9 r10 r11 r12 r13 r14 r15 eax edx ecx ebx r8d zmm0 zmm1 zmm2 zmm3
 ..B1.175:                       # Preds ..B1.102 ..B1.106 ..B1.107 ..B1.104 ..B1.99
@@ -2364,13 +2364,13 @@ main:
 ..B1.130:                       # Preds ..B1.175 ..B1.144
                                 # Execution count [2.50e+00]
 ..LN839:
-        movl      $1, %r11d                                     #55.3 c1
+        movl      $1, %r11d                                     #57.3 c1
 ..LN840:
-        xorl      %r10d, %r10d                                  #55.3 c1
+        xorl      %r10d, %r10d                                  #57.3 c1
 ..LN841:
-        testl     %ebx, %ebx                                    #55.3 c3
+        testl     %ebx, %ebx                                    #57.3 c3
 ..LN842:
-        jbe       ..B1.134      # Prob 10%                      #55.3 c5
+        jbe       ..B1.134      # Prob 10%                      #57.3 c5
 ..LN843:
                                 # LOE rsi rdi r9 eax edx ecx ebx r8d r10d r11d zmm0 zmm1
 ..B1.132:                       # Preds ..B1.130 ..B1.132
@@ -2382,49 +2382,49 @@ main:
                 # %s was not vectorized: non-vectorizable loop instance from multiversioning
                 # VECTOR TRIP COUNT IS ESTIMATED CONSTANT
 ..LN844:
-	.loc    1  56  is_stmt 1
-        lea       (%r10,%r10), %r11d                            #56.18 c1
+	.loc    1  58  is_stmt 1
+        lea       (%r10,%r10), %r11d                            #58.18 c1
 ..LN845:
-	.loc    1  55  is_stmt 1
-        addl      $1, %r10d                                     #55.3 c1
+	.loc    1  57  is_stmt 1
+        addl      $1, %r10d                                     #57.3 c1
 ..LN846:
-	.loc    1  56  is_stmt 1
-        movslq    %r11d, %r11                                   #56.31 c3
+	.loc    1  58  is_stmt 1
+        movslq    %r11d, %r11                                   #58.31 c3
 ..LN847:
-        vmovss    (%r9,%r11,4), %xmm2                           #56.18 c5
+        vmovss    (%r9,%r11,4), %xmm2                           #58.18 c5
 ..LN848:
-        vaddss    (%rdi,%r11,4), %xmm2, %xmm3                   #56.31 c11 stall 2
+        vaddss    (%rdi,%r11,4), %xmm2, %xmm3                   #58.31 c11 stall 2
 ..LN849:
-        vmovss    %xmm3, (%rsi,%r11,4)                          #56.7 c17 stall 2
+        vmovss    %xmm3, (%rsi,%r11,4)                          #58.7 c17 stall 2
 ..LN850:
-        vmovss    4(%r9,%r11,4), %xmm4                          #56.18 c17
+        vmovss    4(%r9,%r11,4), %xmm4                          #58.18 c17
 ..LN851:
-        vaddss    4(%rdi,%r11,4), %xmm4, %xmm5                  #56.31 c23 stall 2
+        vaddss    4(%rdi,%r11,4), %xmm4, %xmm5                  #58.31 c23 stall 2
 ..LN852:
-        vmovss    %xmm5, 4(%rsi,%r11,4)                         #56.7 c29 stall 2
+        vmovss    %xmm5, 4(%rsi,%r11,4)                         #58.7 c29 stall 2
 ..LN853:
-	.loc    1  55  is_stmt 1
-        cmpl      %ebx, %r10d                                   #55.3 c29
+	.loc    1  57  is_stmt 1
+        cmpl      %ebx, %r10d                                   #57.3 c29
 ..LN854:
-        jb        ..B1.132      # Prob 64%                      #55.3 c31
+        jb        ..B1.132      # Prob 64%                      #57.3 c31
 ..LN855:
                                 # LOE rsi rdi r9 eax edx ecx ebx r8d r10d zmm0 zmm1
 ..B1.133:                       # Preds ..B1.132
                                 # Execution count [2.25e+00]
 ..LN856:
-	.loc    1  56  is_stmt 1
-        lea       1(%r10,%r10), %r11d                           #56.7 c1
+	.loc    1  58  is_stmt 1
+        lea       1(%r10,%r10), %r11d                           #58.7 c1
 ..LN857:
                                 # LOE rsi rdi r9 eax edx ecx ebx r8d r11d zmm0 zmm1
 ..B1.134:                       # Preds ..B1.133 ..B1.130
                                 # Execution count [2.50e+00]
 ..LN858:
-	.loc    1  55  is_stmt 1
-        lea       -1(%r11), %r10d                               #55.3 c1
+	.loc    1  57  is_stmt 1
+        lea       -1(%r11), %r10d                               #57.3 c1
 ..LN859:
-        cmpl      %r8d, %r10d                                   #55.3 c3
+        cmpl      %r8d, %r10d                                   #57.3 c3
 ..LN860:
-        jae       ..B1.136      # Prob 10%                      #55.3 c5
+        jae       ..B1.136      # Prob 10%                      #57.3 c5
 ..LN861:
                                 # LOE rsi rdi r9 eax edx ecx ebx r8d r11d zmm0 zmm1
 ..B1.135:                       # Preds ..B1.134
@@ -2436,108 +2436,108 @@ main:
                 # %s was not vectorized: non-vectorizable loop instance from multiversioning
                 # VECTOR TRIP COUNT IS ESTIMATED CONSTANT
 ..LN862:
-	.loc    1  56  is_stmt 1
-        movslq    %r11d, %r11                                   #56.18 c1
+	.loc    1  58  is_stmt 1
+        movslq    %r11d, %r11                                   #58.18 c1
 ..LN863:
-        vmovss    -4(%r9,%r11,4), %xmm2                         #56.18 c3
+        vmovss    -4(%r9,%r11,4), %xmm2                         #58.18 c3
 ..LN864:
-        vaddss    -4(%rdi,%r11,4), %xmm2, %xmm3                 #56.31 c9 stall 2
+        vaddss    -4(%rdi,%r11,4), %xmm2, %xmm3                 #58.31 c9 stall 2
 ..LN865:
-        vmovss    %xmm3, -4(%rsi,%r11,4)                        #56.7 c15 stall 2
+        vmovss    %xmm3, -4(%rsi,%r11,4)                        #58.7 c15 stall 2
 ..LN866:
                                 # LOE rsi rdi r9 eax edx ecx ebx r8d zmm0 zmm1
 ..B1.136:                       # Preds ..B1.124 ..B1.122 ..B1.135 ..B1.134 ..B1.59
                                 #      
                                 # Execution count [4.78e+00]
 ..LN867:
-	.loc    1  92  is_stmt 1
-        addl      $1, %edx                                      #92.3 c1
+	.loc    1  94  is_stmt 1
+        addl      $1, %edx                                      #94.3 c1
 ..LN868:
-        movl      %eax, steps(%rip)                             #92.39 c1
+        movl      %eax, steps(%rip)                             #94.39 c1
 ..LN869:
-        addl      $1, %eax                                      #92.3 c1
+        addl      $1, %eax                                      #94.3 c1
 ..LN870:
-        cmpl      %ecx, %edx                                    #92.3 c3
+        cmpl      %ecx, %edx                                    #94.3 c3
 ..LN871:
-        jb        ..B1.59       # Prob 82%                      #92.3 c5
+        jb        ..B1.59       # Prob 82%                      #94.3 c5
 ..LN872:
                                 # LOE rsi rdi r9 eax edx ecx ebx r8d zmm0 zmm1
 ..B1.138:                       # Preds ..B1.148 ..B1.136 ..B1.57
                                 # Execution count [1.00e+00]
 ..LN873:
-	.loc    1  97  is_stmt 1
-        lea       16(%rsp), %rdi                                #97.3 c1
+	.loc    1  99  is_stmt 1
+        lea       16(%rsp), %rdi                                #99.3 c1
 ..LN874:
 #       time(time_t *)
-        call      time                                          #97.3 c3
+        call      time                                          #99.3 c3
 ..LN875:
                                 # LOE
 ..B1.139:                       # Preds ..B1.138
                                 # Execution count [1.00e+00]
 ..LN876:
-	.loc    1  98  is_stmt 1
-        lea       16(%rsp), %rdi                                #98.17 c1
+	.loc    1  100  is_stmt 1
+        lea       16(%rsp), %rdi                                #100.17 c1
 ..LN877:
 #       localtime(const time_t *)
-        call      localtime                                     #98.17 c3
+        call      localtime                                     #100.17 c3
 ..LN878:
                                 # LOE rax
 ..B1.170:                       # Preds ..B1.139
                                 # Execution count [1.00e+00]
 ..LN879:
-	.loc    1  100  is_stmt 1
-        movq      %rax, %rdi                                    #100.44 c1
+	.loc    1  102  is_stmt 1
+        movq      %rax, %rdi                                    #102.44 c1
 ..___tag_value_main.42:
 ..LN880:
 #       asctime(const struct tm *)
-        call      asctime                                       #100.44
+        call      asctime                                       #102.44
 ..___tag_value_main.43:
 ..LN881:
                                 # LOE rax
 ..B1.140:                       # Preds ..B1.170
                                 # Execution count [1.00e+00]
 ..LN882:
-        movl      $.L_2__STRING.3, %edi                         #100.3 c1
+        movl      $.L_2__STRING.3, %edi                         #102.3 c1
 ..LN883:
-        movq      %rax, %rsi                                    #100.3 c1
+        movq      %rax, %rsi                                    #102.3 c1
 ..LN884:
-        xorl      %eax, %eax                                    #100.3 c3
+        xorl      %eax, %eax                                    #102.3 c3
 ..___tag_value_main.44:
 ..LN885:
 #       printf(const char *__restrict__, ...)
-        call      printf                                        #100.3
+        call      printf                                        #102.3
 ..___tag_value_main.45:
 ..LN886:
                                 # LOE
 ..B1.141:                       # Preds ..B1.140
                                 # Execution count [1.00e+00]
 ..LN887:
-	.loc    1  116  is_stmt 1
-        movq      24(%rsp), %rbx                                #116.10[spill] c1
+	.loc    1  118  is_stmt 1
+        movq      24(%rsp), %rbx                                #118.10[spill] c1
 	.cfi_restore 3
 ..LN888:
-        movq      56(%rsp), %r12                                #116.10[spill] c1
+        movq      56(%rsp), %r12                                #118.10[spill] c1
 	.cfi_restore 12
 ..LN889:
-        xorl      %eax, %eax                                    #116.10 c1
+        xorl      %eax, %eax                                    #118.10 c1
 ..LN890:
-        movq      48(%rsp), %r13                                #116.10[spill] c5 stall 1
+        movq      48(%rsp), %r13                                #118.10[spill] c5 stall 1
 	.cfi_restore 13
 ..LN891:
-        movq      40(%rsp), %r14                                #116.10[spill] c5
+        movq      40(%rsp), %r14                                #118.10[spill] c5
 	.cfi_restore 14
 ..LN892:
-        movq      32(%rsp), %r15                                #116.10[spill] c9 stall 1
+        movq      32(%rsp), %r15                                #118.10[spill] c9 stall 1
 	.cfi_restore 15
 ..LN893:
-	.loc    1  116  epilogue_begin  is_stmt 1
-        movq      %rbp, %rsp                                    #116.10 c11
+	.loc    1  118  epilogue_begin  is_stmt 1
+        movq      %rbp, %rsp                                    #118.10 c11
 ..LN894:
-        popq      %rbp                                          #116.10
+        popq      %rbp                                          #118.10
 	.cfi_def_cfa 7, 8
 	.cfi_restore 6
 ..LN895:
-        ret                                                     #116.10
+        ret                                                     #118.10
 	.cfi_def_cfa 6, 16
 	.cfi_escape 0x10, 0x03, 0x0e, 0x38, 0x1c, 0x0d, 0x80, 0xff, 0xff, 0xff, 0x1a, 0x0d, 0x18, 0xff, 0xff, 0xff, 0x22
 	.cfi_offset 6, -16
@@ -2594,12 +2594,12 @@ main:
 ..B1.144:                       # Preds ..B1.61
                                 # Execution count [0.00e+00]: Infreq
 ..LN913:
-	.loc    1  45  is_stmt 1
-        xorl      %r10d, %r10d                                  #45.3 c1
+	.loc    1  46  is_stmt 1
+        xorl      %r10d, %r10d                                  #46.3 c1
 ..LN914:
-        cmpq      $0, 112(%rsp)                                 #45.3[spill] c1
+        cmpq      $0, 112(%rsp)                                 #46.3[spill] c1
 ..LN915:
-        jbe       ..B1.130      # Prob 10%                      #45.3 c3
+        jbe       ..B1.130      # Prob 10%                      #46.3 c3
 ..LN916:
                                 # LOE rsi rdi r9 r10 eax edx ecx ebx r8d zmm0 zmm1
 ..B1.145:                       # Preds ..B1.144
@@ -2625,47 +2625,47 @@ main:
 ..B1.146:                       # Preds ..B1.74
                                 # Execution count [2.25e-01]: Infreq
 ..LN926:
-        xorl      %edx, %edx                                    #45.3 c1
+        xorl      %edx, %edx                                    #46.3 c1
 ..LN927:
-        jmp       ..B1.84       # Prob 100%                     #45.3 c1
+        jmp       ..B1.84       # Prob 100%                     #46.3 c1
 ..LN928:
                                 # LOE rsi rdi r9 edx ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.147:                       # Preds ..B1.72
                                 # Execution count [2.25e-01]: Infreq
 ..LN929:
-        movl      (%rsp), %edx                                  #45.3[spill] c1
+        movl      (%rsp), %edx                                  #46.3[spill] c1
 ..LN930:
-        xorl      %r14d, %r14d                                  #45.3 c1
+        xorl      %r14d, %r14d                                  #46.3 c1
 ..LN931:
-        jmp       ..B1.80       # Prob 100%                     #45.3 c1
+        jmp       ..B1.80       # Prob 100%                     #46.3 c1
 ..LN932:
                                 # LOE rsi rdi r9 edx ecx ebx r8d r11d r12d r14d zmm0 zmm1
 ..B1.148:                       # Preds ..B1.116
                                 # Execution count [2.25e-01]: Infreq
 ..LN933:
-	.loc    1  56  is_stmt 1
-        movl      8(%rsp), %eax                                 #56.31[spill] c1
+	.loc    1  58  is_stmt 1
+        movl      8(%rsp), %eax                                 #58.31[spill] c1
 ..LN934:
-	.loc    1  92  is_stmt 1
-        addl      $1, 104(%rsp)                                 #92.3[spill] c1
+	.loc    1  94  is_stmt 1
+        addl      $1, 104(%rsp)                                 #94.3[spill] c1
 ..LN935:
-	.loc    1  56  is_stmt 1
-        movl      96(%rsp), %r10d                               #56.31[spill] c3
+	.loc    1  58  is_stmt 1
+        movl      96(%rsp), %r10d                               #58.31[spill] c3
 ..LN936:
-        lea       1(%r10,%rax), %edx                            #56.31 c7 stall 1
+        lea       1(%r10,%rax), %edx                            #58.31 c7 stall 1
 ..LN937:
-	.loc    1  92  is_stmt 1
-        movl      %edx, steps(%rip)                             #92.39 c9
+	.loc    1  94  is_stmt 1
+        movl      %edx, steps(%rip)                             #94.39 c9
 ..LN938:
-        addl      $1, %r10d                                     #92.3 c9
+        addl      $1, %r10d                                     #94.3 c9
 ..LN939:
-        movl      %r10d, 96(%rsp)                               #92.3[spill] c11
+        movl      %r10d, 96(%rsp)                               #94.3[spill] c11
 ..LN940:
-        cmpl      88(%rsp), %r10d                               #92.3[spill] c11
+        cmpl      88(%rsp), %r10d                               #94.3[spill] c11
 ..LN941:
-        jb        ..B1.64       # Prob 82%                      #92.3 c13
+        jb        ..B1.64       # Prob 82%                      #94.3 c13
 ..LN942:
-        jmp       ..B1.138      # Prob 100%                     #92.3 c13
+        jmp       ..B1.138      # Prob 100%                     #94.3 c13
 ..LN943:
                                 # LOE rsi rdi r9 ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.150:                       # Preds ..B1.108
@@ -2677,8 +2677,8 @@ main:
 ..LN946:
         movl      %r11d, 72(%rsp)                               #[spill] c3
 ..LN947:
-	.loc    1  55  is_stmt 1
-        xorl      %r10d, %r10d                                  #55.3 c3
+	.loc    1  57  is_stmt 1
+        xorl      %r10d, %r10d                                  #57.3 c3
 ..LN948:
         movl      %r12d, 80(%rsp)                               #[spill] c5
 ..LN949:
@@ -2686,20 +2686,20 @@ main:
 ..LN950:
         movl      104(%rsp), %eax                               #[spill] c7
 ..LN951:
-        movl      (%rsp), %r13d                                 #55.3[spill] c9
+        movl      (%rsp), %r13d                                 #57.3[spill] c9
 ..LN952:
-        jmp       ..B1.118      # Prob 100%                     #55.3 c9
+        jmp       ..B1.118      # Prob 100%                     #57.3 c9
 ..LN953:
                                 # LOE rsi rdi r9 eax edx ecx ebx r8d r10d r13d zmm0 zmm1
 ..B1.152:                       # Preds ..B1.88
                                 # Execution count [2.50e-01]: Infreq
 ..LN954:
-	.loc    1  45  is_stmt 1
-        xorl      %r10d, %r10d                                  #45.3 c1
+	.loc    1  46  is_stmt 1
+        xorl      %r10d, %r10d                                  #46.3 c1
 ..LN955:
-        cmpq      $0, 112(%rsp)                                 #45.3[spill] c1
+        cmpq      $0, 112(%rsp)                                 #46.3[spill] c1
 ..LN956:
-        jbe       ..B1.98       # Prob 10%                      #45.3 c3
+        jbe       ..B1.98       # Prob 10%                      #46.3 c3
 ..LN957:
                                 # LOE rsi rdi r9 r10 ecx ebx r8d r11d r12d zmm0 zmm1
 ..B1.153:                       # Preds ..B1.152
@@ -2737,8 +2737,8 @@ main:
 ..LN972:
         movl      %r11d, 72(%rsp)                               #[spill] c3
 ..LN973:
-	.loc    1  55  is_stmt 1
-        xorl      %r13d, %r13d                                  #55.3 c3
+	.loc    1  57  is_stmt 1
+        xorl      %r13d, %r13d                                  #57.3 c3
 ..LN974:
         movl      %r12d, 80(%rsp)                               #[spill] c5
 ..LN975:
@@ -4073,203 +4073,203 @@ sumArray:
 	.loc    1  41  prologue_end  is_stmt 1
         movq      %r12, -8(%rsp)                                #41.17[spill] c3
 ..LN1432:
-	.loc    1  45  is_stmt 1
-        movl      SIZE(%rip), %edi                              #45.27 c3
+	.loc    1  46  is_stmt 1
+        movl      SIZE(%rip), %edi                              #46.27 c3
 ..LN1433:
-        testl     %edi, %edi                                    #45.27 c7 stall 1
+        testl     %edi, %edi                                    #46.27 c7 stall 1
 ..LN1434:
-        jle       ..B3.33       # Prob 50%                      #45.27 c9
+        jle       ..B3.33       # Prob 50%                      #46.27 c9
 	.cfi_offset 12, -16
 ..LN1435:
                                 # LOE rbx rbp r13 r14 r15 edi
 ..B3.2:                         # Preds ..B3.1
                                 # Execution count [0.00e+00]
 ..LN1436:
-	.loc    1  46  is_stmt 1
-        movq      o(%rip), %rsi                                 #46.7 c1
+	.loc    1  47  is_stmt 1
+        movq      o(%rip), %rsi                                 #47.7 c1
 ..LN1437:
-        movq      a(%rip), %r8                                  #46.18 c1
+        movq      a(%rip), %r8                                  #47.18 c1
 ..LN1438:
-        movq      b(%rip), %rcx                                 #46.31 c5 stall 1
+        movq      b(%rip), %rcx                                 #47.31 c5 stall 1
 ..LN1439:
-	.loc    1  45  is_stmt 1
-        cmpl      $6, %edi                                      #45.3 c5
+	.loc    1  46  is_stmt 1
+        cmpl      $6, %edi                                      #46.3 c5
 ..LN1440:
-        jle       ..B3.27       # Prob 50%                      #45.3 c7
+        jle       ..B3.27       # Prob 50%                      #46.3 c7
 ..LN1441:
                                 # LOE rcx rbx rbp rsi r8 r13 r14 r15 edi
 ..B3.3:                         # Preds ..B3.2
                                 # Execution count [0.00e+00]
 ..LN1442:
-	.loc    1  46  is_stmt 1
-        cmpq      %rcx, %rsi                                    #46.31 c1
+	.loc    1  47  is_stmt 1
+        cmpq      %rcx, %rsi                                    #47.31 c1
 ..LN1443:
-        jbe       ..B3.5        # Prob 50%                      #46.31 c3
+        jbe       ..B3.5        # Prob 50%                      #47.31 c3
 ..LN1444:
                                 # LOE rcx rbx rbp rsi r8 r13 r14 r15 edi
 ..B3.4:                         # Preds ..B3.3
                                 # Execution count [0.00e+00]
 ..LN1445:
-	.loc    1  45  is_stmt 1
-        movslq    %edi, %rdx                                    #45.27 c1
-..LN1446:
 	.loc    1  46  is_stmt 1
-        movq      %rsi, %rax                                    #46.31 c1
+        movslq    %edi, %rdx                                    #46.27 c1
+..LN1446:
+	.loc    1  47  is_stmt 1
+        movq      %rsi, %rax                                    #47.31 c1
 ..LN1447:
-        lea       (,%rdx,4), %r9                                #46.31 c3
+        lea       (,%rdx,4), %r9                                #47.31 c3
 ..LN1448:
-        subq      %rcx, %rax                                    #46.31 c3
+        subq      %rcx, %rax                                    #47.31 c3
 ..LN1449:
-        cmpq      %r9, %rax                                     #46.31 c5
+        cmpq      %r9, %rax                                     #47.31 c5
 ..LN1450:
-        jge       ..B3.7        # Prob 50%                      #46.31 c7
+        jge       ..B3.7        # Prob 50%                      #47.31 c7
 ..LN1451:
-        jmp       ..B3.27       # Prob 100%                     #46.31 c7
+        jmp       ..B3.27       # Prob 100%                     #47.31 c7
 ..LN1452:
                                 # LOE rdx rcx rbx rbp rsi r8 r9 r13 r14 r15 edi
 ..B3.5:                         # Preds ..B3.3
                                 # Execution count [0.00e+00]
 ..LN1453:
-        cmpq      %rsi, %rcx                                    #46.31 c1
+        cmpq      %rsi, %rcx                                    #47.31 c1
 ..LN1454:
-        jbe       ..B3.27       # Prob 50%                      #46.31 c3
+        jbe       ..B3.27       # Prob 50%                      #47.31 c3
 ..LN1455:
                                 # LOE rcx rbx rbp rsi r8 r13 r14 r15 edi
 ..B3.6:                         # Preds ..B3.5
                                 # Execution count [0.00e+00]
 ..LN1456:
-	.loc    1  45  is_stmt 1
-        movslq    %edi, %rdx                                    #45.27 c1
-..LN1457:
 	.loc    1  46  is_stmt 1
-        movq      %rcx, %rax                                    #46.31 c1
+        movslq    %edi, %rdx                                    #46.27 c1
+..LN1457:
+	.loc    1  47  is_stmt 1
+        movq      %rcx, %rax                                    #47.31 c1
 ..LN1458:
-        lea       (,%rdx,4), %r9                                #46.31 c3
+        lea       (,%rdx,4), %r9                                #47.31 c3
 ..LN1459:
-        subq      %rsi, %rax                                    #46.31 c3
+        subq      %rsi, %rax                                    #47.31 c3
 ..LN1460:
-        cmpq      %r9, %rax                                     #46.31 c5
+        cmpq      %r9, %rax                                     #47.31 c5
 ..LN1461:
-        jl        ..B3.27       # Prob 50%                      #46.31 c7
+        jl        ..B3.27       # Prob 50%                      #47.31 c7
 ..LN1462:
                                 # LOE rdx rcx rbx rbp rsi r8 r9 r13 r14 r15 edi
 ..B3.7:                         # Preds ..B3.6 ..B3.4
                                 # Execution count [0.00e+00]
 ..LN1463:
-        cmpq      %r8, %rsi                                     #46.18 c1
+        cmpq      %r8, %rsi                                     #47.18 c1
 ..LN1464:
-        jbe       ..B3.9        # Prob 50%                      #46.18 c3
+        jbe       ..B3.9        # Prob 50%                      #47.18 c3
 ..LN1465:
                                 # LOE rdx rcx rbx rbp rsi r8 r9 r13 r14 r15 edi
 ..B3.8:                         # Preds ..B3.7
                                 # Execution count [0.00e+00]
 ..LN1466:
-        movq      %rsi, %rax                                    #46.18 c1
+        movq      %rsi, %rax                                    #47.18 c1
 ..LN1467:
-        subq      %r8, %rax                                     #46.18 c3
+        subq      %r8, %rax                                     #47.18 c3
 ..LN1468:
-        cmpq      %r9, %rax                                     #46.18 c5
+        cmpq      %r9, %rax                                     #47.18 c5
 ..LN1469:
-        jge       ..B3.11       # Prob 50%                      #46.18 c7
+        jge       ..B3.11       # Prob 50%                      #47.18 c7
 ..LN1470:
-        jmp       ..B3.27       # Prob 100%                     #46.18 c7
+        jmp       ..B3.27       # Prob 100%                     #47.18 c7
 ..LN1471:
                                 # LOE rdx rcx rbx rbp rsi r8 r13 r14 r15 edi
 ..B3.9:                         # Preds ..B3.7
                                 # Execution count [0.00e+00]
 ..LN1472:
-        cmpq      %rsi, %r8                                     #46.18 c1
+        cmpq      %rsi, %r8                                     #47.18 c1
 ..LN1473:
-        jbe       ..B3.27       # Prob 50%                      #46.18 c3
+        jbe       ..B3.27       # Prob 50%                      #47.18 c3
 ..LN1474:
                                 # LOE rdx rcx rbx rbp rsi r8 r9 r13 r14 r15 edi
 ..B3.10:                        # Preds ..B3.9
                                 # Execution count [0.00e+00]
 ..LN1475:
-        movq      %r8, %rax                                     #46.18 c1
+        movq      %r8, %rax                                     #47.18 c1
 ..LN1476:
-        subq      %rsi, %rax                                    #46.18 c3
+        subq      %rsi, %rax                                    #47.18 c3
 ..LN1477:
-        cmpq      %r9, %rax                                     #46.18 c5
+        cmpq      %r9, %rax                                     #47.18 c5
 ..LN1478:
-        jl        ..B3.27       # Prob 50%                      #46.18 c7
+        jl        ..B3.27       # Prob 50%                      #47.18 c7
 ..LN1479:
                                 # LOE rdx rcx rbx rbp rsi r8 r13 r14 r15 edi
 ..B3.11:                        # Preds ..B3.8 ..B3.10
                                 # Execution count [4.50e-01]
 ..LN1480:
-	.loc    1  45  is_stmt 1
-        cmpl      $433, %edi                                    #45.3 c1
+	.loc    1  46  is_stmt 1
+        cmpl      $433, %edi                                    #46.3 c1
 ..LN1481:
-        jl        ..B3.35       # Prob 10%                      #45.3 c3
+        jl        ..B3.35       # Prob 10%                      #46.3 c3
 ..LN1482:
                                 # LOE rdx rcx rbx rbp rsi r8 r13 r14 r15 edi
 ..B3.12:                        # Preds ..B3.11
                                 # Execution count [4.50e-01]
 ..LN1483:
-        movq      %rsi, %rax                                    #45.3 c1
+        movq      %rsi, %rax                                    #46.3 c1
 ..LN1484:
-        andq      $63, %rax                                     #45.3 c3
+        andq      $63, %rax                                     #46.3 c3
 ..LN1485:
-        testl     %eax, %eax                                    #45.3 c3
+        testl     %eax, %eax                                    #46.3 c3
 ..LN1486:
-        je        ..B3.15       # Prob 50%                      #45.3 c5
+        je        ..B3.15       # Prob 50%                      #46.3 c5
 ..LN1487:
                                 # LOE rdx rcx rbx rbp rsi r8 r13 r14 r15 eax edi
 ..B3.13:                        # Preds ..B3.12
                                 # Execution count [4.50e-01]
 ..LN1488:
-        testb     $3, %al                                       #45.3 c1
+        testb     $3, %al                                       #46.3 c1
 ..LN1489:
-        jne       ..B3.34       # Prob 10%                      #45.3 c3
+        jne       ..B3.34       # Prob 10%                      #46.3 c3
 ..LN1490:
                                 # LOE rdx rcx rbx rbp rsi r8 r13 r14 r15 eax edi
 ..B3.14:                        # Preds ..B3.13
                                 # Execution count [0.00e+00]
 ..LN1491:
-        negl      %eax                                          #45.3 c1
+        negl      %eax                                          #46.3 c1
 ..LN1492:
-        addl      $64, %eax                                     #45.3 c3
+        addl      $64, %eax                                     #46.3 c3
 ..LN1493:
-        shrl      $2, %eax                                      #45.3 c5
+        shrl      $2, %eax                                      #46.3 c5
 ..LN1494:
-        cmpl      %eax, %edi                                    #45.3 c7
+        cmpl      %eax, %edi                                    #46.3 c7
 ..LN1495:
-        cmovl     %edi, %eax                                    #45.3 c9
+        cmovl     %edi, %eax                                    #46.3 c9
 ..LN1496:
                                 # LOE rdx rcx rbx rbp rsi r8 r13 r14 r15 eax edi
 ..B3.15:                        # Preds ..B3.14 ..B3.12
                                 # Execution count [5.00e-01]
 ..LN1497:
-        movl      %edi, %r9d                                    #45.3 c1
+        movl      %edi, %r9d                                    #46.3 c1
 ..LN1498:
-        subl      %eax, %r9d                                    #45.3 c3
+        subl      %eax, %r9d                                    #46.3 c3
 ..LN1499:
-        andl      $31, %r9d                                     #45.3 c5
+        andl      $31, %r9d                                     #46.3 c5
 ..LN1500:
-        negl      %r9d                                          #45.3 c7
+        negl      %r9d                                          #46.3 c7
 ..LN1501:
-        addl      %edi, %r9d                                    #45.3 c9
+        addl      %edi, %r9d                                    #46.3 c9
 ..LN1502:
-        cmpl      $1, %eax                                      #45.3 c9
+        cmpl      $1, %eax                                      #46.3 c9
 ..LN1503:
-        jb        ..B3.19       # Prob 50%                      #45.3 c11
+        jb        ..B3.19       # Prob 50%                      #46.3 c11
 ..LN1504:
                                 # LOE rdx rcx rbx rbp rsi r8 r13 r14 r15 eax edi r9d
 ..B3.16:                        # Preds ..B3.15
                                 # Execution count [4.50e-01]
 ..LN1505:
-        vmovups   .L_2il0floatpacket.0(%rip), %zmm2             #45.3 c1
+        vmovups   .L_2il0floatpacket.0(%rip), %zmm2             #46.3 c1
 ..LN1506:
-        vmovdqu32 .L_2il0floatpacket.2(%rip), %zmm1             #45.3 c1
+        vmovdqu32 .L_2il0floatpacket.2(%rip), %zmm1             #46.3 c1
 ..LN1507:
-        xorl      %r12d, %r12d                                  #45.3 c1
+        xorl      %r12d, %r12d                                  #46.3 c1
 ..LN1508:
-        movslq    %eax, %r11                                    #45.3 c1
+        movslq    %eax, %r11                                    #46.3 c1
 ..LN1509:
-        xorl      %r10d, %r10d                                  #45.3 c3
+        xorl      %r10d, %r10d                                  #46.3 c3
 ..LN1510:
-        vpbroadcastd %eax, %zmm0                                #45.3 c7 stall 1
+        vpbroadcastd %eax, %zmm0                                #46.3 c7 stall 1
 ..LN1511:
                                 # LOE rdx rcx rbx rbp rsi r8 r10 r11 r12 r13 r14 r15 eax edi r9d zmm0 zmm1 zmm2
 ..B3.17:                        # Preds ..B3.17 ..B3.16
@@ -4288,53 +4288,53 @@ sumArray:
                 # MAIN VECTOR TYPE: 32-bits floating point
                 # DEPENDENCY ANALYSIS WAS IGNORED
 ..LN1512:
-        vpcmpgtd  %zmm1, %zmm0, %k1                             #45.3 c1
+        vpcmpgtd  %zmm1, %zmm0, %k1                             #46.3 c1
 ..LN1513:
-        addq      $16, %r12                                     #45.3 c1
+        addq      $16, %r12                                     #46.3 c1
 ..LN1514:
-        vpaddd    %zmm2, %zmm1, %zmm1                           #45.3 c1
+        vpaddd    %zmm2, %zmm1, %zmm1                           #46.3 c1
 ..LN1515:
-	.loc    1  46  is_stmt 1
-        vmovups   (%r10,%r8), %zmm3{%k1}{z}                     #46.18 c3
+	.loc    1  47  is_stmt 1
+        vmovups   (%r10,%r8), %zmm3{%k1}{z}                     #47.18 c3
 ..LN1516:
-        vmovups   (%r10,%rcx), %zmm4{%k1}{z}                    #46.31 c3
+        vmovups   (%r10,%rcx), %zmm4{%k1}{z}                    #47.31 c3
 ..LN1517:
-        vaddps    %zmm4, %zmm3, %zmm5                           #46.31 c9 stall 2
+        vaddps    %zmm4, %zmm3, %zmm5                           #47.31 c9 stall 2
 ..LN1518:
-        vmovups   %zmm5, (%r10,%rsi){%k1}                       #46.7 c15 stall 2
+        vmovups   %zmm5, (%r10,%rsi){%k1}                       #47.7 c15 stall 2
 ..LN1519:
-	.loc    1  45  is_stmt 1
-        addq      $64, %r10                                     #45.3 c15
+	.loc    1  46  is_stmt 1
+        addq      $64, %r10                                     #46.3 c15
 ..LN1520:
-        cmpq      %r11, %r12                                    #45.3 c15
+        cmpq      %r11, %r12                                    #46.3 c15
 ..LN1521:
-        jb        ..B3.17       # Prob 82%                      #45.3 c17
+        jb        ..B3.17       # Prob 82%                      #46.3 c17
 ..LN1522:
                                 # LOE rdx rcx rbx rbp rsi r8 r10 r11 r12 r13 r14 r15 eax edi r9d zmm0 zmm1 zmm2
 ..B3.18:                        # Preds ..B3.17
                                 # Execution count [4.50e-01]
 ..LN1523:
-        cmpl      %eax, %edi                                    #45.3 c1
+        cmpl      %eax, %edi                                    #46.3 c1
 ..LN1524:
-        je        ..B3.33       # Prob 10%                      #45.3 c3
+        je        ..B3.33       # Prob 10%                      #46.3 c3
 ..LN1525:
                                 # LOE rdx rcx rbx rbp rsi r8 r13 r14 r15 eax edi r9d
 ..B3.19:                        # Preds ..B3.18 ..B3.15 ..B3.35
                                 # Execution count [0.00e+00]
 ..LN1526:
-        lea       32(%rax), %r10d                               #45.3 c1
+        lea       32(%rax), %r10d                               #46.3 c1
 ..LN1527:
-        cmpl      %r10d, %r9d                                   #45.3 c3
+        cmpl      %r10d, %r9d                                   #46.3 c3
 ..LN1528:
-        jl        ..B3.23       # Prob 50%                      #45.3 c5
+        jl        ..B3.23       # Prob 50%                      #46.3 c5
 ..LN1529:
                                 # LOE rdx rcx rbx rbp rsi r8 r13 r14 r15 eax edi r9d
 ..B3.20:                        # Preds ..B3.19
                                 # Execution count [4.50e-01]
 ..LN1530:
-        movslq    %eax, %rax                                    #45.3 c1
+        movslq    %eax, %rax                                    #46.3 c1
 ..LN1531:
-        movslq    %r9d, %r10                                    #45.3 c1
+        movslq    %r9d, %r10                                    #46.3 c1
 ..LN1532:
                                 # LOE rax rdx rcx rbx rbp rsi r8 r10 r13 r14 r15 edi r9d
 ..B3.21:                        # Preds ..B3.21 ..B3.20
@@ -4351,66 +4351,66 @@ sumArray:
                 # MAIN VECTOR TYPE: 32-bits floating point
                 # DEPENDENCY ANALYSIS WAS IGNORED
 ..LN1533:
-	.loc    1  46  is_stmt 1
-        vmovups   (%r8,%rax,4), %zmm0                           #46.18 c1
+	.loc    1  47  is_stmt 1
+        vmovups   (%r8,%rax,4), %zmm0                           #47.18 c1
 ..LN1534:
-        vmovups   64(%r8,%rax,4), %zmm1                         #46.18 c1
+        vmovups   64(%r8,%rax,4), %zmm1                         #47.18 c1
 ..LN1535:
-        vaddps    (%rcx,%rax,4), %zmm0, %zmm2                   #46.31 c7 stall 2
+        vaddps    (%rcx,%rax,4), %zmm0, %zmm2                   #47.31 c7 stall 2
 ..LN1536:
-        vaddps    64(%rcx,%rax,4), %zmm1, %zmm3                 #46.31 c7
+        vaddps    64(%rcx,%rax,4), %zmm1, %zmm3                 #47.31 c7
 ..LN1537:
-        vmovups   %zmm2, (%rsi,%rax,4)                          #46.7 c13 stall 2
+        vmovups   %zmm2, (%rsi,%rax,4)                          #47.7 c13 stall 2
 ..LN1538:
-        vmovups   %zmm3, 64(%rsi,%rax,4)                        #46.7 c13
+        vmovups   %zmm3, 64(%rsi,%rax,4)                        #47.7 c13
 ..LN1539:
-	.loc    1  45  is_stmt 1
-        addq      $32, %rax                                     #45.3 c13
+	.loc    1  46  is_stmt 1
+        addq      $32, %rax                                     #46.3 c13
 ..LN1540:
-        cmpq      %r10, %rax                                    #45.3 c15
+        cmpq      %r10, %rax                                    #46.3 c15
 ..LN1541:
-        jb        ..B3.21       # Prob 82%                      #45.3 c17
+        jb        ..B3.21       # Prob 82%                      #46.3 c17
 ..LN1542:
                                 # LOE rax rdx rcx rbx rbp rsi r8 r10 r13 r14 r15 edi r9d
 ..B3.23:                        # Preds ..B3.21 ..B3.19 ..B3.34
                                 # Execution count [5.00e-01]
 ..LN1543:
-        lea       1(%r9), %eax                                  #45.3 c1
+        lea       1(%r9), %eax                                  #46.3 c1
 ..LN1544:
-        cmpl      %edi, %eax                                    #45.3 c3
+        cmpl      %edi, %eax                                    #46.3 c3
 ..LN1545:
-        ja        ..B3.33       # Prob 50%                      #45.3 c5
+        ja        ..B3.33       # Prob 50%                      #46.3 c5
 ..LN1546:
                                 # LOE rdx rcx rbx rbp rsi r8 r13 r14 r15 edi r9d
 ..B3.24:                        # Preds ..B3.23
                                 # Execution count [4.50e-01]
 ..LN1547:
-        subl      %r9d, %edi                                    #45.3 c1
+        subl      %r9d, %edi                                    #46.3 c1
 ..LN1548:
-	.loc    1  46  is_stmt 1
-        movslq    %r9d, %r9                                     #46.18 c1
+	.loc    1  47  is_stmt 1
+        movslq    %r9d, %r9                                     #47.18 c1
 ..LN1549:
-	.loc    1  45  is_stmt 1
-        vmovups   .L_2il0floatpacket.0(%rip), %zmm2             #45.3 c1
+	.loc    1  46  is_stmt 1
+        vmovups   .L_2il0floatpacket.0(%rip), %zmm2             #46.3 c1
 ..LN1550:
-        vmovdqu32 .L_2il0floatpacket.2(%rip), %zmm1             #45.3 c1
+        vmovdqu32 .L_2il0floatpacket.2(%rip), %zmm1             #46.3 c1
 ..LN1551:
-        xorl      %eax, %eax                                    #45.3 c3
+        xorl      %eax, %eax                                    #46.3 c3
 ..LN1552:
-        subq      %r9, %rdx                                     #45.3 c3
+        subq      %r9, %rdx                                     #46.3 c3
 ..LN1553:
-        vpbroadcastd %edi, %zmm0                                #45.3 c7 stall 1
+        vpbroadcastd %edi, %zmm0                                #46.3 c7 stall 1
 ..LN1554:
-	.loc    1  46  is_stmt 1
-        lea       (%rsi,%r9,4), %r10                            #46.7 c7
+	.loc    1  47  is_stmt 1
+        lea       (%rsi,%r9,4), %r10                            #47.7 c7
 ..LN1555:
-        lea       (%rcx,%r9,4), %rdi                            #46.31 c9
+        lea       (%rcx,%r9,4), %rdi                            #47.31 c9
 ..LN1556:
-	.loc    1  45  is_stmt 1
-        xorl      %ecx, %ecx                                    #45.3 c9
-..LN1557:
 	.loc    1  46  is_stmt 1
-        lea       (%r8,%r9,4), %rsi                             #46.18 c11
+        xorl      %ecx, %ecx                                    #46.3 c9
+..LN1557:
+	.loc    1  47  is_stmt 1
+        lea       (%r8,%r9,4), %rsi                             #47.18 c11
 ..LN1558:
                                 # LOE rax rdx rcx rbx rbp rsi rdi r10 r13 r14 r15 zmm0 zmm1 zmm2
 ..B3.25:                        # Preds ..B3.25 ..B3.24
@@ -4429,51 +4429,51 @@ sumArray:
                 # MAIN VECTOR TYPE: 32-bits floating point
                 # DEPENDENCY ANALYSIS WAS IGNORED
 ..LN1559:
-	.loc    1  45  is_stmt 1
-        vpcmpgtd  %zmm1, %zmm0, %k1                             #45.3 c1
-..LN1560:
-        addq      $16, %rax                                     #45.3 c1
-..LN1561:
-        vpaddd    %zmm2, %zmm1, %zmm1                           #45.3 c1
-..LN1562:
 	.loc    1  46  is_stmt 1
-        vmovups   (%rcx,%rsi), %zmm3{%k1}{z}                    #46.18 c3
+        vpcmpgtd  %zmm1, %zmm0, %k1                             #46.3 c1
+..LN1560:
+        addq      $16, %rax                                     #46.3 c1
+..LN1561:
+        vpaddd    %zmm2, %zmm1, %zmm1                           #46.3 c1
+..LN1562:
+	.loc    1  47  is_stmt 1
+        vmovups   (%rcx,%rsi), %zmm3{%k1}{z}                    #47.18 c3
 ..LN1563:
-        vmovups   (%rcx,%rdi), %zmm4{%k1}{z}                    #46.31 c3
+        vmovups   (%rcx,%rdi), %zmm4{%k1}{z}                    #47.31 c3
 ..LN1564:
-        vaddps    %zmm4, %zmm3, %zmm5                           #46.31 c9 stall 2
+        vaddps    %zmm4, %zmm3, %zmm5                           #47.31 c9 stall 2
 ..LN1565:
-        vmovups   %zmm5, (%rcx,%r10){%k1}                       #46.7 c15 stall 2
+        vmovups   %zmm5, (%rcx,%r10){%k1}                       #47.7 c15 stall 2
 ..LN1566:
-	.loc    1  45  is_stmt 1
-        addq      $64, %rcx                                     #45.3 c15
+	.loc    1  46  is_stmt 1
+        addq      $64, %rcx                                     #46.3 c15
 ..LN1567:
-        cmpq      %rdx, %rax                                    #45.3 c15
+        cmpq      %rdx, %rax                                    #46.3 c15
 ..LN1568:
-        jb        ..B3.25       # Prob 82%                      #45.3 c17
+        jb        ..B3.25       # Prob 82%                      #46.3 c17
 ..LN1569:
-        jmp       ..B3.33       # Prob 100%                     #45.3 c17
+        jmp       ..B3.33       # Prob 100%                     #46.3 c17
 ..LN1570:
                                 # LOE rax rdx rcx rbx rbp rsi rdi r10 r13 r14 r15 zmm0 zmm1 zmm2
 ..B3.27:                        # Preds ..B3.2 ..B3.4 ..B3.5 ..B3.6 ..B3.8
                                 #       ..B3.9 ..B3.10
                                 # Execution count [5.00e-01]
 ..LN1571:
-        movl      %edi, %eax                                    #45.3 c1
+        movl      %edi, %eax                                    #46.3 c1
 ..LN1572:
-        movl      $1, %r9d                                      #45.3 c1
+        movl      $1, %r9d                                      #46.3 c1
 ..LN1573:
-        shrl      $31, %eax                                     #45.3 c3
+        shrl      $31, %eax                                     #46.3 c3
 ..LN1574:
-        xorl      %edx, %edx                                    #45.3 c3
+        xorl      %edx, %edx                                    #46.3 c3
 ..LN1575:
-        addl      %edi, %eax                                    #45.27 c5
+        addl      %edi, %eax                                    #46.27 c5
 ..LN1576:
-        sarl      $1, %eax                                      #45.27 c7
+        sarl      $1, %eax                                      #46.27 c7
 ..LN1577:
-        testl     %eax, %eax                                    #45.3 c9
+        testl     %eax, %eax                                    #46.3 c9
 ..LN1578:
-        jbe       ..B3.31       # Prob 9%                       #45.3 c11
+        jbe       ..B3.31       # Prob 9%                       #46.3 c11
 ..LN1579:
                                 # LOE rcx rbx rbp rsi r8 r13 r14 r15 eax edx edi r9d
 ..B3.29:                        # Preds ..B3.27 ..B3.29
@@ -4485,49 +4485,49 @@ sumArray:
                 # %s was not vectorized: non-vectorizable loop instance from multiversioning
                 # VECTOR TRIP COUNT IS ESTIMATED CONSTANT
 ..LN1580:
-	.loc    1  46  is_stmt 1
-        lea       (%rdx,%rdx), %r9d                             #46.18 c1
+	.loc    1  47  is_stmt 1
+        lea       (%rdx,%rdx), %r9d                             #47.18 c1
 ..LN1581:
-	.loc    1  45  is_stmt 1
-        addl      $1, %edx                                      #45.3 c1
-..LN1582:
 	.loc    1  46  is_stmt 1
-        movslq    %r9d, %r9                                     #46.31 c3
+        addl      $1, %edx                                      #46.3 c1
+..LN1582:
+	.loc    1  47  is_stmt 1
+        movslq    %r9d, %r9                                     #47.31 c3
 ..LN1583:
-        vmovss    (%r8,%r9,4), %xmm0                            #46.18 c5
+        vmovss    (%r8,%r9,4), %xmm0                            #47.18 c5
 ..LN1584:
-        vaddss    (%rcx,%r9,4), %xmm0, %xmm1                    #46.31 c11 stall 2
+        vaddss    (%rcx,%r9,4), %xmm0, %xmm1                    #47.31 c11 stall 2
 ..LN1585:
-        vmovss    %xmm1, (%rsi,%r9,4)                           #46.7 c17 stall 2
+        vmovss    %xmm1, (%rsi,%r9,4)                           #47.7 c17 stall 2
 ..LN1586:
-        vmovss    4(%r8,%r9,4), %xmm2                           #46.18 c17
+        vmovss    4(%r8,%r9,4), %xmm2                           #47.18 c17
 ..LN1587:
-        vaddss    4(%rcx,%r9,4), %xmm2, %xmm3                   #46.31 c23 stall 2
+        vaddss    4(%rcx,%r9,4), %xmm2, %xmm3                   #47.31 c23 stall 2
 ..LN1588:
-        vmovss    %xmm3, 4(%rsi,%r9,4)                          #46.7 c29 stall 2
+        vmovss    %xmm3, 4(%rsi,%r9,4)                          #47.7 c29 stall 2
 ..LN1589:
-	.loc    1  45  is_stmt 1
-        cmpl      %eax, %edx                                    #45.3 c29
+	.loc    1  46  is_stmt 1
+        cmpl      %eax, %edx                                    #46.3 c29
 ..LN1590:
-        jb        ..B3.29       # Prob 63%                      #45.3 c31
+        jb        ..B3.29       # Prob 63%                      #46.3 c31
 ..LN1591:
                                 # LOE rcx rbx rbp rsi r8 r13 r14 r15 eax edx edi
 ..B3.30:                        # Preds ..B3.29
                                 # Execution count [4.50e-01]
 ..LN1592:
-	.loc    1  46  is_stmt 1
-        lea       1(%rdx,%rdx), %r9d                            #46.7 c1
+	.loc    1  47  is_stmt 1
+        lea       1(%rdx,%rdx), %r9d                            #47.7 c1
 ..LN1593:
                                 # LOE rcx rbx rbp rsi r8 r13 r14 r15 edi r9d
 ..B3.31:                        # Preds ..B3.30 ..B3.27
                                 # Execution count [5.00e-01]
 ..LN1594:
-	.loc    1  45  is_stmt 1
-        lea       -1(%r9), %eax                                 #45.3 c1
+	.loc    1  46  is_stmt 1
+        lea       -1(%r9), %eax                                 #46.3 c1
 ..LN1595:
-        cmpl      %edi, %eax                                    #45.3 c3
+        cmpl      %edi, %eax                                    #46.3 c3
 ..LN1596:
-        jae       ..B3.33       # Prob 9%                       #45.3 c5
+        jae       ..B3.33       # Prob 9%                       #46.3 c5
 ..LN1597:
                                 # LOE rcx rbx rbp rsi r8 r13 r14 r15 r9d
 ..B3.32:                        # Preds ..B3.31
@@ -4539,48 +4539,48 @@ sumArray:
                 # %s was not vectorized: non-vectorizable loop instance from multiversioning
                 # VECTOR TRIP COUNT IS ESTIMATED CONSTANT
 ..LN1598:
-	.loc    1  46  is_stmt 1
-        movslq    %r9d, %r9                                     #46.18 c1
+	.loc    1  47  is_stmt 1
+        movslq    %r9d, %r9                                     #47.18 c1
 ..LN1599:
-        vmovss    -4(%r8,%r9,4), %xmm0                          #46.18 c3
+        vmovss    -4(%r8,%r9,4), %xmm0                          #47.18 c3
 ..LN1600:
-        vaddss    -4(%rcx,%r9,4), %xmm0, %xmm1                  #46.31 c9 stall 2
+        vaddss    -4(%rcx,%r9,4), %xmm0, %xmm1                  #47.31 c9 stall 2
 ..LN1601:
-        vmovss    %xmm1, -4(%rsi,%r9,4)                         #46.7 c15 stall 2
+        vmovss    %xmm1, -4(%rsi,%r9,4)                         #47.7 c15 stall 2
 ..LN1602:
                                 # LOE rbx rbp r13 r14 r15
 ..B3.33:                        # Preds ..B3.25 ..B3.1 ..B3.23 ..B3.31 ..B3.18
                                 #       ..B3.32
                                 # Execution count [1.00e+00]
 ..LN1603:
-	.loc    1  49  is_stmt 1
-        movq      -8(%rsp), %r12                                #49.1[spill] c1
+	.loc    1  50  is_stmt 1
+        movq      -8(%rsp), %r12                                #50.1[spill] c1
 	.cfi_restore 12
 ..LN1604:
-	.loc    1  49  epilogue_begin  is_stmt 1
-        ret                                                     #49.1 c3
+	.loc    1  50  epilogue_begin  is_stmt 1
+        ret                                                     #50.1 c3
 	.cfi_offset 12, -16
 ..LN1605:
                                 # LOE
 ..B3.34:                        # Preds ..B3.13
                                 # Execution count [4.50e-02]: Infreq
 ..LN1606:
-	.loc    1  45  is_stmt 1
-        xorl      %r9d, %r9d                                    #45.3 c1
+	.loc    1  46  is_stmt 1
+        xorl      %r9d, %r9d                                    #46.3 c1
 ..LN1607:
-        jmp       ..B3.23       # Prob 100%                     #45.3 c1
+        jmp       ..B3.23       # Prob 100%                     #46.3 c1
 ..LN1608:
                                 # LOE rdx rcx rbx rbp rsi r8 r13 r14 r15 edi r9d
 ..B3.35:                        # Preds ..B3.11
                                 # Execution count [4.50e-02]: Infreq
 ..LN1609:
-        movl      %edi, %r9d                                    #45.3 c1
+        movl      %edi, %r9d                                    #46.3 c1
 ..LN1610:
-        xorl      %eax, %eax                                    #45.3 c1
+        xorl      %eax, %eax                                    #46.3 c1
 ..LN1611:
-        andl      $-32, %r9d                                    #45.3 c3
+        andl      $-32, %r9d                                    #46.3 c3
 ..LN1612:
-        jmp       ..B3.19       # Prob 100%                     #45.3 c3
+        jmp       ..B3.19       # Prob 100%                     #46.3 c3
         .align    16,0x90
 ..LN1613:
                                 # LOE rdx rcx rbx rbp rsi r8 r13 r14 r15 eax edi r9d
@@ -4608,208 +4608,208 @@ sumArray2:
 	.cfi_startproc
 ..___tag_value_sumArray2.116:
 ..L117:
-                                                        #51.18
+                                                        #52.18
 ..LN1616:
-	.loc    1  51  prologue_end  is_stmt 1
-        movq      %r12, -8(%rsp)                                #51.18[spill] c3
+	.loc    1  52  prologue_end  is_stmt 1
+        movq      %r12, -8(%rsp)                                #52.18[spill] c3
 ..LN1617:
-	.loc    1  55  is_stmt 1
-        movl      SIZE(%rip), %edi                              #55.27 c3
+	.loc    1  57  is_stmt 1
+        movl      SIZE(%rip), %edi                              #57.27 c3
 ..LN1618:
-        testl     %edi, %edi                                    #55.27 c7 stall 1
+        testl     %edi, %edi                                    #57.27 c7 stall 1
 ..LN1619:
-        jle       ..B4.33       # Prob 50%                      #55.27 c9
+        jle       ..B4.33       # Prob 50%                      #57.27 c9
 	.cfi_offset 12, -16
 ..LN1620:
                                 # LOE rbx rbp r13 r14 r15 edi
 ..B4.2:                         # Preds ..B4.1
                                 # Execution count [0.00e+00]
 ..LN1621:
-	.loc    1  56  is_stmt 1
-        movq      a(%rip), %rsi                                 #56.7 c1
+	.loc    1  58  is_stmt 1
+        movq      a(%rip), %rsi                                 #58.7 c1
 ..LN1622:
-        movq      o(%rip), %r8                                  #56.18 c1
+        movq      o(%rip), %r8                                  #58.18 c1
 ..LN1623:
-        movq      b(%rip), %rcx                                 #56.31 c5 stall 1
+        movq      b(%rip), %rcx                                 #58.31 c5 stall 1
 ..LN1624:
-	.loc    1  55  is_stmt 1
-        cmpl      $6, %edi                                      #55.3 c5
+	.loc    1  57  is_stmt 1
+        cmpl      $6, %edi                                      #57.3 c5
 ..LN1625:
-        jle       ..B4.27       # Prob 50%                      #55.3 c7
+        jle       ..B4.27       # Prob 50%                      #57.3 c7
 ..LN1626:
                                 # LOE rcx rbx rbp rsi r8 r13 r14 r15 edi
 ..B4.3:                         # Preds ..B4.2
                                 # Execution count [0.00e+00]
 ..LN1627:
-	.loc    1  56  is_stmt 1
-        cmpq      %rcx, %rsi                                    #56.31 c1
+	.loc    1  58  is_stmt 1
+        cmpq      %rcx, %rsi                                    #58.31 c1
 ..LN1628:
-        jbe       ..B4.5        # Prob 50%                      #56.31 c3
+        jbe       ..B4.5        # Prob 50%                      #58.31 c3
 ..LN1629:
                                 # LOE rcx rbx rbp rsi r8 r13 r14 r15 edi
 ..B4.4:                         # Preds ..B4.3
                                 # Execution count [0.00e+00]
 ..LN1630:
-	.loc    1  55  is_stmt 1
-        movslq    %edi, %rdx                                    #55.27 c1
+	.loc    1  57  is_stmt 1
+        movslq    %edi, %rdx                                    #57.27 c1
 ..LN1631:
-	.loc    1  56  is_stmt 1
-        movq      %rsi, %rax                                    #56.31 c1
+	.loc    1  58  is_stmt 1
+        movq      %rsi, %rax                                    #58.31 c1
 ..LN1632:
-        lea       (,%rdx,4), %r9                                #56.31 c3
+        lea       (,%rdx,4), %r9                                #58.31 c3
 ..LN1633:
-        subq      %rcx, %rax                                    #56.31 c3
+        subq      %rcx, %rax                                    #58.31 c3
 ..LN1634:
-        cmpq      %r9, %rax                                     #56.31 c5
+        cmpq      %r9, %rax                                     #58.31 c5
 ..LN1635:
-        jge       ..B4.7        # Prob 50%                      #56.31 c7
+        jge       ..B4.7        # Prob 50%                      #58.31 c7
 ..LN1636:
-        jmp       ..B4.27       # Prob 100%                     #56.31 c7
+        jmp       ..B4.27       # Prob 100%                     #58.31 c7
 ..LN1637:
                                 # LOE rdx rcx rbx rbp rsi r8 r9 r13 r14 r15 edi
 ..B4.5:                         # Preds ..B4.3
                                 # Execution count [0.00e+00]
 ..LN1638:
-        cmpq      %rsi, %rcx                                    #56.31 c1
+        cmpq      %rsi, %rcx                                    #58.31 c1
 ..LN1639:
-        jbe       ..B4.27       # Prob 50%                      #56.31 c3
+        jbe       ..B4.27       # Prob 50%                      #58.31 c3
 ..LN1640:
                                 # LOE rcx rbx rbp rsi r8 r13 r14 r15 edi
 ..B4.6:                         # Preds ..B4.5
                                 # Execution count [0.00e+00]
 ..LN1641:
-	.loc    1  55  is_stmt 1
-        movslq    %edi, %rdx                                    #55.27 c1
+	.loc    1  57  is_stmt 1
+        movslq    %edi, %rdx                                    #57.27 c1
 ..LN1642:
-	.loc    1  56  is_stmt 1
-        movq      %rcx, %rax                                    #56.31 c1
+	.loc    1  58  is_stmt 1
+        movq      %rcx, %rax                                    #58.31 c1
 ..LN1643:
-        lea       (,%rdx,4), %r9                                #56.31 c3
+        lea       (,%rdx,4), %r9                                #58.31 c3
 ..LN1644:
-        subq      %rsi, %rax                                    #56.31 c3
+        subq      %rsi, %rax                                    #58.31 c3
 ..LN1645:
-        cmpq      %r9, %rax                                     #56.31 c5
+        cmpq      %r9, %rax                                     #58.31 c5
 ..LN1646:
-        jl        ..B4.27       # Prob 50%                      #56.31 c7
+        jl        ..B4.27       # Prob 50%                      #58.31 c7
 ..LN1647:
                                 # LOE rdx rcx rbx rbp rsi r8 r9 r13 r14 r15 edi
 ..B4.7:                         # Preds ..B4.6 ..B4.4
                                 # Execution count [0.00e+00]
 ..LN1648:
-        cmpq      %r8, %rsi                                     #56.18 c1
+        cmpq      %r8, %rsi                                     #58.18 c1
 ..LN1649:
-        jbe       ..B4.9        # Prob 50%                      #56.18 c3
+        jbe       ..B4.9        # Prob 50%                      #58.18 c3
 ..LN1650:
                                 # LOE rdx rcx rbx rbp rsi r8 r9 r13 r14 r15 edi
 ..B4.8:                         # Preds ..B4.7
                                 # Execution count [0.00e+00]
 ..LN1651:
-        movq      %rsi, %rax                                    #56.18 c1
+        movq      %rsi, %rax                                    #58.18 c1
 ..LN1652:
-        subq      %r8, %rax                                     #56.18 c3
+        subq      %r8, %rax                                     #58.18 c3
 ..LN1653:
-        cmpq      %r9, %rax                                     #56.18 c5
+        cmpq      %r9, %rax                                     #58.18 c5
 ..LN1654:
-        jge       ..B4.11       # Prob 50%                      #56.18 c7
+        jge       ..B4.11       # Prob 50%                      #58.18 c7
 ..LN1655:
-        jmp       ..B4.27       # Prob 100%                     #56.18 c7
+        jmp       ..B4.27       # Prob 100%                     #58.18 c7
 ..LN1656:
                                 # LOE rdx rcx rbx rbp rsi r8 r13 r14 r15 edi
 ..B4.9:                         # Preds ..B4.7
                                 # Execution count [0.00e+00]
 ..LN1657:
-        cmpq      %rsi, %r8                                     #56.18 c1
+        cmpq      %rsi, %r8                                     #58.18 c1
 ..LN1658:
-        jbe       ..B4.27       # Prob 50%                      #56.18 c3
+        jbe       ..B4.27       # Prob 50%                      #58.18 c3
 ..LN1659:
                                 # LOE rdx rcx rbx rbp rsi r8 r9 r13 r14 r15 edi
 ..B4.10:                        # Preds ..B4.9
                                 # Execution count [0.00e+00]
 ..LN1660:
-        movq      %r8, %rax                                     #56.18 c1
+        movq      %r8, %rax                                     #58.18 c1
 ..LN1661:
-        subq      %rsi, %rax                                    #56.18 c3
+        subq      %rsi, %rax                                    #58.18 c3
 ..LN1662:
-        cmpq      %r9, %rax                                     #56.18 c5
+        cmpq      %r9, %rax                                     #58.18 c5
 ..LN1663:
-        jl        ..B4.27       # Prob 50%                      #56.18 c7
+        jl        ..B4.27       # Prob 50%                      #58.18 c7
 ..LN1664:
                                 # LOE rdx rcx rbx rbp rsi r8 r13 r14 r15 edi
 ..B4.11:                        # Preds ..B4.8 ..B4.10
                                 # Execution count [4.50e-01]
 ..LN1665:
-	.loc    1  55  is_stmt 1
-        cmpl      $433, %edi                                    #55.3 c1
+	.loc    1  57  is_stmt 1
+        cmpl      $433, %edi                                    #57.3 c1
 ..LN1666:
-        jl        ..B4.35       # Prob 10%                      #55.3 c3
+        jl        ..B4.35       # Prob 10%                      #57.3 c3
 ..LN1667:
                                 # LOE rdx rcx rbx rbp rsi r8 r13 r14 r15 edi
 ..B4.12:                        # Preds ..B4.11
                                 # Execution count [4.50e-01]
 ..LN1668:
-        movq      %rsi, %rax                                    #55.3 c1
+        movq      %rsi, %rax                                    #57.3 c1
 ..LN1669:
-        andq      $63, %rax                                     #55.3 c3
+        andq      $63, %rax                                     #57.3 c3
 ..LN1670:
-        testl     %eax, %eax                                    #55.3 c3
+        testl     %eax, %eax                                    #57.3 c3
 ..LN1671:
-        je        ..B4.15       # Prob 50%                      #55.3 c5
+        je        ..B4.15       # Prob 50%                      #57.3 c5
 ..LN1672:
                                 # LOE rdx rcx rbx rbp rsi r8 r13 r14 r15 eax edi
 ..B4.13:                        # Preds ..B4.12
                                 # Execution count [4.50e-01]
 ..LN1673:
-        testb     $3, %al                                       #55.3 c1
+        testb     $3, %al                                       #57.3 c1
 ..LN1674:
-        jne       ..B4.34       # Prob 10%                      #55.3 c3
+        jne       ..B4.34       # Prob 10%                      #57.3 c3
 ..LN1675:
                                 # LOE rdx rcx rbx rbp rsi r8 r13 r14 r15 eax edi
 ..B4.14:                        # Preds ..B4.13
                                 # Execution count [0.00e+00]
 ..LN1676:
-        negl      %eax                                          #55.3 c1
+        negl      %eax                                          #57.3 c1
 ..LN1677:
-        addl      $64, %eax                                     #55.3 c3
+        addl      $64, %eax                                     #57.3 c3
 ..LN1678:
-        shrl      $2, %eax                                      #55.3 c5
+        shrl      $2, %eax                                      #57.3 c5
 ..LN1679:
-        cmpl      %eax, %edi                                    #55.3 c7
+        cmpl      %eax, %edi                                    #57.3 c7
 ..LN1680:
-        cmovl     %edi, %eax                                    #55.3 c9
+        cmovl     %edi, %eax                                    #57.3 c9
 ..LN1681:
                                 # LOE rdx rcx rbx rbp rsi r8 r13 r14 r15 eax edi
 ..B4.15:                        # Preds ..B4.14 ..B4.12
                                 # Execution count [5.00e-01]
 ..LN1682:
-        movl      %edi, %r9d                                    #55.3 c1
+        movl      %edi, %r9d                                    #57.3 c1
 ..LN1683:
-        subl      %eax, %r9d                                    #55.3 c3
+        subl      %eax, %r9d                                    #57.3 c3
 ..LN1684:
-        andl      $31, %r9d                                     #55.3 c5
+        andl      $31, %r9d                                     #57.3 c5
 ..LN1685:
-        negl      %r9d                                          #55.3 c7
+        negl      %r9d                                          #57.3 c7
 ..LN1686:
-        addl      %edi, %r9d                                    #55.3 c9
+        addl      %edi, %r9d                                    #57.3 c9
 ..LN1687:
-        cmpl      $1, %eax                                      #55.3 c9
+        cmpl      $1, %eax                                      #57.3 c9
 ..LN1688:
-        jb        ..B4.19       # Prob 50%                      #55.3 c11
+        jb        ..B4.19       # Prob 50%                      #57.3 c11
 ..LN1689:
                                 # LOE rdx rcx rbx rbp rsi r8 r13 r14 r15 eax edi r9d
 ..B4.16:                        # Preds ..B4.15
                                 # Execution count [4.50e-01]
 ..LN1690:
-        vmovups   .L_2il0floatpacket.0(%rip), %zmm2             #55.3 c1
+        vmovups   .L_2il0floatpacket.0(%rip), %zmm2             #57.3 c1
 ..LN1691:
-        vmovdqu32 .L_2il0floatpacket.2(%rip), %zmm1             #55.3 c1
+        vmovdqu32 .L_2il0floatpacket.2(%rip), %zmm1             #57.3 c1
 ..LN1692:
-        xorl      %r12d, %r12d                                  #55.3 c1
+        xorl      %r12d, %r12d                                  #57.3 c1
 ..LN1693:
-        movslq    %eax, %r11                                    #55.3 c1
+        movslq    %eax, %r11                                    #57.3 c1
 ..LN1694:
-        xorl      %r10d, %r10d                                  #55.3 c3
+        xorl      %r10d, %r10d                                  #57.3 c3
 ..LN1695:
-        vpbroadcastd %eax, %zmm0                                #55.3 c7 stall 1
+        vpbroadcastd %eax, %zmm0                                #57.3 c7 stall 1
 ..LN1696:
                                 # LOE rdx rcx rbx rbp rsi r8 r10 r11 r12 r13 r14 r15 eax edi r9d zmm0 zmm1 zmm2
 ..B4.17:                        # Preds ..B4.17 ..B4.16
@@ -4828,53 +4828,53 @@ sumArray2:
                 # MAIN VECTOR TYPE: 32-bits floating point
                 # DEPENDENCY ANALYSIS WAS IGNORED
 ..LN1697:
-        vpcmpgtd  %zmm1, %zmm0, %k1                             #55.3 c1
+        vpcmpgtd  %zmm1, %zmm0, %k1                             #57.3 c1
 ..LN1698:
-        addq      $16, %r12                                     #55.3 c1
+        addq      $16, %r12                                     #57.3 c1
 ..LN1699:
-        vpaddd    %zmm2, %zmm1, %zmm1                           #55.3 c1
+        vpaddd    %zmm2, %zmm1, %zmm1                           #57.3 c1
 ..LN1700:
-	.loc    1  56  is_stmt 1
-        vmovups   (%r10,%r8), %zmm3{%k1}{z}                     #56.18 c3
+	.loc    1  58  is_stmt 1
+        vmovups   (%r10,%r8), %zmm3{%k1}{z}                     #58.18 c3
 ..LN1701:
-        vmovups   (%r10,%rcx), %zmm4{%k1}{z}                    #56.31 c3
+        vmovups   (%r10,%rcx), %zmm4{%k1}{z}                    #58.31 c3
 ..LN1702:
-        vaddps    %zmm4, %zmm3, %zmm5                           #56.31 c9 stall 2
+        vaddps    %zmm4, %zmm3, %zmm5                           #58.31 c9 stall 2
 ..LN1703:
-        vmovups   %zmm5, (%r10,%rsi){%k1}                       #56.7 c15 stall 2
+        vmovups   %zmm5, (%r10,%rsi){%k1}                       #58.7 c15 stall 2
 ..LN1704:
-	.loc    1  55  is_stmt 1
-        addq      $64, %r10                                     #55.3 c15
+	.loc    1  57  is_stmt 1
+        addq      $64, %r10                                     #57.3 c15
 ..LN1705:
-        cmpq      %r11, %r12                                    #55.3 c15
+        cmpq      %r11, %r12                                    #57.3 c15
 ..LN1706:
-        jb        ..B4.17       # Prob 82%                      #55.3 c17
+        jb        ..B4.17       # Prob 82%                      #57.3 c17
 ..LN1707:
                                 # LOE rdx rcx rbx rbp rsi r8 r10 r11 r12 r13 r14 r15 eax edi r9d zmm0 zmm1 zmm2
 ..B4.18:                        # Preds ..B4.17
                                 # Execution count [4.50e-01]
 ..LN1708:
-        cmpl      %eax, %edi                                    #55.3 c1
+        cmpl      %eax, %edi                                    #57.3 c1
 ..LN1709:
-        je        ..B4.33       # Prob 10%                      #55.3 c3
+        je        ..B4.33       # Prob 10%                      #57.3 c3
 ..LN1710:
                                 # LOE rdx rcx rbx rbp rsi r8 r13 r14 r15 eax edi r9d
 ..B4.19:                        # Preds ..B4.18 ..B4.15 ..B4.35
                                 # Execution count [0.00e+00]
 ..LN1711:
-        lea       32(%rax), %r10d                               #55.3 c1
+        lea       32(%rax), %r10d                               #57.3 c1
 ..LN1712:
-        cmpl      %r10d, %r9d                                   #55.3 c3
+        cmpl      %r10d, %r9d                                   #57.3 c3
 ..LN1713:
-        jl        ..B4.23       # Prob 50%                      #55.3 c5
+        jl        ..B4.23       # Prob 50%                      #57.3 c5
 ..LN1714:
                                 # LOE rdx rcx rbx rbp rsi r8 r13 r14 r15 eax edi r9d
 ..B4.20:                        # Preds ..B4.19
                                 # Execution count [4.50e-01]
 ..LN1715:
-        movslq    %eax, %rax                                    #55.3 c1
+        movslq    %eax, %rax                                    #57.3 c1
 ..LN1716:
-        movslq    %r9d, %r10                                    #55.3 c1
+        movslq    %r9d, %r10                                    #57.3 c1
 ..LN1717:
                                 # LOE rax rdx rcx rbx rbp rsi r8 r10 r13 r14 r15 edi r9d
 ..B4.21:                        # Preds ..B4.21 ..B4.20
@@ -4891,66 +4891,66 @@ sumArray2:
                 # MAIN VECTOR TYPE: 32-bits floating point
                 # DEPENDENCY ANALYSIS WAS IGNORED
 ..LN1718:
-	.loc    1  56  is_stmt 1
-        vmovups   (%r8,%rax,4), %zmm0                           #56.18 c1
+	.loc    1  58  is_stmt 1
+        vmovups   (%r8,%rax,4), %zmm0                           #58.18 c1
 ..LN1719:
-        vmovups   64(%r8,%rax,4), %zmm1                         #56.18 c1
+        vmovups   64(%r8,%rax,4), %zmm1                         #58.18 c1
 ..LN1720:
-        vaddps    (%rcx,%rax,4), %zmm0, %zmm2                   #56.31 c7 stall 2
+        vaddps    (%rcx,%rax,4), %zmm0, %zmm2                   #58.31 c7 stall 2
 ..LN1721:
-        vaddps    64(%rcx,%rax,4), %zmm1, %zmm3                 #56.31 c7
+        vaddps    64(%rcx,%rax,4), %zmm1, %zmm3                 #58.31 c7
 ..LN1722:
-        vmovups   %zmm2, (%rsi,%rax,4)                          #56.7 c13 stall 2
+        vmovups   %zmm2, (%rsi,%rax,4)                          #58.7 c13 stall 2
 ..LN1723:
-        vmovups   %zmm3, 64(%rsi,%rax,4)                        #56.7 c13
+        vmovups   %zmm3, 64(%rsi,%rax,4)                        #58.7 c13
 ..LN1724:
-	.loc    1  55  is_stmt 1
-        addq      $32, %rax                                     #55.3 c13
+	.loc    1  57  is_stmt 1
+        addq      $32, %rax                                     #57.3 c13
 ..LN1725:
-        cmpq      %r10, %rax                                    #55.3 c15
+        cmpq      %r10, %rax                                    #57.3 c15
 ..LN1726:
-        jb        ..B4.21       # Prob 82%                      #55.3 c17
+        jb        ..B4.21       # Prob 82%                      #57.3 c17
 ..LN1727:
                                 # LOE rax rdx rcx rbx rbp rsi r8 r10 r13 r14 r15 edi r9d
 ..B4.23:                        # Preds ..B4.21 ..B4.19 ..B4.34
                                 # Execution count [5.00e-01]
 ..LN1728:
-        lea       1(%r9), %eax                                  #55.3 c1
+        lea       1(%r9), %eax                                  #57.3 c1
 ..LN1729:
-        cmpl      %edi, %eax                                    #55.3 c3
+        cmpl      %edi, %eax                                    #57.3 c3
 ..LN1730:
-        ja        ..B4.33       # Prob 50%                      #55.3 c5
+        ja        ..B4.33       # Prob 50%                      #57.3 c5
 ..LN1731:
                                 # LOE rdx rcx rbx rbp rsi r8 r13 r14 r15 edi r9d
 ..B4.24:                        # Preds ..B4.23
                                 # Execution count [4.50e-01]
 ..LN1732:
-        subl      %r9d, %edi                                    #55.3 c1
+        subl      %r9d, %edi                                    #57.3 c1
 ..LN1733:
-	.loc    1  56  is_stmt 1
-        movslq    %r9d, %r9                                     #56.18 c1
+	.loc    1  58  is_stmt 1
+        movslq    %r9d, %r9                                     #58.18 c1
 ..LN1734:
-	.loc    1  55  is_stmt 1
-        vmovups   .L_2il0floatpacket.0(%rip), %zmm2             #55.3 c1
+	.loc    1  57  is_stmt 1
+        vmovups   .L_2il0floatpacket.0(%rip), %zmm2             #57.3 c1
 ..LN1735:
-        vmovdqu32 .L_2il0floatpacket.2(%rip), %zmm1             #55.3 c1
+        vmovdqu32 .L_2il0floatpacket.2(%rip), %zmm1             #57.3 c1
 ..LN1736:
-        xorl      %eax, %eax                                    #55.3 c3
+        xorl      %eax, %eax                                    #57.3 c3
 ..LN1737:
-        subq      %r9, %rdx                                     #55.3 c3
+        subq      %r9, %rdx                                     #57.3 c3
 ..LN1738:
-        vpbroadcastd %edi, %zmm0                                #55.3 c7 stall 1
+        vpbroadcastd %edi, %zmm0                                #57.3 c7 stall 1
 ..LN1739:
-	.loc    1  56  is_stmt 1
-        lea       (%rsi,%r9,4), %r10                            #56.7 c7
+	.loc    1  58  is_stmt 1
+        lea       (%rsi,%r9,4), %r10                            #58.7 c7
 ..LN1740:
-        lea       (%rcx,%r9,4), %rdi                            #56.31 c9
+        lea       (%rcx,%r9,4), %rdi                            #58.31 c9
 ..LN1741:
-	.loc    1  55  is_stmt 1
-        xorl      %ecx, %ecx                                    #55.3 c9
+	.loc    1  57  is_stmt 1
+        xorl      %ecx, %ecx                                    #57.3 c9
 ..LN1742:
-	.loc    1  56  is_stmt 1
-        lea       (%r8,%r9,4), %rsi                             #56.18 c11
+	.loc    1  58  is_stmt 1
+        lea       (%r8,%r9,4), %rsi                             #58.18 c11
 ..LN1743:
                                 # LOE rax rdx rcx rbx rbp rsi rdi r10 r13 r14 r15 zmm0 zmm1 zmm2
 ..B4.25:                        # Preds ..B4.25 ..B4.24
@@ -4969,51 +4969,51 @@ sumArray2:
                 # MAIN VECTOR TYPE: 32-bits floating point
                 # DEPENDENCY ANALYSIS WAS IGNORED
 ..LN1744:
-	.loc    1  55  is_stmt 1
-        vpcmpgtd  %zmm1, %zmm0, %k1                             #55.3 c1
+	.loc    1  57  is_stmt 1
+        vpcmpgtd  %zmm1, %zmm0, %k1                             #57.3 c1
 ..LN1745:
-        addq      $16, %rax                                     #55.3 c1
+        addq      $16, %rax                                     #57.3 c1
 ..LN1746:
-        vpaddd    %zmm2, %zmm1, %zmm1                           #55.3 c1
+        vpaddd    %zmm2, %zmm1, %zmm1                           #57.3 c1
 ..LN1747:
-	.loc    1  56  is_stmt 1
-        vmovups   (%rcx,%rsi), %zmm3{%k1}{z}                    #56.18 c3
+	.loc    1  58  is_stmt 1
+        vmovups   (%rcx,%rsi), %zmm3{%k1}{z}                    #58.18 c3
 ..LN1748:
-        vmovups   (%rcx,%rdi), %zmm4{%k1}{z}                    #56.31 c3
+        vmovups   (%rcx,%rdi), %zmm4{%k1}{z}                    #58.31 c3
 ..LN1749:
-        vaddps    %zmm4, %zmm3, %zmm5                           #56.31 c9 stall 2
+        vaddps    %zmm4, %zmm3, %zmm5                           #58.31 c9 stall 2
 ..LN1750:
-        vmovups   %zmm5, (%rcx,%r10){%k1}                       #56.7 c15 stall 2
+        vmovups   %zmm5, (%rcx,%r10){%k1}                       #58.7 c15 stall 2
 ..LN1751:
-	.loc    1  55  is_stmt 1
-        addq      $64, %rcx                                     #55.3 c15
+	.loc    1  57  is_stmt 1
+        addq      $64, %rcx                                     #57.3 c15
 ..LN1752:
-        cmpq      %rdx, %rax                                    #55.3 c15
+        cmpq      %rdx, %rax                                    #57.3 c15
 ..LN1753:
-        jb        ..B4.25       # Prob 82%                      #55.3 c17
+        jb        ..B4.25       # Prob 82%                      #57.3 c17
 ..LN1754:
-        jmp       ..B4.33       # Prob 100%                     #55.3 c17
+        jmp       ..B4.33       # Prob 100%                     #57.3 c17
 ..LN1755:
                                 # LOE rax rdx rcx rbx rbp rsi rdi r10 r13 r14 r15 zmm0 zmm1 zmm2
 ..B4.27:                        # Preds ..B4.2 ..B4.4 ..B4.5 ..B4.6 ..B4.8
                                 #       ..B4.9 ..B4.10
                                 # Execution count [5.00e-01]
 ..LN1756:
-        movl      %edi, %eax                                    #55.3 c1
+        movl      %edi, %eax                                    #57.3 c1
 ..LN1757:
-        movl      $1, %r9d                                      #55.3 c1
+        movl      $1, %r9d                                      #57.3 c1
 ..LN1758:
-        shrl      $31, %eax                                     #55.3 c3
+        shrl      $31, %eax                                     #57.3 c3
 ..LN1759:
-        xorl      %edx, %edx                                    #55.3 c3
+        xorl      %edx, %edx                                    #57.3 c3
 ..LN1760:
-        addl      %edi, %eax                                    #55.27 c5
+        addl      %edi, %eax                                    #57.27 c5
 ..LN1761:
-        sarl      $1, %eax                                      #55.27 c7
+        sarl      $1, %eax                                      #57.27 c7
 ..LN1762:
-        testl     %eax, %eax                                    #55.3 c9
+        testl     %eax, %eax                                    #57.3 c9
 ..LN1763:
-        jbe       ..B4.31       # Prob 9%                       #55.3 c11
+        jbe       ..B4.31       # Prob 9%                       #57.3 c11
 ..LN1764:
                                 # LOE rcx rbx rbp rsi r8 r13 r14 r15 eax edx edi r9d
 ..B4.29:                        # Preds ..B4.27 ..B4.29
@@ -5025,49 +5025,49 @@ sumArray2:
                 # %s was not vectorized: non-vectorizable loop instance from multiversioning
                 # VECTOR TRIP COUNT IS ESTIMATED CONSTANT
 ..LN1765:
-	.loc    1  56  is_stmt 1
-        lea       (%rdx,%rdx), %r9d                             #56.18 c1
+	.loc    1  58  is_stmt 1
+        lea       (%rdx,%rdx), %r9d                             #58.18 c1
 ..LN1766:
-	.loc    1  55  is_stmt 1
-        addl      $1, %edx                                      #55.3 c1
+	.loc    1  57  is_stmt 1
+        addl      $1, %edx                                      #57.3 c1
 ..LN1767:
-	.loc    1  56  is_stmt 1
-        movslq    %r9d, %r9                                     #56.31 c3
+	.loc    1  58  is_stmt 1
+        movslq    %r9d, %r9                                     #58.31 c3
 ..LN1768:
-        vmovss    (%r8,%r9,4), %xmm0                            #56.18 c5
+        vmovss    (%r8,%r9,4), %xmm0                            #58.18 c5
 ..LN1769:
-        vaddss    (%rcx,%r9,4), %xmm0, %xmm1                    #56.31 c11 stall 2
+        vaddss    (%rcx,%r9,4), %xmm0, %xmm1                    #58.31 c11 stall 2
 ..LN1770:
-        vmovss    %xmm1, (%rsi,%r9,4)                           #56.7 c17 stall 2
+        vmovss    %xmm1, (%rsi,%r9,4)                           #58.7 c17 stall 2
 ..LN1771:
-        vmovss    4(%r8,%r9,4), %xmm2                           #56.18 c17
+        vmovss    4(%r8,%r9,4), %xmm2                           #58.18 c17
 ..LN1772:
-        vaddss    4(%rcx,%r9,4), %xmm2, %xmm3                   #56.31 c23 stall 2
+        vaddss    4(%rcx,%r9,4), %xmm2, %xmm3                   #58.31 c23 stall 2
 ..LN1773:
-        vmovss    %xmm3, 4(%rsi,%r9,4)                          #56.7 c29 stall 2
+        vmovss    %xmm3, 4(%rsi,%r9,4)                          #58.7 c29 stall 2
 ..LN1774:
-	.loc    1  55  is_stmt 1
-        cmpl      %eax, %edx                                    #55.3 c29
+	.loc    1  57  is_stmt 1
+        cmpl      %eax, %edx                                    #57.3 c29
 ..LN1775:
-        jb        ..B4.29       # Prob 63%                      #55.3 c31
+        jb        ..B4.29       # Prob 63%                      #57.3 c31
 ..LN1776:
                                 # LOE rcx rbx rbp rsi r8 r13 r14 r15 eax edx edi
 ..B4.30:                        # Preds ..B4.29
                                 # Execution count [4.50e-01]
 ..LN1777:
-	.loc    1  56  is_stmt 1
-        lea       1(%rdx,%rdx), %r9d                            #56.7 c1
+	.loc    1  58  is_stmt 1
+        lea       1(%rdx,%rdx), %r9d                            #58.7 c1
 ..LN1778:
                                 # LOE rcx rbx rbp rsi r8 r13 r14 r15 edi r9d
 ..B4.31:                        # Preds ..B4.30 ..B4.27
                                 # Execution count [5.00e-01]
 ..LN1779:
-	.loc    1  55  is_stmt 1
-        lea       -1(%r9), %eax                                 #55.3 c1
+	.loc    1  57  is_stmt 1
+        lea       -1(%r9), %eax                                 #57.3 c1
 ..LN1780:
-        cmpl      %edi, %eax                                    #55.3 c3
+        cmpl      %edi, %eax                                    #57.3 c3
 ..LN1781:
-        jae       ..B4.33       # Prob 9%                       #55.3 c5
+        jae       ..B4.33       # Prob 9%                       #57.3 c5
 ..LN1782:
                                 # LOE rcx rbx rbp rsi r8 r13 r14 r15 r9d
 ..B4.32:                        # Preds ..B4.31
@@ -5079,48 +5079,48 @@ sumArray2:
                 # %s was not vectorized: non-vectorizable loop instance from multiversioning
                 # VECTOR TRIP COUNT IS ESTIMATED CONSTANT
 ..LN1783:
-	.loc    1  56  is_stmt 1
-        movslq    %r9d, %r9                                     #56.18 c1
+	.loc    1  58  is_stmt 1
+        movslq    %r9d, %r9                                     #58.18 c1
 ..LN1784:
-        vmovss    -4(%r8,%r9,4), %xmm0                          #56.18 c3
+        vmovss    -4(%r8,%r9,4), %xmm0                          #58.18 c3
 ..LN1785:
-        vaddss    -4(%rcx,%r9,4), %xmm0, %xmm1                  #56.31 c9 stall 2
+        vaddss    -4(%rcx,%r9,4), %xmm0, %xmm1                  #58.31 c9 stall 2
 ..LN1786:
-        vmovss    %xmm1, -4(%rsi,%r9,4)                         #56.7 c15 stall 2
+        vmovss    %xmm1, -4(%rsi,%r9,4)                         #58.7 c15 stall 2
 ..LN1787:
                                 # LOE rbx rbp r13 r14 r15
 ..B4.33:                        # Preds ..B4.25 ..B4.1 ..B4.23 ..B4.31 ..B4.18
                                 #       ..B4.32
                                 # Execution count [1.00e+00]
 ..LN1788:
-	.loc    1  59  is_stmt 1
-        movq      -8(%rsp), %r12                                #59.1[spill] c1
+	.loc    1  61  is_stmt 1
+        movq      -8(%rsp), %r12                                #61.1[spill] c1
 	.cfi_restore 12
 ..LN1789:
-	.loc    1  59  epilogue_begin  is_stmt 1
-        ret                                                     #59.1 c3
+	.loc    1  61  epilogue_begin  is_stmt 1
+        ret                                                     #61.1 c3
 	.cfi_offset 12, -16
 ..LN1790:
                                 # LOE
 ..B4.34:                        # Preds ..B4.13
                                 # Execution count [4.50e-02]: Infreq
 ..LN1791:
-	.loc    1  55  is_stmt 1
-        xorl      %r9d, %r9d                                    #55.3 c1
+	.loc    1  57  is_stmt 1
+        xorl      %r9d, %r9d                                    #57.3 c1
 ..LN1792:
-        jmp       ..B4.23       # Prob 100%                     #55.3 c1
+        jmp       ..B4.23       # Prob 100%                     #57.3 c1
 ..LN1793:
                                 # LOE rdx rcx rbx rbp rsi r8 r13 r14 r15 edi r9d
 ..B4.35:                        # Preds ..B4.11
                                 # Execution count [4.50e-02]: Infreq
 ..LN1794:
-        movl      %edi, %r9d                                    #55.3 c1
+        movl      %edi, %r9d                                    #57.3 c1
 ..LN1795:
-        xorl      %eax, %eax                                    #55.3 c1
+        xorl      %eax, %eax                                    #57.3 c1
 ..LN1796:
-        andl      $-32, %r9d                                    #55.3 c3
+        andl      $-32, %r9d                                    #57.3 c3
 ..LN1797:
-        jmp       ..B4.19       # Prob 100%                     #55.3 c3
+        jmp       ..B4.19       # Prob 100%                     #57.3 c3
         .align    16,0x90
 ..LN1798:
                                 # LOE rdx rcx rbx rbp rsi r8 r13 r14 r15 eax edi r9d
@@ -5149,152 +5149,152 @@ sumArrayNOVEC:
 	.cfi_startproc
 ..___tag_value_sumArrayNOVEC.131:
 ..L132:
-                                                        #61.22
+                                                        #63.22
 ..LN1802:
-	.loc    1  61  prologue_end  is_stmt 1
+	.loc    1  63  prologue_end  is_stmt 1
 ..LN1803:
-	.loc    1  66  is_stmt 1
-        movl      SIZE(%rip), %ecx                              #66.27 c1
+	.loc    1  68  is_stmt 1
+        movl      SIZE(%rip), %ecx                              #68.27 c1
 ..LN1804:
-        testl     %ecx, %ecx                                    #66.27 c5 stall 1
+        testl     %ecx, %ecx                                    #68.27 c5 stall 1
 ..LN1805:
-        jle       ..B5.37       # Prob 50%                      #66.27 c7
+        jle       ..B5.37       # Prob 50%                      #68.27 c7
 ..LN1806:
                                 # LOE rbx rbp r12 r13 r14 r15 ecx
 ..B5.2:                         # Preds ..B5.1
                                 # Execution count [0.00e+00]
 ..LN1807:
-	.loc    1  67  is_stmt 1
-        movq      o(%rip), %rdx                                 #67.7 c1
+	.loc    1  69  is_stmt 1
+        movq      o(%rip), %rdx                                 #69.7 c1
 ..LN1808:
-        movq      a(%rip), %rsi                                 #67.18 c1
+        movq      a(%rip), %rsi                                 #69.18 c1
 ..LN1809:
-        movq      b(%rip), %rax                                 #67.31 c5 stall 1
+        movq      b(%rip), %rax                                 #69.31 c5 stall 1
 ..LN1810:
-	.loc    1  66  is_stmt 1
-        cmpl      $6, %ecx                                      #66.3 c5
+	.loc    1  68  is_stmt 1
+        cmpl      $6, %ecx                                      #68.3 c5
 ..LN1811:
-        jle       ..B5.31       # Prob 50%                      #66.3 c7
+        jle       ..B5.31       # Prob 50%                      #68.3 c7
 ..LN1812:
                                 # LOE rax rdx rbx rbp rsi r12 r13 r14 r15 ecx
 ..B5.3:                         # Preds ..B5.2
                                 # Execution count [0.00e+00]
 ..LN1813:
-	.loc    1  67  is_stmt 1
-        cmpq      %rax, %rdx                                    #67.31 c1
+	.loc    1  69  is_stmt 1
+        cmpq      %rax, %rdx                                    #69.31 c1
 ..LN1814:
-        jbe       ..B5.5        # Prob 50%                      #67.31 c3
+        jbe       ..B5.5        # Prob 50%                      #69.31 c3
 ..LN1815:
                                 # LOE rax rdx rbx rbp rsi r12 r13 r14 r15 ecx
 ..B5.4:                         # Preds ..B5.3
                                 # Execution count [0.00e+00]
 ..LN1816:
-	.loc    1  66  is_stmt 1
-        movslq    %ecx, %r8                                     #66.27 c1
+	.loc    1  68  is_stmt 1
+        movslq    %ecx, %r8                                     #68.27 c1
 ..LN1817:
-	.loc    1  67  is_stmt 1
-        movq      %rdx, %rdi                                    #67.31 c1
+	.loc    1  69  is_stmt 1
+        movq      %rdx, %rdi                                    #69.31 c1
 ..LN1818:
-        shlq      $2, %r8                                       #67.31 c3
+        shlq      $2, %r8                                       #69.31 c3
 ..LN1819:
-        subq      %rax, %rdi                                    #67.31 c3
+        subq      %rax, %rdi                                    #69.31 c3
 ..LN1820:
-        cmpq      %r8, %rdi                                     #67.31 c5
+        cmpq      %r8, %rdi                                     #69.31 c5
 ..LN1821:
-        jge       ..B5.7        # Prob 50%                      #67.31 c7
+        jge       ..B5.7        # Prob 50%                      #69.31 c7
 ..LN1822:
-        jmp       ..B5.31       # Prob 100%                     #67.31 c7
+        jmp       ..B5.31       # Prob 100%                     #69.31 c7
 ..LN1823:
                                 # LOE rax rdx rbx rbp rsi r8 r12 r13 r14 r15 ecx
 ..B5.5:                         # Preds ..B5.3
                                 # Execution count [0.00e+00]
 ..LN1824:
-        cmpq      %rdx, %rax                                    #67.31 c1
+        cmpq      %rdx, %rax                                    #69.31 c1
 ..LN1825:
-        jbe       ..B5.31       # Prob 50%                      #67.31 c3
+        jbe       ..B5.31       # Prob 50%                      #69.31 c3
 ..LN1826:
                                 # LOE rax rdx rbx rbp rsi r12 r13 r14 r15 ecx
 ..B5.6:                         # Preds ..B5.5
                                 # Execution count [0.00e+00]
 ..LN1827:
-	.loc    1  66  is_stmt 1
-        movslq    %ecx, %r8                                     #66.27 c1
+	.loc    1  68  is_stmt 1
+        movslq    %ecx, %r8                                     #68.27 c1
 ..LN1828:
-	.loc    1  67  is_stmt 1
-        movq      %rax, %rdi                                    #67.31 c1
+	.loc    1  69  is_stmt 1
+        movq      %rax, %rdi                                    #69.31 c1
 ..LN1829:
-        shlq      $2, %r8                                       #67.31 c3
+        shlq      $2, %r8                                       #69.31 c3
 ..LN1830:
-        subq      %rdx, %rdi                                    #67.31 c3
+        subq      %rdx, %rdi                                    #69.31 c3
 ..LN1831:
-        cmpq      %r8, %rdi                                     #67.31 c5
+        cmpq      %r8, %rdi                                     #69.31 c5
 ..LN1832:
-        jl        ..B5.31       # Prob 50%                      #67.31 c7
+        jl        ..B5.31       # Prob 50%                      #69.31 c7
 ..LN1833:
                                 # LOE rax rdx rbx rbp rsi r8 r12 r13 r14 r15 ecx
 ..B5.7:                         # Preds ..B5.6 ..B5.4
                                 # Execution count [0.00e+00]
 ..LN1834:
-        cmpq      %rsi, %rdx                                    #67.18 c1
+        cmpq      %rsi, %rdx                                    #69.18 c1
 ..LN1835:
-        jbe       ..B5.9        # Prob 50%                      #67.18 c3
+        jbe       ..B5.9        # Prob 50%                      #69.18 c3
 ..LN1836:
                                 # LOE rax rdx rbx rbp rsi r8 r12 r13 r14 r15 ecx
 ..B5.8:                         # Preds ..B5.7
                                 # Execution count [0.00e+00]
 ..LN1837:
-        movq      %rdx, %rdi                                    #67.18 c1
+        movq      %rdx, %rdi                                    #69.18 c1
 ..LN1838:
-        subq      %rsi, %rdi                                    #67.18 c3
+        subq      %rsi, %rdi                                    #69.18 c3
 ..LN1839:
-        cmpq      %r8, %rdi                                     #67.18 c5
+        cmpq      %r8, %rdi                                     #69.18 c5
 ..LN1840:
-        jge       ..B5.11       # Prob 50%                      #67.18 c7
+        jge       ..B5.11       # Prob 50%                      #69.18 c7
 ..LN1841:
-        jmp       ..B5.31       # Prob 100%                     #67.18 c7
+        jmp       ..B5.31       # Prob 100%                     #69.18 c7
 ..LN1842:
                                 # LOE rax rdx rbx rbp rsi r12 r13 r14 r15 ecx
 ..B5.9:                         # Preds ..B5.7
                                 # Execution count [0.00e+00]
 ..LN1843:
-        cmpq      %rdx, %rsi                                    #67.18 c1
+        cmpq      %rdx, %rsi                                    #69.18 c1
 ..LN1844:
-        jbe       ..B5.31       # Prob 50%                      #67.18 c3
+        jbe       ..B5.31       # Prob 50%                      #69.18 c3
 ..LN1845:
                                 # LOE rax rdx rbx rbp rsi r8 r12 r13 r14 r15 ecx
 ..B5.10:                        # Preds ..B5.9
                                 # Execution count [0.00e+00]
 ..LN1846:
-        movq      %rsi, %rdi                                    #67.18 c1
+        movq      %rsi, %rdi                                    #69.18 c1
 ..LN1847:
-        subq      %rdx, %rdi                                    #67.18 c3
+        subq      %rdx, %rdi                                    #69.18 c3
 ..LN1848:
-        cmpq      %r8, %rdi                                     #67.18 c5
+        cmpq      %r8, %rdi                                     #69.18 c5
 ..LN1849:
-        jl        ..B5.31       # Prob 50%                      #67.18 c7
+        jl        ..B5.31       # Prob 50%                      #69.18 c7
 ..LN1850:
                                 # LOE rax rdx rbx rbp rsi r12 r13 r14 r15 ecx
 ..B5.11:                        # Preds ..B5.8 ..B5.10
                                 # Execution count [5.00e-01]
 ..LN1851:
-	.loc    1  66  is_stmt 1
-        movl      %ecx, %edi                                    #66.27 c1
+	.loc    1  68  is_stmt 1
+        movl      %ecx, %edi                                    #68.27 c1
 ..LN1852:
-        movl      $1, %r9d                                      #66.3 c1
+        movl      $1, %r9d                                      #68.3 c1
 ..LN1853:
-        sarl      $2, %edi                                      #66.27 c3
+        sarl      $2, %edi                                      #68.27 c3
 ..LN1854:
-        xorl      %r8d, %r8d                                    #66.3 c3
+        xorl      %r8d, %r8d                                    #68.3 c3
 ..LN1855:
-        shrl      $29, %edi                                     #66.27 c5
+        shrl      $29, %edi                                     #68.27 c5
 ..LN1856:
-        addl      %ecx, %edi                                    #66.27 c7
+        addl      %ecx, %edi                                    #68.27 c7
 ..LN1857:
-        sarl      $3, %edi                                      #66.27 c9
+        sarl      $3, %edi                                      #68.27 c9
 ..LN1858:
-        testl     %edi, %edi                                    #66.3 c11
+        testl     %edi, %edi                                    #68.3 c11
 ..LN1859:
-        jbe       ..B5.15       # Prob 9%                       #66.3 c13
+        jbe       ..B5.15       # Prob 9%                       #68.3 c13
 ..LN1860:
                                 # LOE rax rdx rbx rbp rsi r12 r13 r14 r15 ecx edi r8d r9d
 ..B5.13:                        # Preds ..B5.11 ..B5.13
@@ -5307,194 +5307,194 @@ sumArrayNOVEC:
                 # VECTOR TRIP COUNT IS ESTIMATED CONSTANT
                 # DEPENDENCY ANALYSIS WAS IGNORED
 ..LN1861:
-	.loc    1  67  is_stmt 1
-        lea       (,%r8,8), %r9d                                #67.18 c1
+	.loc    1  69  is_stmt 1
+        lea       (,%r8,8), %r9d                                #69.18 c1
 ..LN1862:
-	.loc    1  66  is_stmt 1
-        addl      $1, %r8d                                      #66.3 c1
+	.loc    1  68  is_stmt 1
+        addl      $1, %r8d                                      #68.3 c1
 ..LN1863:
-	.loc    1  67  is_stmt 1
-        movslq    %r9d, %r9                                     #67.31 c3
+	.loc    1  69  is_stmt 1
+        movslq    %r9d, %r9                                     #69.31 c3
 ..LN1864:
-        vmovss    (%rsi,%r9,4), %xmm0                           #67.18 c5
+        vmovss    (%rsi,%r9,4), %xmm0                           #69.18 c5
 ..LN1865:
-        vaddss    (%rax,%r9,4), %xmm0, %xmm1                    #67.31 c11 stall 2
+        vaddss    (%rax,%r9,4), %xmm0, %xmm1                    #69.31 c11 stall 2
 ..LN1866:
-        vmovss    %xmm1, (%rdx,%r9,4)                           #67.7 c17 stall 2
+        vmovss    %xmm1, (%rdx,%r9,4)                           #69.7 c17 stall 2
 ..LN1867:
-        vmovss    4(%rsi,%r9,4), %xmm2                          #67.18 c17
+        vmovss    4(%rsi,%r9,4), %xmm2                          #69.18 c17
 ..LN1868:
-        vaddss    4(%rax,%r9,4), %xmm2, %xmm3                   #67.31 c23 stall 2
+        vaddss    4(%rax,%r9,4), %xmm2, %xmm3                   #69.31 c23 stall 2
 ..LN1869:
-        vmovss    %xmm3, 4(%rdx,%r9,4)                          #67.7 c29 stall 2
+        vmovss    %xmm3, 4(%rdx,%r9,4)                          #69.7 c29 stall 2
 ..LN1870:
-        vmovss    8(%rsi,%r9,4), %xmm4                          #67.18 c29
+        vmovss    8(%rsi,%r9,4), %xmm4                          #69.18 c29
 ..LN1871:
-        vaddss    8(%rax,%r9,4), %xmm4, %xmm5                   #67.31 c35 stall 2
+        vaddss    8(%rax,%r9,4), %xmm4, %xmm5                   #69.31 c35 stall 2
 ..LN1872:
-        vmovss    %xmm5, 8(%rdx,%r9,4)                          #67.7 c41 stall 2
+        vmovss    %xmm5, 8(%rdx,%r9,4)                          #69.7 c41 stall 2
 ..LN1873:
-        vmovss    12(%rsi,%r9,4), %xmm6                         #67.18 c41
+        vmovss    12(%rsi,%r9,4), %xmm6                         #69.18 c41
 ..LN1874:
-        vaddss    12(%rax,%r9,4), %xmm6, %xmm7                  #67.31 c47 stall 2
+        vaddss    12(%rax,%r9,4), %xmm6, %xmm7                  #69.31 c47 stall 2
 ..LN1875:
-        vmovss    %xmm7, 12(%rdx,%r9,4)                         #67.7 c53 stall 2
+        vmovss    %xmm7, 12(%rdx,%r9,4)                         #69.7 c53 stall 2
 ..LN1876:
-        vmovss    16(%rsi,%r9,4), %xmm8                         #67.18 c53
+        vmovss    16(%rsi,%r9,4), %xmm8                         #69.18 c53
 ..LN1877:
-        vaddss    16(%rax,%r9,4), %xmm8, %xmm9                  #67.31 c59 stall 2
+        vaddss    16(%rax,%r9,4), %xmm8, %xmm9                  #69.31 c59 stall 2
 ..LN1878:
-        vmovss    %xmm9, 16(%rdx,%r9,4)                         #67.7 c65 stall 2
+        vmovss    %xmm9, 16(%rdx,%r9,4)                         #69.7 c65 stall 2
 ..LN1879:
-        vmovss    20(%rsi,%r9,4), %xmm10                        #67.18 c65
+        vmovss    20(%rsi,%r9,4), %xmm10                        #69.18 c65
 ..LN1880:
-        vaddss    20(%rax,%r9,4), %xmm10, %xmm11                #67.31 c71 stall 2
+        vaddss    20(%rax,%r9,4), %xmm10, %xmm11                #69.31 c71 stall 2
 ..LN1881:
-        vmovss    %xmm11, 20(%rdx,%r9,4)                        #67.7 c77 stall 2
+        vmovss    %xmm11, 20(%rdx,%r9,4)                        #69.7 c77 stall 2
 ..LN1882:
-        vmovss    24(%rsi,%r9,4), %xmm12                        #67.18 c77
+        vmovss    24(%rsi,%r9,4), %xmm12                        #69.18 c77
 ..LN1883:
-        vaddss    24(%rax,%r9,4), %xmm12, %xmm13                #67.31 c83 stall 2
+        vaddss    24(%rax,%r9,4), %xmm12, %xmm13                #69.31 c83 stall 2
 ..LN1884:
-        vmovss    %xmm13, 24(%rdx,%r9,4)                        #67.7 c89 stall 2
+        vmovss    %xmm13, 24(%rdx,%r9,4)                        #69.7 c89 stall 2
 ..LN1885:
-        vmovss    28(%rsi,%r9,4), %xmm14                        #67.18 c89
+        vmovss    28(%rsi,%r9,4), %xmm14                        #69.18 c89
 ..LN1886:
-        vaddss    28(%rax,%r9,4), %xmm14, %xmm15                #67.31 c95 stall 2
+        vaddss    28(%rax,%r9,4), %xmm14, %xmm15                #69.31 c95 stall 2
 ..LN1887:
-        vmovss    %xmm15, 28(%rdx,%r9,4)                        #67.7 c101 stall 2
+        vmovss    %xmm15, 28(%rdx,%r9,4)                        #69.7 c101 stall 2
 ..LN1888:
-	.loc    1  66  is_stmt 1
-        cmpl      %edi, %r8d                                    #66.3 c101
+	.loc    1  68  is_stmt 1
+        cmpl      %edi, %r8d                                    #68.3 c101
 ..LN1889:
-        jb        ..B5.13       # Prob 99%                      #66.3 c103
+        jb        ..B5.13       # Prob 99%                      #68.3 c103
 ..LN1890:
                                 # LOE rax rdx rbx rbp rsi r12 r13 r14 r15 ecx edi r8d
 ..B5.14:                        # Preds ..B5.13
                                 # Execution count [4.50e-01]
 ..LN1891:
-	.loc    1  67  is_stmt 1
-        lea       1(,%r8,8), %r9d                               #67.7 c1
+	.loc    1  69  is_stmt 1
+        lea       1(,%r8,8), %r9d                               #69.7 c1
 ..LN1892:
                                 # LOE rax rdx rbx rbp rsi r12 r13 r14 r15 ecx r9d
 ..B5.15:                        # Preds ..B5.14 ..B5.11
                                 # Execution count [5.00e-01]
 ..LN1893:
-	.loc    1  66  is_stmt 1
-        cmpl      %ecx, %r9d                                    #66.3 c1
+	.loc    1  68  is_stmt 1
+        cmpl      %ecx, %r9d                                    #68.3 c1
 ..LN1894:
-        ja        ..B5.37       # Prob 50%                      #66.3 c3
+        ja        ..B5.37       # Prob 50%                      #68.3 c3
 ..LN1895:
                                 # LOE rax rdx rbx rbp rsi r12 r13 r14 r15 ecx r9d
 ..B5.16:                        # Preds ..B5.15
                                 # Execution count [0.00e+00]
 ..LN1896:
-        subl      %r9d, %ecx                                    #66.3 c1
+        subl      %r9d, %ecx                                    #68.3 c1
 ..LN1897:
-        jmp       *.2.15_2.switchtab.0(,%rcx,8)                 #66.3
+        jmp       *.2.15_2.switchtab.0(,%rcx,8)                 #68.3
 ..LN1898:
                                 # LOE rax rdx rbx rbp rsi r12 r13 r14 r15 r9d
 ..1.15_0.TAG.6:
 ..B5.18:                        # Preds ..B5.16
                                 # Execution count [0.00e+00]
 ..LN1899:
-	.loc    1  67  is_stmt 1
-        movslq    %r9d, %r9                                     #67.18 c1
+	.loc    1  69  is_stmt 1
+        movslq    %r9d, %r9                                     #69.18 c1
 ..LN1900:
-        vmovss    20(%rsi,%r9,4), %xmm0                         #67.18 c3
+        vmovss    20(%rsi,%r9,4), %xmm0                         #69.18 c3
 ..LN1901:
-        vaddss    20(%rax,%r9,4), %xmm0, %xmm1                  #67.31 c9 stall 2
+        vaddss    20(%rax,%r9,4), %xmm0, %xmm1                  #69.31 c9 stall 2
 ..LN1902:
-        vmovss    %xmm1, 20(%rdx,%r9,4)                         #67.7 c15 stall 2
+        vmovss    %xmm1, 20(%rdx,%r9,4)                         #69.7 c15 stall 2
 ..LN1903:
                                 # LOE rax rdx rbx rbp rsi r12 r13 r14 r15 r9d
 ..1.15_0.TAG.5:
 ..B5.20:                        # Preds ..B5.16 ..B5.18
                                 # Execution count [0.00e+00]
 ..LN1904:
-        movslq    %r9d, %r9                                     #67.18 c1
+        movslq    %r9d, %r9                                     #69.18 c1
 ..LN1905:
-        vmovss    16(%rsi,%r9,4), %xmm0                         #67.18 c3
+        vmovss    16(%rsi,%r9,4), %xmm0                         #69.18 c3
 ..LN1906:
-        vaddss    16(%rax,%r9,4), %xmm0, %xmm1                  #67.31 c9 stall 2
+        vaddss    16(%rax,%r9,4), %xmm0, %xmm1                  #69.31 c9 stall 2
 ..LN1907:
-        vmovss    %xmm1, 16(%rdx,%r9,4)                         #67.7 c15 stall 2
+        vmovss    %xmm1, 16(%rdx,%r9,4)                         #69.7 c15 stall 2
 ..LN1908:
                                 # LOE rax rdx rbx rbp rsi r12 r13 r14 r15 r9d
 ..1.15_0.TAG.4:
 ..B5.22:                        # Preds ..B5.16 ..B5.20
                                 # Execution count [0.00e+00]
 ..LN1909:
-        movslq    %r9d, %r9                                     #67.18 c1
+        movslq    %r9d, %r9                                     #69.18 c1
 ..LN1910:
-        vmovss    12(%rsi,%r9,4), %xmm0                         #67.18 c3
+        vmovss    12(%rsi,%r9,4), %xmm0                         #69.18 c3
 ..LN1911:
-        vaddss    12(%rax,%r9,4), %xmm0, %xmm1                  #67.31 c9 stall 2
+        vaddss    12(%rax,%r9,4), %xmm0, %xmm1                  #69.31 c9 stall 2
 ..LN1912:
-        vmovss    %xmm1, 12(%rdx,%r9,4)                         #67.7 c15 stall 2
+        vmovss    %xmm1, 12(%rdx,%r9,4)                         #69.7 c15 stall 2
 ..LN1913:
                                 # LOE rax rdx rbx rbp rsi r12 r13 r14 r15 r9d
 ..1.15_0.TAG.3:
 ..B5.24:                        # Preds ..B5.16 ..B5.22
                                 # Execution count [0.00e+00]
 ..LN1914:
-        movslq    %r9d, %r9                                     #67.18 c1
+        movslq    %r9d, %r9                                     #69.18 c1
 ..LN1915:
-        vmovss    8(%rsi,%r9,4), %xmm0                          #67.18 c3
+        vmovss    8(%rsi,%r9,4), %xmm0                          #69.18 c3
 ..LN1916:
-        vaddss    8(%rax,%r9,4), %xmm0, %xmm1                   #67.31 c9 stall 2
+        vaddss    8(%rax,%r9,4), %xmm0, %xmm1                   #69.31 c9 stall 2
 ..LN1917:
-        vmovss    %xmm1, 8(%rdx,%r9,4)                          #67.7 c15 stall 2
+        vmovss    %xmm1, 8(%rdx,%r9,4)                          #69.7 c15 stall 2
 ..LN1918:
                                 # LOE rax rdx rbx rbp rsi r12 r13 r14 r15 r9d
 ..1.15_0.TAG.2:
 ..B5.26:                        # Preds ..B5.16 ..B5.24
                                 # Execution count [0.00e+00]
 ..LN1919:
-        movslq    %r9d, %r9                                     #67.18 c1
+        movslq    %r9d, %r9                                     #69.18 c1
 ..LN1920:
-        vmovss    4(%rsi,%r9,4), %xmm0                          #67.18 c3
+        vmovss    4(%rsi,%r9,4), %xmm0                          #69.18 c3
 ..LN1921:
-        vaddss    4(%rax,%r9,4), %xmm0, %xmm1                   #67.31 c9 stall 2
+        vaddss    4(%rax,%r9,4), %xmm0, %xmm1                   #69.31 c9 stall 2
 ..LN1922:
-        vmovss    %xmm1, 4(%rdx,%r9,4)                          #67.7 c15 stall 2
+        vmovss    %xmm1, 4(%rdx,%r9,4)                          #69.7 c15 stall 2
 ..LN1923:
                                 # LOE rax rdx rbx rbp rsi r12 r13 r14 r15 r9d
 ..1.15_0.TAG.1:
 ..B5.28:                        # Preds ..B5.16 ..B5.26
                                 # Execution count [0.00e+00]
 ..LN1924:
-        movslq    %r9d, %r9                                     #67.18 c1
+        movslq    %r9d, %r9                                     #69.18 c1
 ..LN1925:
-        vmovss    (%rsi,%r9,4), %xmm0                           #67.18 c3
+        vmovss    (%rsi,%r9,4), %xmm0                           #69.18 c3
 ..LN1926:
-        vaddss    (%rax,%r9,4), %xmm0, %xmm1                    #67.31 c9 stall 2
+        vaddss    (%rax,%r9,4), %xmm0, %xmm1                    #69.31 c9 stall 2
 ..LN1927:
-        vmovss    %xmm1, (%rdx,%r9,4)                           #67.7 c15 stall 2
+        vmovss    %xmm1, (%rdx,%r9,4)                           #69.7 c15 stall 2
 ..LN1928:
-        jmp       ..B5.36       # Prob 100%                     #67.7 c15 stall 2
+        jmp       ..B5.36       # Prob 100%                     #69.7 c15 stall 2
 ..LN1929:
                                 # LOE rax rdx rbx rbp rsi r12 r13 r14 r15 r9d
 ..B5.31:                        # Preds ..B5.2 ..B5.4 ..B5.5 ..B5.6 ..B5.8
                                 #       ..B5.9 ..B5.10
                                 # Execution count [5.00e-01]
 ..LN1930:
-	.loc    1  66  is_stmt 1
-        movl      %ecx, %edi                                    #66.3 c1
+	.loc    1  68  is_stmt 1
+        movl      %ecx, %edi                                    #68.3 c1
 ..LN1931:
-        movl      $1, %r9d                                      #66.3 c1
+        movl      $1, %r9d                                      #68.3 c1
 ..LN1932:
-        shrl      $31, %edi                                     #66.3 c3
+        shrl      $31, %edi                                     #68.3 c3
 ..LN1933:
-        xorl      %r8d, %r8d                                    #66.3 c3
+        xorl      %r8d, %r8d                                    #68.3 c3
 ..LN1934:
-        addl      %ecx, %edi                                    #66.27 c5
+        addl      %ecx, %edi                                    #68.27 c5
 ..LN1935:
-        sarl      $1, %edi                                      #66.27 c7
+        sarl      $1, %edi                                      #68.27 c7
 ..LN1936:
-        testl     %edi, %edi                                    #66.3 c9
+        testl     %edi, %edi                                    #68.3 c9
 ..LN1937:
-        jbe       ..B5.35       # Prob 9%                       #66.3 c11
+        jbe       ..B5.35       # Prob 9%                       #68.3 c11
 ..LN1938:
                                 # LOE rax rdx rbx rbp rsi r12 r13 r14 r15 ecx edi r8d r9d
 ..B5.33:                        # Preds ..B5.31 ..B5.33
@@ -5506,49 +5506,49 @@ sumArrayNOVEC:
                 # %s was not vectorized: novector directive used
                 # VECTOR TRIP COUNT IS ESTIMATED CONSTANT
 ..LN1939:
-	.loc    1  67  is_stmt 1
-        lea       (%r8,%r8), %r9d                               #67.18 c1
+	.loc    1  69  is_stmt 1
+        lea       (%r8,%r8), %r9d                               #69.18 c1
 ..LN1940:
-	.loc    1  66  is_stmt 1
-        addl      $1, %r8d                                      #66.3 c1
+	.loc    1  68  is_stmt 1
+        addl      $1, %r8d                                      #68.3 c1
 ..LN1941:
-	.loc    1  67  is_stmt 1
-        movslq    %r9d, %r9                                     #67.31 c3
+	.loc    1  69  is_stmt 1
+        movslq    %r9d, %r9                                     #69.31 c3
 ..LN1942:
-        vmovss    (%rsi,%r9,4), %xmm0                           #67.18 c5
+        vmovss    (%rsi,%r9,4), %xmm0                           #69.18 c5
 ..LN1943:
-        vaddss    (%rax,%r9,4), %xmm0, %xmm1                    #67.31 c11 stall 2
+        vaddss    (%rax,%r9,4), %xmm0, %xmm1                    #69.31 c11 stall 2
 ..LN1944:
-        vmovss    %xmm1, (%rdx,%r9,4)                           #67.7 c17 stall 2
+        vmovss    %xmm1, (%rdx,%r9,4)                           #69.7 c17 stall 2
 ..LN1945:
-        vmovss    4(%rsi,%r9,4), %xmm2                          #67.18 c17
+        vmovss    4(%rsi,%r9,4), %xmm2                          #69.18 c17
 ..LN1946:
-        vaddss    4(%rax,%r9,4), %xmm2, %xmm3                   #67.31 c23 stall 2
+        vaddss    4(%rax,%r9,4), %xmm2, %xmm3                   #69.31 c23 stall 2
 ..LN1947:
-        vmovss    %xmm3, 4(%rdx,%r9,4)                          #67.7 c29 stall 2
+        vmovss    %xmm3, 4(%rdx,%r9,4)                          #69.7 c29 stall 2
 ..LN1948:
-	.loc    1  66  is_stmt 1
-        cmpl      %edi, %r8d                                    #66.3 c29
+	.loc    1  68  is_stmt 1
+        cmpl      %edi, %r8d                                    #68.3 c29
 ..LN1949:
-        jb        ..B5.33       # Prob 63%                      #66.3 c31
+        jb        ..B5.33       # Prob 63%                      #68.3 c31
 ..LN1950:
                                 # LOE rax rdx rbx rbp rsi r12 r13 r14 r15 ecx edi r8d
 ..B5.34:                        # Preds ..B5.33
                                 # Execution count [4.50e-01]
 ..LN1951:
-	.loc    1  67  is_stmt 1
-        lea       1(%r8,%r8), %r9d                              #67.7 c1
+	.loc    1  69  is_stmt 1
+        lea       1(%r8,%r8), %r9d                              #69.7 c1
 ..LN1952:
                                 # LOE rax rdx rbx rbp rsi r12 r13 r14 r15 ecx r9d
 ..B5.35:                        # Preds ..B5.34 ..B5.31
                                 # Execution count [5.00e-01]
 ..LN1953:
-	.loc    1  66  is_stmt 1
-        lea       -1(%r9), %edi                                 #66.3 c1
+	.loc    1  68  is_stmt 1
+        lea       -1(%r9), %edi                                 #68.3 c1
 ..LN1954:
-        cmpl      %ecx, %edi                                    #66.3 c3
+        cmpl      %ecx, %edi                                    #68.3 c3
 ..LN1955:
-        jae       ..B5.37       # Prob 9%                       #66.3 c5
+        jae       ..B5.37       # Prob 9%                       #68.3 c5
 ..LN1956:
                                 # LOE rax rdx rbx rbp rsi r12 r13 r14 r15 r9d
 ..1.15_0.TAG.0:
@@ -5561,21 +5561,21 @@ sumArrayNOVEC:
                 # %s was not vectorized: novector directive used
                 # VECTOR TRIP COUNT IS ESTIMATED CONSTANT
 ..LN1957:
-	.loc    1  67  is_stmt 1
-        movslq    %r9d, %r9                                     #67.18 c1
+	.loc    1  69  is_stmt 1
+        movslq    %r9d, %r9                                     #69.18 c1
 ..LN1958:
-        vmovss    -4(%rsi,%r9,4), %xmm0                         #67.18 c3
+        vmovss    -4(%rsi,%r9,4), %xmm0                         #69.18 c3
 ..LN1959:
-        vaddss    -4(%rax,%r9,4), %xmm0, %xmm1                  #67.31 c9 stall 2
+        vaddss    -4(%rax,%r9,4), %xmm0, %xmm1                  #69.31 c9 stall 2
 ..LN1960:
-        vmovss    %xmm1, -4(%rdx,%r9,4)                         #67.7 c15 stall 2
+        vmovss    %xmm1, -4(%rdx,%r9,4)                         #69.7 c15 stall 2
 ..LN1961:
                                 # LOE rbx rbp r12 r13 r14 r15
 ..B5.37:                        # Preds ..B5.35 ..B5.1 ..B5.15 ..B5.36
                                 # Execution count [1.00e+00]
 ..LN1962:
-	.loc    1  70  epilogue_begin  is_stmt 1
-        ret                                                     #70.1 c3
+	.loc    1  72  epilogue_begin  is_stmt 1
+        ret                                                     #72.1 c3
 ..LN1963:
         .align    16,0x90
 ..LN1964:
@@ -6134,7 +6134,7 @@ maxrange:
 //	DW_TAG_subprogram:
 	.byte 0x03
 //	DW_AT_decl_line:
-	.byte 0x33
+	.byte 0x34
 //	DW_AT_decl_file:
 	.byte 0x01
 //	DW_AT_name:
@@ -6149,7 +6149,7 @@ maxrange:
 //	DW_TAG_variable:
 	.byte 0x04
 //	DW_AT_decl_line:
-	.byte 0x35
+	.byte 0x36
 //	DW_AT_decl_file:
 	.byte 0x01
 //	DW_AT_name:
@@ -6160,7 +6160,7 @@ maxrange:
 //	DW_TAG_subprogram:
 	.byte 0x03
 //	DW_AT_decl_line:
-	.byte 0x3d
+	.byte 0x3f
 //	DW_AT_decl_file:
 	.byte 0x01
 //	DW_AT_name:
@@ -6175,7 +6175,7 @@ maxrange:
 //	DW_TAG_variable:
 	.byte 0x04
 //	DW_AT_decl_line:
-	.byte 0x3f
+	.byte 0x41
 //	DW_AT_decl_file:
 	.byte 0x01
 //	DW_AT_name:
@@ -6186,7 +6186,7 @@ maxrange:
 //	DW_TAG_subprogram:
 	.byte 0x06
 //	DW_AT_decl_line:
-	.byte 0x48
+	.byte 0x4a
 //	DW_AT_decl_file:
 	.byte 0x01
 //	DW_AT_type:
@@ -6209,7 +6209,7 @@ maxrange:
 //	DW_TAG_formal_parameter:
 	.byte 0x07
 //	DW_AT_decl_line:
-	.byte 0x48
+	.byte 0x4a
 //	DW_AT_decl_file:
 	.byte 0x01
 //	DW_AT_type:
@@ -6221,7 +6221,7 @@ maxrange:
 //	DW_TAG_formal_parameter:
 	.byte 0x07
 //	DW_AT_decl_line:
-	.byte 0x48
+	.byte 0x4a
 //	DW_AT_decl_file:
 	.byte 0x01
 //	DW_AT_type:
@@ -6233,7 +6233,7 @@ maxrange:
 //	DW_TAG_variable:
 	.byte 0x05
 //	DW_AT_decl_line:
-	.byte 0x49
+	.byte 0x4b
 //	DW_AT_decl_file:
 	.byte 0x01
 //	DW_AT_name:
@@ -6246,7 +6246,7 @@ maxrange:
 //	DW_TAG_variable:
 	.byte 0x04
 //	DW_AT_decl_line:
-	.byte 0x4a
+	.byte 0x4c
 //	DW_AT_decl_file:
 	.byte 0x01
 //	DW_AT_name:
@@ -6256,7 +6256,7 @@ maxrange:
 //	DW_TAG_variable:
 	.byte 0x04
 //	DW_AT_decl_line:
-	.byte 0x4b
+	.byte 0x4d
 //	DW_AT_decl_file:
 	.byte 0x01
 //	DW_AT_name:

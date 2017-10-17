@@ -1,0 +1,186 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 17.0.1.132 Build 20161005
+
+Compiler options: -o CD -O3 -xhost -qopt-report=5
+
+    Report from: Interprocedural optimizations [ipo]
+
+  WHOLE PROGRAM (SAFE) [EITHER METHOD]: false
+  WHOLE PROGRAM (SEEN) [TABLE METHOD]: true
+  WHOLE PROGRAM (READ) [OBJECT READER METHOD]: false
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+In the inlining report below:
+   "sz" refers to the "size" of the routine. The smaller a routine's size,
+      the more likely it is to be inlined.
+   "isz" refers to the "inlined size" of the routine. This is the amount
+      the calling routine will grow if the called routine is inlined into it.
+      The compiler generally limits the amount a routine can grow by having
+      routines inlined into it.
+
+Begin optimization report for: main()
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (main()) [1/1=100.0%] CD.c(6,12)
+  -> EXTERN: (17,16) malloc(unsigned long long)
+  -> EXTERN: (18,16) malloc(unsigned long long)
+  -> EXTERN: (19,15) malloc(unsigned long long)
+  -> EXTERN: (34,3) srand(unsigned int)
+  -> EXTERN: (34,9) time(long long *)
+  -> EXTERN: (35,10) rand(void)
+  -> EXTERN: (44,10) rand(void)
+  -> EXTERN: (47,3) free(const void *)
+  -> EXTERN: (48,3) free(const void *)
+  -> EXTERN: (49,3) free(const void *)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at CD.c(25,3)
+<Peeled loop for vectorization>
+   remark #15389: vectorization support: reference A[i] has unaligned access   [ CD.c(26,5) ]
+   remark #15389: vectorization support: reference C[i] has unaligned access   [ CD.c(27,5) ]
+   remark #15389: vectorization support: reference BB[i] has unaligned access   [ CD.c(28,5) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 0.889
+   remark #15301: PEEL LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at CD.c(25,3)
+   remark #15389: vectorization support: reference A[i] has unaligned access   [ CD.c(26,5) ]
+   remark #15389: vectorization support: reference C[i] has unaligned access   [ CD.c(27,5) ]
+   remark #15389: vectorization support: reference BB[i] has unaligned access   [ CD.c(28,5) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 16
+   remark #15399: vectorization support: unroll factor set to 2
+   remark #15309: vectorization support: normalized vectorization overhead 0.633
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15451: unmasked unaligned unit stride stores: 3 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 14 
+   remark #15477: vector cost: 0.930 
+   remark #15478: estimated potential speedup: 12.030 
+   remark #15487: type converts: 2 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at CD.c(25,3)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference A[i] has unaligned access   [ CD.c(26,5) ]
+   remark #15389: vectorization support: reference C[i] has unaligned access   [ CD.c(27,5) ]
+   remark #15389: vectorization support: reference BB[i] has unaligned access   [ CD.c(28,5) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 16
+   remark #15309: vectorization support: normalized vectorization overhead 0.889
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at CD.c(36,3)
+   remark #25096: Loop Interchange not done due to: Imperfect Loop Nest (Either at Source or due to other Compiler Transformations)
+   remark #25451: Advice: Loop Interchange, if possible, might help loopnest. Suggested Permutation : ( 1 2 ) --> ( 2 1 ) 
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at CD.c(38,3)
+   <Peeled loop for vectorization>
+      remark #15389: vectorization support: reference BB[i] has unaligned access   [ CD.c(39,7) ]
+      remark #15389: vectorization support: reference BB[i] has unaligned access   [ CD.c(39,7) ]
+      remark #15389: vectorization support: reference C[i] has unaligned access   [ CD.c(39,22) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 16
+      remark #15309: vectorization support: normalized vectorization overhead 0.129
+      remark #15301: PEEL LOOP WAS VECTORIZED
+
+      LOOP BEGIN at <compiler generated>
+         remark #25460: No loop optimizations reported
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at CD.c(38,3)
+      remark #15389: vectorization support: reference BB[i] has unaligned access   [ CD.c(39,7) ]
+      remark #15389: vectorization support: reference BB[i] has unaligned access   [ CD.c(39,7) ]
+      remark #15389: vectorization support: reference C[i] has unaligned access   [ CD.c(39,22) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15416: vectorization support: irregularly indexed store was generated for the variable <A[*(BB+i*4)]>, part of index is read from memory   [ CD.c(39,5) ]
+      remark #15415: vectorization support: irregularly indexed load was generated for the variable <A[*(BB+i*4)]>, part of index is read from memory   [ CD.c(39,5) ]
+      remark #15305: vectorization support: vector length 16
+      remark #15309: vectorization support: normalized vectorization overhead 0.090
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15450: unmasked unaligned unit stride loads: 2 
+      remark #15462: unmasked indexed (or gather) loads: 1 
+      remark #15463: unmasked indexed (or scatter) stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 43 
+      remark #15477: vector cost: 9.680 
+      remark #15478: estimated potential speedup: 3.940 
+      remark #15486: divides: 1 
+      remark #15488: --- end vector cost summary ---
+      remark #15499: histogram: 2 
+
+      LOOP BEGIN at <compiler generated>
+         remark #25460: No loop optimizations reported
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at CD.c(38,3)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference BB[i] has unaligned access   [ CD.c(39,7) ]
+      remark #15389: vectorization support: reference BB[i] has unaligned access   [ CD.c(39,7) ]
+      remark #15389: vectorization support: reference C[i] has unaligned access   [ CD.c(39,22) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 16
+      remark #15309: vectorization support: normalized vectorization overhead 0.129
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+
+      LOOP BEGIN at <compiler generated>
+         remark #25460: No loop optimizations reported
+      LOOP END
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+CD.c(6,12):remark #34051: REGISTER ALLOCATION : [main] CD.c:6
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   63[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm31 k0-k7]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   30[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm12 k0-k2]
+        
+    Routine temporaries
+        Total         :     230
+            Global    :     113
+            Local     :     117
+        Regenerable   :      20
+        Spilled       :       8
+        
+    Routine stack
+        Variables     :       4 bytes*
+            Reads     :       2 [2.00e+00 ~ 0.2%]
+            Writes    :       2 [2.00e+00 ~ 0.2%]
+        Spills        :      64 bytes*
+            Reads     :      17 [8.00e+00 ~ 0.8%]
+            Writes    :      15 [3.92e+01 ~ 3.9%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================

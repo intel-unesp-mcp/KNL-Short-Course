@@ -3,16 +3,22 @@
 
 int k=0;
 int steps=0;
-int stepstotal=20;
-int SIZE=1600000000;
+int stepstotal=300;
+//int SIZE=1600000000;
+int SIZE=160000000;
 int SIZE2=5;//00;
 int maxrange= 100;
-int maxrange2= 1500000000;
+int maxrange2= 150000000;
 
 float *a;
 int *b;
 float *o;
 float *d;
+
+const int ARR_SIZE=160000000;
+
+float aa[ARR_SIZE],dd[ARR_SIZE];
+int bb[ARR_SIZE]; 
 
 void fillarray() {
 
@@ -36,10 +42,14 @@ void fillarray() {
 
     //printf ( "auxval: %d auxcont2 %d \n", auxval, auxcont2 ); 	
     for (auxcont=auxcont2; auxcont<(auxcont2+SIZE2); auxcont++){
-      a[auxcont]=auxval+auxcont;
+      a[auxcont]=auxval-auxcont;
+      aa[auxcont]=auxval-auxcont;  
+      
       b[auxcont]=rand()%maxrange2;
-      o[auxcont]=auxval*2+auxcont;
-      d[auxcont]=auxval*3+auxcont;
+      bb[auxcont]=rand()%maxrange2;
+      o[auxcont]=auxval*2-auxcont;
+      d[auxcont]=auxval*3-auxcont;
+      dd[auxcont]=auxval*3-auxcont; 
     }
   }
 }
@@ -48,7 +58,21 @@ void sum3() {
   int auxcont=0;
 
   for (auxcont=0; auxcont<SIZE; auxcont++){
-    o[auxcont] = a[b[auxcont]] +d[auxcont];
+    //a[b[auxcont]]++;// = o[auxcont] +d[auxcont];
+    a[b[auxcont]] += 1/d[auxcont];// + o[auxcont];// = o[auxcont] +d[auxcont];
+  }
+
+}
+
+void sum4() {
+  int auxcont=0;
+
+  for (auxcont=0; auxcont<SIZE; auxcont++){
+    aa[bb[auxcont]] += 1/dd[auxcont];// + o[auxcont];// = o[auxcont] +d[auxcont];
+  }
+
+  for (auxcont=0; auxcont<SIZE; auxcont++){
+    dd[bb[auxcont]] += 1/aa[auxcont];// + o[auxcont];// = o[auxcont] +d[auxcont];
   }
 
 }
@@ -73,8 +97,11 @@ int main(int argc, char *argv[]) {
   timeinfobegin = localtime ( &rawtime );
   printf ( "sum3() begin: %s - end: ", asctime (timeinfobegin) );
  
-  for (k = steps; steps < stepstotal; steps ++) {
-    sum3();
+  int stepslocal=0;
+  #pragma omp parallel for
+  for (stepslocal=0; stepslocal < stepstotal; stepslocal ++) {
+    //sum3();
+    sum4();
   }	 
 
   time ( &rawtime );
