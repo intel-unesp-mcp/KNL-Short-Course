@@ -45,6 +45,10 @@ Map to MCDRAM:
 numactl -m 4,5,6,7
 ```
 
+Xeon AVX-2 | KNL AVX-512 DRAM | KNL AVX-512 MCDRAM
+--- | --- | ---
+13 | 9.5 | 
+
 ## Compile Code Using AVX-512:
 
 KNL machine:
