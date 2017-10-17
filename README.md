@@ -163,7 +163,7 @@ for(i = 0; i < SIZE; i++) {
 
 Xeon AVX-2 | KNL AVX-512 
 --- | --- 
-38 | 14 
+38 | 34 
 
 ## Pre-Fetch
 
