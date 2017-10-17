@@ -123,7 +123,9 @@ Xeon AVX-2 | KNL AVX-512
 
 unpack and mask operations.
 
-## Option-price Example
+## ERI
+
+### Option-price Example
 
 S. Li, “Chapter 8 - Parallel Numerical Methods in Finance,” in High Performance
 Parallelism Pearls Volume Two: Multicore and Many-core Programming
@@ -149,8 +151,6 @@ Xeon AVX-2 | KNL AVX-512
 23 | 7.5 
 
 ## Conflict Detection
-
-## ERI
 
 ## Pre-Fetch
 
