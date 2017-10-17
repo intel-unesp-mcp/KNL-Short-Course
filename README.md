@@ -152,6 +152,19 @@ Xeon AVX-2 | KNL AVX-512
 
 ## Conflict Detection
 
+Example based on Colfax WP "Capabilities of Intel® AVX-512 in Intel® Xeon® Scalable Processors (Skylake)" (https://colfaxresearch.com/skl-avx512)
+
+```
+for(i = 0; i < SIZE; i++) {
+  A[BB[i]] += 1.0f/C[i] + auxval;
+}
+
+```
+
+Xeon AVX-2 | KNL AVX-512 
+--- | --- 
+38 | 14 
+
 ## Pre-Fetch
 
 put this option to enable the compiler to introduce intrinsics code for pre-fetch:
